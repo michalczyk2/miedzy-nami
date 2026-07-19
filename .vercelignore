@@ -1,0 +1,17 @@
+.git
+.github
+.vercel
+node_modules
+backup
+reports
+scripts
+src
+tests
+content/*.json
+*.zip
+*.log
+*.md
+START-TUTAJ.txt
+DEPLOY-WINDOWS.*
+PREVIEW-WINDOWS.bat
+CHECK-WINDOWS.bat

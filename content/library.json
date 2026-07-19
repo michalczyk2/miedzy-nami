@@ -1,0 +1,8491 @@
+[
+  {
+    "id": "wave-1",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Idealny weekend",
+    "low": "zmarnowany czas",
+    "high": "reset, o którym opowiadamy przez miesiąc",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-2",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Pierwsza randka",
+    "low": "chcę uciec po 10 minutach",
+    "high": "nie chcę, żeby ten wieczór się kończył",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-3",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Prezent urodzinowy",
+    "low": "zupełnie nietrafiony",
+    "high": "prezent marzeń",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-4",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Spontaniczny wyjazd",
+    "low": "niepotrzebny chaos",
+    "high": "najlepsza przygoda roku",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-5",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Restauracja",
+    "low": "nigdy więcej",
+    "high": "rezerwujemy kolejny termin",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "wave-6",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Film na wieczór",
+    "low": "zasnę po 10 minutach",
+    "high": "obejrzę drugi raz",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-7",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólne gotowanie",
+    "low": "kuchenny koszmar",
+    "high": "idealny wieczór",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "wave-8",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Miejsce do życia",
+    "low": "uciekamy po tygodniu",
+    "high": "zostajemy na zawsze",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "wave-9",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Romantyczny gest",
+    "low": "przesada i niezręczność",
+    "high": "dokładnie tego potrzebuję",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "wave-10",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Impreza ze znajomymi",
+    "low": "szukam wymówki, żeby wyjść",
+    "high": "najlepsza noc od dawna",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "wave-11",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Śniadanie hotelowe",
+    "low": "smutny tost",
+    "high": "powód, żeby wrócić do hotelu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-12",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Domowy wieczór",
+    "low": "nuda",
+    "high": "najlepszy możliwy plan",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-13",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólne hobby",
+    "low": "porzucimy po tygodniu",
+    "high": "nasza nowa tradycja",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "wave-14",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Dzień bez telefonu",
+    "low": "kara",
+    "high": "czysty spokój",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "wave-15",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Niespodzianka",
+    "low": "stres i chaos",
+    "high": "idealne zaskoczenie",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-16",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wyjazd ze znajomymi",
+    "low": "organizacyjny koszmar",
+    "high": "legendarna historia",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-17",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Zakup do mieszkania",
+    "low": "zbędny gadżet",
+    "high": "zmienia codzienność",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "wave-18",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Plan na Sylwestra",
+    "low": "rozczarowanie",
+    "high": "noc życia",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "wave-19",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólne zdjęcie",
+    "low": "natychmiast usunąć",
+    "high": "oprawiamy i wieszamy",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "wave-20",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Długa podróż samochodem",
+    "low": "męczarnia",
+    "high": "część wakacji, którą wspominamy najlepiej",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-21",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Spacer po mieście",
+    "low": "bezcelowe krążenie",
+    "high": "idealna randka",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-22",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Rozmowa o finansach",
+    "low": "unikam jej",
+    "high": "czuję ulgę i bezpieczeństwo",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "wave-23",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Pomysł na wspólny biznes",
+    "low": "katastrofa",
+    "high": "szansa życia",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "wave-24",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Niedzielny poranek",
+    "low": "stracony dzień",
+    "high": "najlepsza część tygodnia",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-25",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wizyta u rodziny",
+    "low": "obowiązek",
+    "high": "naprawdę dobry czas",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "wave-26",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólny trening",
+    "low": "cierpienie",
+    "high": "motywujący rytuał",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-27",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Urlop all inclusive",
+    "low": "nuda przy basenie",
+    "high": "pełen odpoczynek",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-28",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Camping",
+    "low": "walka o przetrwanie",
+    "high": "wolność i przygoda",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-29",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wieczór karaoke",
+    "low": "nie pokażę twarzy",
+    "high": "śpiewamy do rana",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "wave-30",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólne zakupy",
+    "low": "test cierpliwości",
+    "high": "dobry czas razem",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-31",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Pies lub kot w domu",
+    "low": "ciągły problem",
+    "high": "pełnoprawny członek rodziny",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "wave-32",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Przeprowadzka do innego kraju",
+    "low": "za duże ryzyko",
+    "high": "początek najlepszego rozdziału",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "wave-33",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Powrót do miejsca pierwszej randki",
+    "low": "niepotrzebny sentyment",
+    "high": "piękny symbol",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "wave-34",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Drobna kłótnia",
+    "low": "psuje cały dzień",
+    "high": "oczyszcza atmosferę",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "wave-35",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólny serial",
+    "low": "zapychacz czasu",
+    "high": "nasz wieczorny rytuał",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "wave-36",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Kolacja przy świecach",
+    "low": "sztuczna scena",
+    "high": "romantyczny klasyk",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-37",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wycieczka w góry",
+    "low": "po co mi to było",
+    "high": "widok wart każdego kroku",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-38",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Plażowanie cały dzień",
+    "low": "nuda",
+    "high": "pełen relaks",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "wave-39",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Gra planszowa we dwoje",
+    "low": "kłótnia o zasady",
+    "high": "idealna rywalizacja",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "wave-40",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólna lista marzeń",
+    "low": "puste hasła",
+    "high": "plan na przyszłość",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "wave-41",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Rozmowa do późnej nocy",
+    "low": "jutro będę żałować",
+    "high": "chwila prawdziwej bliskości",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "wave-42",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Powtórzenie pierwszych wakacji",
+    "low": "nie da się odtworzyć",
+    "high": "jeszcze lepiej niż wtedy",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "wave-43",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólne oszczędzanie",
+    "low": "same ograniczenia",
+    "high": "droga do marzenia",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "wave-44",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Podwójna randka",
+    "low": "niezręczny obowiązek",
+    "high": "świetny wspólny wieczór",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "wave-45",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Domowe spa",
+    "low": "mokre ręczniki wszędzie",
+    "high": "pełen luksus",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-46",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Nocny spacer",
+    "low": "zimno i zmęczenie",
+    "high": "magiczna atmosfera",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "wave-47",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Prezent zrobiony własnoręcznie",
+    "low": "amatorszczyzna",
+    "high": "najbardziej osobista rzecz",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "wave-48",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólny projekt remontowy",
+    "low": "wieczna kłótnia",
+    "high": "satysfakcja na lata",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "wave-49",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Święta we dwoje",
+    "low": "czegoś brakuje",
+    "high": "nasza własna tradycja",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "wave-50",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Dzień totalnie bez planu",
+    "low": "zmarnowany czas",
+    "high": "idealna swoboda",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-1",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Mam niespodziewany wolny dzień. Co wybiorę?",
+    "options": [
+      "Wyjazd za miasto",
+      "Odpoczynek w domu",
+      "Spotkanie ze znajomymi",
+      "Załatwianie zaległych spraw"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-2",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Która niespodzianka najbardziej by mnie ucieszyła?",
+    "options": [
+      "Zarezerwowany wyjazd",
+      "Ulubione jedzenie",
+      "Osobisty prezent",
+      "Wieczór zaplanowany od A do Z"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "know-3",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najbardziej psuje mi wyjazd?",
+    "options": [
+      "Zła pogoda",
+      "Opóźnienia",
+      "Słaby nocleg",
+      "Zbyt napięty plan"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-4",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy jestem zmęczony lub zmęczona, czego najbardziej potrzebuję?",
+    "options": [
+      "Ciszy",
+      "Przytulenia",
+      "Jedzenia",
+      "Rozmowy"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "know-5",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co kupiłbym lub kupiłabym najpierw po dużej wygranej?",
+    "options": [
+      "Mieszkanie",
+      "Samochód",
+      "Podróż",
+      "Nic, najpierw oszczędności"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "know-6",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który typ randki wybiorę najchętniej?",
+    "options": [
+      "Restauracja",
+      "Domowy wieczór",
+      "Aktywna atrakcja",
+      "Spontaniczny wypad"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "know-7",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który posiłek mógłbym lub mogłabym jeść najczęściej?",
+    "options": [
+      "Pizza",
+      "Makaron",
+      "Azjatyckie",
+      "Domowe klasyki"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "know-8",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najczęściej odkładam na później?",
+    "options": [
+      "Sprzątanie",
+      "Telefon lub wiadomość",
+      "Trening",
+      "Formalności"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-9",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jak reaguję, gdy plan nagle się zmienia?",
+    "options": [
+      "Szybko się dostosowuję",
+      "Najpierw się denerwuję",
+      "Przejmuję organizację",
+      "Wolę zrezygnować"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "know-10",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdzie najchętniej spędziłbym lub spędziłabym miesiąc?",
+    "options": [
+      "Nad morzem",
+      "W górach",
+      "W wielkim mieście",
+      "Na spokojnej wsi"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-11",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jaki prezent wolę dostać?",
+    "options": [
+      "Praktyczny",
+      "Romantyczny",
+      "Wspólne doświadczenie",
+      "Coś, o czym wspominałem lub wspominałam"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "know-12",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najszybciej poprawia mi humor?",
+    "options": [
+      "Jedzenie",
+      "Sen",
+      "Żart",
+      "Bliskość"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "know-13",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który wydatek najłatwiej sobie usprawiedliwię?",
+    "options": [
+      "Podróże",
+      "Technologia",
+      "Ubrania",
+      "Jedzenie na mieście"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-14",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jaką rolę naturalnie przejmuję w grupie?",
+    "options": [
+      "Organizator",
+      "Rozładowuję atmosferę",
+      "Obserwator",
+      "Rozwiązuję problemy"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "know-15",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co bardziej mnie stresuje?",
+    "options": [
+      "Spóźnienie",
+      "Brak pieniędzy",
+      "Konflikt",
+      "Brak kontroli nad planem"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "know-16",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który wspólny plan wybrałbym na dziś?",
+    "options": [
+      "Spacer",
+      "Film",
+      "Wyjście do miasta",
+      "Gotowanie"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-17",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdybym miał lub miała nauczyć się czegoś nowego, co wybiorę?",
+    "options": [
+      "Język",
+      "Taniec",
+      "Gotowanie",
+      "Sport"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "know-18",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najbardziej cenię w wakacjach?",
+    "options": [
+      "Widoki",
+      "Jedzenie",
+      "Odpoczynek",
+      "Nowe doświadczenia"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-19",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co wybiorę w hotelu?",
+    "options": [
+      "Lepszy widok",
+      "Lepsze śniadanie",
+      "Lepszą lokalizację",
+      "Większy pokój"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-20",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jaki wieczór jest dla mnie najbardziej regenerujący?",
+    "options": [
+      "Samotny spokój",
+      "Czas we dwoje",
+      "Spotkanie ze znajomymi",
+      "Aktywność fizyczna"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "know-21",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Której rzeczy najtrudniej byłoby mi się pozbyć?",
+    "options": [
+      "Telefon",
+      "Samochód",
+      "Pamiątki",
+      "Ulubione ubrania"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "know-22",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jak najczęściej podejmuję ważne decyzje?",
+    "options": [
+      "Analizuję wszystko",
+      "Idę za intuicją",
+      "Pytam innych",
+      "Odwlekam"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "know-23",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najchętniej zaplanuję z dużym wyprzedzeniem?",
+    "options": [
+      "Wakacje",
+      "Finanse",
+      "Weekend",
+      "Prezenty"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "know-24",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który typ humoru najbardziej mnie bawi?",
+    "options": [
+      "Suchary",
+      "Ironia",
+      "Absurd",
+      "Żarty sytuacyjne"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "know-25",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co zrobię podczas długiego postoju w podróży?",
+    "options": [
+      "Pójdę coś zjeść",
+      "Zasypiam",
+      "Zwiedzam okolicę",
+      "Sprawdzam opóźnienie co minutę"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-26",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najbardziej lubię dostawać w wiadomościach?",
+    "options": [
+      "Memy",
+      "Miłe słowa",
+      "Konkretne plany",
+      "Zdjęcia z dnia"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "know-27",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Które domowe zadanie najmniej mi przeszkadza?",
+    "options": [
+      "Gotowanie",
+      "Odkurzanie",
+      "Zakupy",
+      "Pranie"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-28",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdybym zmienił lub zmieniła pracę, co byłoby najważniejsze?",
+    "options": [
+      "Zarobki",
+      "Spokój",
+      "Rozwój",
+      "Elastyczny czas"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "know-29",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jaki klimat mieszkania wybiorę?",
+    "options": [
+      "Nowoczesny",
+      "Przytulny",
+      "Minimalistyczny",
+      "Kolorowy i osobisty"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "know-30",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co wolę podczas zwiedzania?",
+    "options": [
+      "Najważniejsze atrakcje",
+      "Ukryte miejsca",
+      "Jedzenie",
+      "Spontaniczny spacer"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-31",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jak najchętniej świętuję sukces?",
+    "options": [
+      "Kolacją",
+      "Wyjazdem",
+      "Zakupem",
+      "W domu z bliskimi"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "know-32",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najbardziej mnie przekonuje w sporze?",
+    "options": [
+      "Fakty",
+      "Spokojny ton",
+      "Przykład",
+      "Czas na przemyślenie"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "know-33",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdybym mógł lub mogła mieć jedną supermoc, co wybiorę?",
+    "options": [
+      "Teleportację",
+      "Czytanie w myślach",
+      "Zatrzymywanie czasu",
+      "Niewidzialność"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "know-34",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jaką pogodę wybiorę na idealny dzień?",
+    "options": [
+      "Pełne słońce",
+      "Lekki chłód",
+      "Ciepły deszcz",
+      "Śnieg"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "know-35",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co zrobię najpierw po powrocie z podróży?",
+    "options": [
+      "Rozpakuję się",
+      "Zamówię jedzenie",
+      "Wezmę prysznic",
+      "Położę się"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-36",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jakie wspomnienie zachowuję najchętniej?",
+    "options": [
+      "Zdjęcie",
+      "Bilet lub drobiazg",
+      "Film",
+      "Samą historię"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "know-37",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który kompromis przychodzi mi najtrudniej?",
+    "options": [
+      "Pieniądze",
+      "Czas",
+      "Plan wyjazdu",
+      "Kontakty z innymi"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "know-38",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jak najchętniej spędzę urodziny?",
+    "options": [
+      "Duża impreza",
+      "Wyjazd",
+      "Kolacja we dwoje",
+      "Spokojny dzień"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "know-39",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co byłoby dla mnie gorsze przez tydzień?",
+    "options": [
+      "Brak internetu",
+      "Brak słodyczy",
+      "Brak samochodu",
+      "Brak seriali"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "know-40",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który wspólny cel najbardziej mnie ekscytuje?",
+    "options": [
+      "Podróż",
+      "Wspólne mieszkanie",
+      "Projekt lub biznes",
+      "Lepsza forma"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "know-41",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jak reaguję na niespodziewany prezent?",
+    "options": [
+      "Od razu się cieszę",
+      "Najpierw pytam po co",
+      "Czuję się niezręcznie",
+      "Chcę natychmiast się odwdzięczyć"
+    ],
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "know-42",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który zapach kojarzy mi się najlepiej?",
+    "options": [
+      "Kawa",
+      "Morze",
+      "Las",
+      "Świeże pranie"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "know-43",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co najchętniej zamówię na deser?",
+    "options": [
+      "Czekoladowe",
+      "Owocowe",
+      "Lody",
+      "Nic, wolę coś słonego"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "know-44",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jakiego typu zdjęcia robię najczęściej?",
+    "options": [
+      "Ludzi",
+      "Widoki",
+      "Jedzenie",
+      "Zabawne przypadkowe momenty"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "know-45",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co jest dla mnie ważniejsze w domu?",
+    "options": [
+      "Porządek",
+      "Wygoda",
+      "Wygląd",
+      "Dobra lokalizacja"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "know-46",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jak odpoczywam po trudnym tygodniu?",
+    "options": [
+      "Śpię",
+      "Wychodzę z domu",
+      "Gram lub oglądam",
+      "Spędzam czas z bliskimi"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "know-47",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Której cechy najbardziej szukam u ludzi?",
+    "options": [
+      "Szczerości",
+      "Humoru",
+      "Lojalności",
+      "Ambicji"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "know-48",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Jaką pamiątkę z podróży wybiorę?",
+    "options": [
+      "Magnes",
+      "Lokalne jedzenie",
+      "Zdjęcie",
+      "Coś praktycznego"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-49",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Co zrobię, gdy zgubimy drogę?",
+    "options": [
+      "Sprawdzę mapę",
+      "Zapytam kogoś",
+      "Będę improwizować",
+      "Zacznę się denerwować"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "know-50",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Który sposób okazywania uczuć jest mi najbliższy?",
+    "options": [
+      "Słowa",
+      "Dotyk",
+      "Pomoc",
+      "Wspólny czas"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-1",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej mówi „zaraz”, mając na myśli co najmniej pół godziny?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-2",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej przeprasza po kłótni?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-3",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej planuje wyjazdy?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-4",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej kupuje coś, czego nie planował?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-5",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto pierwszy zauważy, że w domu czegoś brakuje?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-6",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto dłużej szykuje się do wyjścia?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-7",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej zasypia podczas filmu?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-8",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej zaczyna rozmowę o przyszłości?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "who-9",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej zachowuje spokój w stresie?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-10",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej zmienia zdanie w ostatniej chwili?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-11",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej pamięta ważne daty?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "who-12",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto pierwszy zaproponuje spontaniczny wyjazd?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-13",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej podjada jedzenie drugiej osoby?",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "who-14",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej radzi sobie z mapą i nawigacją?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-15",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej robi zdjęcia podczas wyjazdu?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-16",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej wydaje pieniądze po wypłacie?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-17",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej potrzebuje pobyć sam lub sama?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-18",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto ma więcej cierpliwości do urzędów i formalności?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-19",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto pierwszy proponuje kompromis?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-20",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej rozładowuje napięcie żartem?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-21",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej wybiera prezenty?",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "who-22",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej zapomina, po co wszedł do pokoju?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-23",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej pilnuje wspólnego budżetu?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "who-24",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej nawiązuje kontakt z obcymi ludźmi?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-25",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej ma rację w sprawie pogody?",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "who-26",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto pierwszy wstaje podczas wakacji?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-27",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej namawia na deser?",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "who-28",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej gotuje bez przepisu?",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "who-29",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej wpada na rozwiązanie problemu?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-30",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej potrzebuje potwierdzenia, że wszystko jest dobrze?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-31",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej pamięta szczegóły pierwszych miesięcy związku?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "who-32",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej robi niespodzianki bez okazji?",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "who-33",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto bardziej przeżywa krytykę?",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "who-34",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej zaprzyjaźniłby się z sąsiadami?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-35",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej mówi przez sen?",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "who-36",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej pakuje walizkę?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-37",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej bierze za dużo rzeczy na wyjazd?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "who-38",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej zgodzi się na zwierzę w domu?",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "who-39",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej odkłada sprzątanie na później?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-40",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej organizuje romantyczny wieczór?",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "who-41",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej zaczyna trudną rozmowę?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "who-42",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto bardziej boi się zmian?",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "who-43",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto szybciej podejmie decyzję o przeprowadzce?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "who-44",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej proponuje nową restaurację?",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "who-45",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej negocjuje ceny?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "who-46",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej pamięta słowa piosenek?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-47",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto pierwszy zauważy, że druga osoba ma gorszy dzień?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "who-48",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej przesadza z planowaniem?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "who-49",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto lepiej odpoczywa bez poczucia winy?",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "who-50",
+    "mode": "who",
+    "type": "conversation",
+    "prompt": "Kto częściej mówi „wszystko jedno”, a potem ma zdanie?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-1",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Miesiąc bez seriali czy miesiąc bez restauracji?",
+    "options": [
+      "Bez seriali",
+      "Bez restauracji"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "dilemma-2",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wakacje luksusowe 3 dni czy budżetowe 10 dni?",
+    "options": [
+      "3 dni luksusu",
+      "10 dni budżetowo"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-3",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze znać prawdę czy czasem żyć w błogiej niewiedzy?",
+    "options": [
+      "Zawsze prawda",
+      "Czasem niewiedza"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "dilemma-4",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Spontaniczny wyjazd jutro czy perfekcyjny plan za pół roku?",
+    "options": [
+      "Jutro",
+      "Za pół roku"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-5",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Dom w centrum czy większy dom daleko od miasta?",
+    "options": [
+      "Centrum",
+      "Poza miastem"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "dilemma-6",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny biznes czy całkowicie osobne kariery?",
+    "options": [
+      "Wspólny biznes",
+      "Osobne kariery"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "dilemma-7",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Rok bez słodyczy czy rok bez alkoholu?",
+    "options": [
+      "Bez słodyczy",
+      "Bez alkoholu"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-8",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Codziennie wstawać o 5:00 czy codziennie kłaść się po 1:00?",
+    "options": [
+      "Wstawać o 5:00",
+      "Spać po 1:00"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-9",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zgubić wszystkie zdjęcia czy wszystkie wiadomości?",
+    "options": [
+      "Zdjęcia",
+      "Wiadomości"
+    ],
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "dilemma-10",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze mówić, co myślisz, czy nigdy nie móc narzekać?",
+    "options": [
+      "Mówić wszystko",
+      "Nigdy nie narzekać"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "dilemma-11",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Kolacja bez telefonów czy weekend bez internetu?",
+    "options": [
+      "Kolacja bez telefonów",
+      "Weekend bez internetu"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "dilemma-12",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny samochód marzeń czy dwa zwykłe samochody?",
+    "options": [
+      "Jeden wymarzony",
+      "Dwa zwykłe"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "dilemma-13",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieszkać rok nad morzem czy rok w górach?",
+    "options": [
+      "Nad morzem",
+      "W górach"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-14",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Znać datę największego sukcesu czy największej porażki?",
+    "options": [
+      "Sukcesu",
+      "Porażki"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "dilemma-15",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze planować randki czy zawsze działać spontanicznie?",
+    "options": [
+      "Planować",
+      "Spontanicznie"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-16",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć świetne mieszkanie w złej lokalizacji czy przeciętne w idealnej?",
+    "options": [
+      "Świetne mieszkanie",
+      "Idealna lokalizacja"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "dilemma-17",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Nigdy więcej nie gotować czy nigdy więcej nie zamawiać jedzenia?",
+    "options": [
+      "Nie gotować",
+      "Nie zamawiać"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "dilemma-18",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Podróżować tylko latem czy tylko zimą?",
+    "options": [
+      "Latem",
+      "Zimą"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-19",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wiedzieć, co partner myśli, czy móc cofnąć jedną kłótnię?",
+    "options": [
+      "Czytać myśli",
+      "Cofnąć kłótnię"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "dilemma-20",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Przeżyć ponownie pierwszą randkę czy najlepsze wakacje?",
+    "options": [
+      "Pierwsza randka",
+      "Najlepsze wakacje"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "dilemma-21",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć więcej czasu czy więcej pieniędzy?",
+    "options": [
+      "Czas",
+      "Pieniądze"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "dilemma-22",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze wybierać film czy zawsze wybierać restaurację?",
+    "options": [
+      "Film",
+      "Restaurację"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-23",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zorganizować wielkie wesele czy długą podróż poślubną?",
+    "options": [
+      "Wielkie wesele",
+      "Długa podróż"
+    ],
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "dilemma-24",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Nigdy się nie spóźniać czy nigdy niczego nie zapominać?",
+    "options": [
+      "Nie spóźniać się",
+      "Nie zapominać"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "dilemma-25",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć dom pełen zwierząt czy dom pełen roślin?",
+    "options": [
+      "Zwierzęta",
+      "Rośliny"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "dilemma-26",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Spędzić tydzień w namiocie czy tydzień bez wychodzenia z hotelu?",
+    "options": [
+      "Namiot",
+      "Hotel"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-27",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze jeść śniadanie na słodko czy zawsze na słono?",
+    "options": [
+      "Słodko",
+      "Słono"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "dilemma-28",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Oddać telefon na tydzień czy samochód na miesiąc?",
+    "options": [
+      "Telefon",
+      "Samochód"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "dilemma-29",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Móc teleportować się czy zatrzymywać czas?",
+    "options": [
+      "Teleportacja",
+      "Zatrzymanie czasu"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-30",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Nigdy więcej nie robić zdjęć czy nigdy ich nie oglądać?",
+    "options": [
+      "Nie robić",
+      "Nie oglądać"
+    ],
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "dilemma-31",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć zawsze rację czy zawsze szybko się godzić?",
+    "options": [
+      "Mieć rację",
+      "Szybko się godzić"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "dilemma-32",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólnie oszczędzać na jedno marzenie czy każde na własne?",
+    "options": [
+      "Jedno wspólne",
+      "Dwa osobne"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "dilemma-33",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Randka za 50 zł z pomysłem czy za 500 zł bez pomysłu?",
+    "options": [
+      "50 zł z pomysłem",
+      "500 zł bez pomysłu"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-34",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Rok podróżować kamperem czy rok mieszkać w jednym luksusowym miejscu?",
+    "options": [
+      "Kamper",
+      "Jedno miejsce"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-35",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć idealną pamięć czy nigdy się nie stresować?",
+    "options": [
+      "Idealna pamięć",
+      "Brak stresu"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "dilemma-36",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze słuchać tej samej muzyki czy oglądać te same filmy?",
+    "options": [
+      "Muzyka",
+      "Filmy"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-37",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zjeść bardzo ostre danie czy bardzo dziwny deser?",
+    "options": [
+      "Ostre danie",
+      "Dziwny deser"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "dilemma-38",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieszkać obok rodziny czy bardzo daleko, ale w wymarzonym miejscu?",
+    "options": [
+      "Blisko rodziny",
+      "Wymarzone miejsce"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "dilemma-39",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wygrać podróż bez możliwości wyboru kierunku czy dostać połowę jej wartości?",
+    "options": [
+      "Losowa podróż",
+      "Połowa pieniędzy"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-40",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Znać wszystkie przyszłe plany partnera czy wszystkie jego wspomnienia?",
+    "options": [
+      "Plany",
+      "Wspomnienia"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "dilemma-41",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze mówić dobranoc czy zawsze jeść razem śniadanie?",
+    "options": [
+      "Dobranoc",
+      "Śniadanie"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-42",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć jedną wspólną pasję czy wiele osobnych zainteresowań?",
+    "options": [
+      "Jedna wspólna",
+      "Wiele osobnych"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "dilemma-43",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Przez miesiąc zamieniać się obowiązkami czy telefonami?",
+    "options": [
+      "Obowiązki",
+      "Telefony"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-44",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Nigdy więcej nie korzystać z mapy czy prognozy pogody?",
+    "options": [
+      "Mapa",
+      "Pogoda"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-45",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć piękny widok z okna czy pięć minut do pracy?",
+    "options": [
+      "Widok",
+      "Blisko pracy"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "dilemma-46",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Spędzić Sylwestra na wielkiej imprezie czy tylko we dwoje?",
+    "options": [
+      "Impreza",
+      "We dwoje"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "dilemma-47",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Przyznać się od razu do błędu czy najpierw wszystko przemyśleć?",
+    "options": [
+      "Od razu",
+      "Po namyśle"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "dilemma-48",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze jechać na wakacje w nowe miejsce czy wracać do ulubionego?",
+    "options": [
+      "Nowe miejsca",
+      "Ulubione miejsce"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "dilemma-49",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Móc usunąć jedno złe wspomnienie czy zachować każdy szczegół dobrego?",
+    "options": [
+      "Usunąć złe",
+      "Zachować dobre"
+    ],
+    "category": "wspomnienia",
+    "level": 3
+  },
+  {
+    "id": "dilemma-50",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zjeść kolację w ciemności czy w całkowitej ciszy?",
+    "options": [
+      "W ciemności",
+      "W ciszy"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "scale-1",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak romantyczna powinna być wasza następna randka?",
+    "low": "zupełnie na luzie",
+    "high": "filmowa scena",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "scale-2",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak odważny ma być pomysł na wspólny weekend?",
+    "low": "pełen spokój",
+    "high": "historia, o której będziemy opowiadać latami",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "scale-3",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak luksusowy powinien być idealny hotel?",
+    "low": "łóżko i prysznic wystarczą",
+    "high": "królewski apartament",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "scale-4",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak szalony może być prezent bez okazji?",
+    "low": "drobny gest",
+    "high": "kompletne zaskoczenie",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "scale-5",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak spontaniczny może być plan na jutro?",
+    "low": "wszystko zapisane",
+    "high": "wychodzimy bez pytania dokąd",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "scale-6",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak wymagające ma być wspólne wyzwanie?",
+    "low": "prawie bez wysiłku",
+    "high": "test charakteru",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "scale-7",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ważne jest wspólne śniadanie?",
+    "low": "miły dodatek",
+    "high": "święty rytuał",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "scale-8",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak mocno przeżywasz spóźnienia?",
+    "low": "wcale",
+    "high": "katastrofa dnia",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "scale-9",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo lubisz niespodzianki?",
+    "low": "wolę wszystko wiedzieć",
+    "high": "zaskakuj mnie zawsze",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "scale-10",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak dokładnie planujesz wakacje?",
+    "low": "tylko bilet",
+    "high": "harmonogram co do minuty",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "scale-11",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak trudno byłoby ci żyć bez telefonu?",
+    "low": "bez problemu",
+    "high": "niemożliwe",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "scale-12",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ważny jest wygląd mieszkania?",
+    "low": "byle wygodnie",
+    "high": "każdy detal ma znaczenie",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "scale-13",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo lubisz rywalizację w grach?",
+    "low": "wynik nieważny",
+    "high": "gram po zwycięstwo",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "scale-14",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak szybko wybaczasz drobne błędy?",
+    "low": "potrzebuję czasu",
+    "high": "natychmiast odpuszczam",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "scale-15",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak duża ma być impreza urodzinowa?",
+    "low": "tylko my",
+    "high": "wszyscy, których znamy",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "scale-16",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak mocno odczuwasz potrzebę podróży?",
+    "low": "mogę zostać w domu",
+    "high": "ciągle chcę gdzieś jechać",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "scale-17",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ważne są prezenty materialne?",
+    "low": "prawie wcale",
+    "high": "bardzo mocno",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "scale-18",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak często potrzebujesz czasu tylko dla siebie?",
+    "low": "niemal nigdy",
+    "high": "codziennie",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "scale-19",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak poważnie traktujesz horoskopy i znaki?",
+    "low": "czysta zabawa",
+    "high": "to coś tłumaczy",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "scale-20",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo lubisz gotować dla drugiej osoby?",
+    "low": "raczej zamówię",
+    "high": "to mój język miłości",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "scale-21",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak dużą rolę odgrywa pieniądz w poczuciu bezpieczeństwa?",
+    "low": "niewielką",
+    "high": "ogromną",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "scale-22",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak chętnie zamieszkałbyś lub zamieszkałabyś za granicą?",
+    "low": "nie chcę wyjeżdżać",
+    "high": "pakuję się jutro",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "scale-23",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo lubisz wracać do starych zdjęć?",
+    "low": "prawie nigdy",
+    "high": "regularnie się wzruszam",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "scale-24",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak długo potrafisz być bez planu na dzień?",
+    "low": "godzinę",
+    "high": "cały tydzień",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "scale-25",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak mocno przeżywasz krytykę?",
+    "low": "szybko zapominam",
+    "high": "myślę o niej długo",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "scale-26",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo cenisz wspólne rytuały?",
+    "low": "nie są potrzebne",
+    "high": "budują całą relację",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "scale-27",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak odważnie eksperymentujesz z jedzeniem?",
+    "low": "tylko znane smaki",
+    "high": "spróbuję wszystkiego",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "scale-28",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak często chcesz poznawać nowych ludzi?",
+    "low": "rzadko",
+    "high": "przy każdej okazji",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "scale-29",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak duże znaczenie ma punktualność?",
+    "low": "pięć minut nic nie zmienia",
+    "high": "każda minuta ma znaczenie",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "scale-30",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak romantyczne powinny być rocznice?",
+    "low": "zwykły dzień",
+    "high": "wielkie święto",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "scale-31",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo chcesz mieć wspólny długoterminowy plan?",
+    "low": "zobaczymy, co będzie",
+    "high": "konkrety na kilka lat",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "scale-32",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak łatwo mówisz o swoich potrzebach?",
+    "low": "bardzo trudno",
+    "high": "zupełnie naturalnie",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "scale-33",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ważna jest dla ciebie cisza w domu?",
+    "low": "nie przeszkadza mi hałas",
+    "high": "potrzebuję jej codziennie",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "scale-34",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak dużo czasu potrzebujesz, by podjąć ważną decyzję?",
+    "low": "chwila",
+    "high": "wiele tygodni",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "scale-35",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo lubisz publiczne okazywanie uczuć?",
+    "low": "unikam",
+    "high": "uwielbiam",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "scale-36",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak mocno przywiązujesz się do miejsc?",
+    "low": "prawie wcale",
+    "high": "miejsce staje się częścią mnie",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "scale-37",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo potrzebujesz porządku?",
+    "low": "odnajduję się w chaosie",
+    "high": "wszystko ma swoje miejsce",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "scale-38",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak długo możesz podróżować bez wygód?",
+    "low": "jedna noc",
+    "high": "wiele tygodni",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "scale-39",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak poważnie traktujesz małe obietnice?",
+    "low": "liczy się intencja",
+    "high": "każda obietnica jest ważna",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "scale-40",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak wielkim marzeniem jest własny dom?",
+    "low": "nie jest potrzebny",
+    "high": "jeden z głównych celów",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "plan-1",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Darmowy tydzień na Malediwach",
+    "positives": [
+      "Piękny hotel",
+      "Pełne wyżywienie"
+    ],
+    "twist": "Lecicie z parą, której oboje nie znosicie",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "plan-2",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Mieszkanie marzeń za pół ceny",
+    "positives": [
+      "Idealna lokalizacja",
+      "Piękny widok"
+    ],
+    "twist": "Sąsiad codziennie ćwiczy na perkusji",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "plan-3",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Kolacja w najlepszej restauracji miasta",
+    "positives": [
+      "Wszystko gratis",
+      "Stolik przy oknie"
+    ],
+    "twist": "Telefon zostaje w depozycie na całą noc",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "plan-4",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Rok bez opłat za samochód",
+    "positives": [
+      "Pełne ubezpieczenie",
+      "Darmowe paliwo"
+    ],
+    "twist": "Samochód jest jaskrawo różowy",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-5",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Weekend w luksusowym spa",
+    "positives": [
+      "Wszystkie zabiegi gratis",
+      "Apartament tylko dla was"
+    ],
+    "twist": "Budzik na każdy zabieg zaczyna dzwonić o 6:00",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "plan-6",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Domek w górach na własność",
+    "positives": [
+      "Kominek",
+      "Niesamowity widok"
+    ],
+    "twist": "Do najbliższego sklepu są dwie godziny",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "plan-7",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wymarzony koncert w pierwszym rzędzie",
+    "positives": [
+      "Spotkanie z artystą",
+      "Darmowe napoje"
+    ],
+    "twist": "Musicie mieć identyczne kostiumy sceniczne",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-8",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Podróż dookoła świata",
+    "positives": [
+      "Wszystkie bilety opłacone",
+      "Najlepsze hotele"
+    ],
+    "twist": "Plan każdej godziny ustala obca osoba",
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "plan-9",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Nowy dom z ogromnym ogrodem",
+    "positives": [
+      "Brak kredytu",
+      "Wymarzona kuchnia"
+    ],
+    "twist": "Przez pięć lat nie możecie niczego przemalować",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "plan-10",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Karta do wszystkich restauracji za darmo",
+    "positives": [
+      "Dowolne danie",
+      "Bez limitu wizyt"
+    ],
+    "twist": "Zawsze wybiera dla was szef kuchni",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "plan-11",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Miesiąc wolnego od pracy",
+    "positives": [
+      "Pełne wynagrodzenie",
+      "Brak obowiązków"
+    ],
+    "twist": "Nie wolno opuścić własnego miasta",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "plan-12",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Prywatny kierowca na rok",
+    "positives": [
+      "Dostępny całą dobę",
+      "Każdy samochód"
+    ],
+    "twist": "Zawsze prowadzi wasz najbardziej gadatliwy znajomy",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-13",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealne wesele całkowicie za darmo",
+    "positives": [
+      "Wymarzone miejsce",
+      "Dowolne menu"
+    ],
+    "twist": "Listę gości ustala rodzina",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "plan-14",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wakacje w tajemniczym kierunku",
+    "positives": [
+      "Pierwsza klasa",
+      "Luksusowy hotel"
+    ],
+    "twist": "Kierunek poznajecie dopiero po wylądowaniu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "plan-15",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wspólna firma od pierwszego dnia przynosi zysk",
+    "positives": [
+      "Duże zarobki",
+      "Pełna swoboda"
+    ],
+    "twist": "Musicie pracować przy jednym biurku",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "plan-16",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Mieszkanie pięć minut od pracy",
+    "positives": [
+      "Niski czynsz",
+      "Dobra komunikacja"
+    ],
+    "twist": "W salonie nie ma żadnego okna",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "plan-17",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Domowe kino marzeń",
+    "positives": [
+      "Ogromny ekran",
+      "Najlepszy dźwięk"
+    ],
+    "twist": "Możecie oglądać tylko filmy sprzed 2000 roku",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-18",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Własna restauracja",
+    "positives": [
+      "Pełna sala codziennie",
+      "Świetny zespół"
+    ],
+    "twist": "W menu musi zostać danie, którego oboje nie lubicie",
+    "category": "jedzenie",
+    "level": 2
+  },
+  {
+    "id": "plan-19",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Rok podróży kamperem",
+    "positives": [
+      "Wszystkie koszty pokryte",
+      "Dowolna trasa"
+    ],
+    "twist": "Nie możecie nocować dwa razy w tym samym kraju",
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "plan-20",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealnie urządzona sypialnia",
+    "positives": [
+      "Najwygodniejsze łóżko",
+      "Pełne wygłuszenie"
+    ],
+    "twist": "Światło zawsze włącza się o 7:00",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "plan-21",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Darmowe zakupy przez jeden dzień",
+    "positives": [
+      "Brak limitu kwoty",
+      "Dowolny sklep"
+    ],
+    "twist": "Macie tylko jedną godzinę i jedną wspólną torbę",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-22",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Roczny abonament na randki",
+    "positives": [
+      "Co tydzień nowa atrakcja",
+      "Wszystko opłacone"
+    ],
+    "twist": "Nigdy nie wiecie, co będziecie robić",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "plan-23",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wyjazd na bezludną wyspę",
+    "positives": [
+      "Piękna plaża",
+      "Pełne zapasy"
+    ],
+    "twist": "Macie tylko jeden telefon bez internetu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "plan-24",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Własny basen przy domu",
+    "positives": [
+      "Podgrzewana woda",
+      "Piękne otoczenie"
+    ],
+    "twist": "Raz w tygodniu korzystają z niego wszyscy sąsiedzi",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "plan-25",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Zawsze idealna pogoda na wakacjach",
+    "positives": [
+      "Słońce według potrzeb",
+      "Brak deszczu"
+    ],
+    "twist": "W domu przez resztę roku pada codziennie",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "plan-26",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Możecie cofnąć jeden dzień",
+    "positives": [
+      "Pamiętacie wszystko",
+      "Zmienia się wynik"
+    ],
+    "twist": "Musicie przeżyć go ponownie dokładnie razem",
+    "category": "wspomnienia",
+    "level": 3
+  },
+  {
+    "id": "plan-27",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wygrywacie milion złotych",
+    "positives": [
+      "Bez podatku",
+      "Pieniądze od razu"
+    ],
+    "twist": "Całość musicie wydać wspólnie w 30 dni",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "plan-28",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealny pies trafia do waszego domu",
+    "positives": [
+      "Mądry i spokojny",
+      "Nie gubi sierści"
+    ],
+    "twist": "Budzi was codziennie o 5:30",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "plan-29",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Darmowe jedzenie na dowóz przez rok",
+    "positives": [
+      "Dowolna kuchnia",
+      "Bez limitu"
+    ],
+    "twist": "Każde zamówienie przychodzi godzinę za wcześnie",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "plan-30",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Własny apartament nad morzem",
+    "positives": [
+      "Widok z tarasu",
+      "Bez opłat"
+    ],
+    "twist": "Możecie być tam tylko poza sezonem",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "plan-31",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wymarzona garderoba",
+    "positives": [
+      "Pełna ubrań",
+      "Dopasowane rozmiary"
+    ],
+    "twist": "Nie możecie niczego dokupić przez dwa lata",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-32",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Rok bez sprzątania",
+    "positives": [
+      "Ktoś robi wszystko",
+      "Pełny porządek"
+    ],
+    "twist": "Osoba sprzątająca codziennie komentuje wasze nawyki",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "plan-33",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wspólny kurs dowolnej umiejętności",
+    "positives": [
+      "Najlepszy nauczyciel",
+      "Pełne wyposażenie"
+    ],
+    "twist": "Egzamin końcowy jest transmitowany na żywo",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-34",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Dom w miejscu z najpiękniejszym widokiem",
+    "positives": [
+      "Pełna cisza",
+      "Wysoki standard"
+    ],
+    "twist": "Internet działa tylko dwie godziny dziennie",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "plan-35",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Możecie jeść bez konsekwencji zdrowotnych",
+    "positives": [
+      "Dowolne ilości",
+      "Zawsze idealna forma"
+    ],
+    "twist": "Każde danie smakuje trochę jak brokuły",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "plan-36",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Podróż w czasie na pierwszą randkę",
+    "positives": [
+      "Pamiętacie przyszłość",
+      "Możecie obserwować siebie"
+    ],
+    "twist": "Nie wolno wam nic powiedzieć",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "plan-37",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealna rocznica w Paryżu",
+    "positives": [
+      "Luksusowy hotel",
+      "Prywatna kolacja"
+    ],
+    "twist": "Cały dzień pada ulewny deszcz",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "plan-38",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Nowa praca dla obojga",
+    "positives": [
+      "Dwa razy wyższe zarobki",
+      "Cztery dni pracy"
+    ],
+    "twist": "Pracujecie w przeciwnych godzinach",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "plan-39",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Darmowy remont całego mieszkania",
+    "positives": [
+      "Najlepsze materiały",
+      "Gotowe w tydzień"
+    ],
+    "twist": "Kolory wybiera losowanie",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "plan-40",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Każda wspólna podróż jest darmowa",
+    "positives": [
+      "Dowolny kierunek",
+      "Brak limitu"
+    ],
+    "twist": "Nie możecie robić żadnych zdjęć",
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "words-1",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "miłość",
+      "dom",
+      "podróż",
+      "kawa",
+      "film",
+      "deszcz",
+      "muzyka",
+      "sen",
+      "plaża",
+      "prezent",
+      "las",
+      "śmiech"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "words-2",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "noc",
+      "miasto",
+      "ogień",
+      "lód",
+      "serce",
+      "czas",
+      "droga",
+      "sekret",
+      "telefon",
+      "wino",
+      "góry",
+      "taniec"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "words-3",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "wakacje",
+      "hotel",
+      "mapa",
+      "słońce",
+      "pociąg",
+      "restauracja",
+      "zdjęcie",
+      "most",
+      "ogród",
+      "książka",
+      "spacer",
+      "burza"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "words-4",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "pizza",
+      "makaron",
+      "czekolada",
+      "śniadanie",
+      "kuchnia",
+      "kolacja",
+      "ser",
+      "owoce",
+      "kawa",
+      "grill",
+      "zupa",
+      "deser"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "words-5",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "Warszawa",
+      "morze",
+      "samochód",
+      "walizka",
+      "lotnisko",
+      "bilet",
+      "droga",
+      "hotel",
+      "widok",
+      "plaża",
+      "góry",
+      "mapa"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "words-6",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "kanapa",
+      "koc",
+      "serial",
+      "herbata",
+      "świeca",
+      "deszcz",
+      "cisza",
+      "sen",
+      "książka",
+      "muzyka",
+      "kot",
+      "wieczór"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-7",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "pierwsza randka",
+      "pierwszy pocałunek",
+      "wiadomość",
+      "zdjęcie",
+      "rocznica",
+      "prezent",
+      "podróż",
+      "śmiech",
+      "telefon",
+      "park",
+      "restauracja",
+      "noc"
+    ],
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "words-8",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "praca",
+      "urlop",
+      "budżet",
+      "dom",
+      "dziecko",
+      "zwierzę",
+      "samochód",
+      "miasto",
+      "marzenie",
+      "plan",
+      "zmiana",
+      "decyzja"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "words-9",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "zaufanie",
+      "bliskość",
+      "granica",
+      "wsparcie",
+      "rozmowa",
+      "cisza",
+      "szczerość",
+      "czas",
+      "dotyk",
+      "pomoc",
+      "obietnica",
+      "spokój"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "words-10",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "kosmita",
+      "jednorożec",
+      "wulkan",
+      "pirat",
+      "robot",
+      "duch",
+      "magia",
+      "księżyc",
+      "smok",
+      "wehikuł",
+      "supermoc",
+      "dinozaur"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "words-11",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "lato",
+      "zima",
+      "jesień",
+      "wiosna",
+      "śnieg",
+      "upał",
+      "wiatr",
+      "deszcz",
+      "słońce",
+      "burza",
+      "mgła",
+      "tęcza"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "words-12",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "rower",
+      "bieganie",
+      "siłownia",
+      "basen",
+      "spacer",
+      "góry",
+      "narty",
+      "taniec",
+      "joga",
+      "mecz",
+      "rakieta",
+      "piłka"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-13",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "telefon",
+      "ładowarka",
+      "internet",
+      "hasło",
+      "aplikacja",
+      "zdjęcie",
+      "wiadomość",
+      "film",
+      "gra",
+      "komputer",
+      "słuchawki",
+      "zegar"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-14",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "rodzina",
+      "przyjaciel",
+      "sąsiad",
+      "szef",
+      "kolega",
+      "dziecko",
+      "babcia",
+      "gość",
+      "para",
+      "zespół",
+      "znajomy",
+      "obcy"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "words-15",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "lot",
+      "rejs",
+      "pociąg",
+      "autobus",
+      "rower",
+      "kamper",
+      "prom",
+      "taksówka",
+      "metro",
+      "spacer",
+      "autostop",
+      "samochód"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "words-16",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "randka",
+      "kwiaty",
+      "list",
+      "świeca",
+      "kolacja",
+      "muzyka",
+      "dotyk",
+      "spacer",
+      "prezent",
+      "pocałunek",
+      "zachód słońca",
+      "hotel"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "words-17",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "pieniądze",
+      "kredyt",
+      "oszczędności",
+      "zakupy",
+      "rachunek",
+      "praca",
+      "premia",
+      "portfel",
+      "cena",
+      "plan",
+      "cel",
+      "ryzyko"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "words-18",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "klucz",
+      "drzwi",
+      "okno",
+      "schody",
+      "dach",
+      "piwnica",
+      "kuchnia",
+      "łóżko",
+      "stół",
+      "lustro",
+      "ogród",
+      "balkon"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-19",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "sukces",
+      "porażka",
+      "odwaga",
+      "strach",
+      "zmiana",
+      "nawyk",
+      "cel",
+      "wybór",
+      "próba",
+      "nauka",
+      "czas",
+      "szansa"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "words-20",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "muzyka",
+      "koncert",
+      "gitara",
+      "piosenka",
+      "refren",
+      "głos",
+      "radio",
+      "taniec",
+      "scena",
+      "bilet",
+      "słuchawki",
+      "melodia"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "words-21",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "kino",
+      "aktor",
+      "popcorn",
+      "ekran",
+      "finał",
+      "serial",
+      "komedia",
+      "horror",
+      "napisy",
+      "premiera",
+      "bohater",
+      "zwiastun"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "words-22",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "las",
+      "jezioro",
+      "rzeka",
+      "góra",
+      "łąka",
+      "kamień",
+      "drzewo",
+      "plaża",
+      "wyspa",
+      "wodospad",
+      "szlak",
+      "chmura"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "words-23",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "poranek",
+      "budzik",
+      "prysznic",
+      "kawa",
+      "śniadanie",
+      "praca",
+      "tramwaj",
+      "sen",
+      "łóżko",
+      "wiadomość",
+      "słońce",
+      "pośpiech"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-24",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "wieczór",
+      "kolacja",
+      "kanapa",
+      "serial",
+      "spacer",
+      "rozmowa",
+      "telefon",
+      "cisza",
+      "światło",
+      "sen",
+      "muzyka",
+      "koc"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-25",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "święta",
+      "choinka",
+      "prezent",
+      "rodzina",
+      "kolęda",
+      "stół",
+      "śnieg",
+      "lampki",
+      "tradycja",
+      "ciasto",
+      "gość",
+      "życzenia"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "words-26",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "urodziny",
+      "tort",
+      "świeczka",
+      "prezent",
+      "goście",
+      "życzenia",
+      "balon",
+      "muzyka",
+      "zdjęcie",
+      "niespodzianka",
+      "kolacja",
+      "rok"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "words-27",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "lotnisko",
+      "paszport",
+      "bagaż",
+      "bramka",
+      "samolot",
+      "bilet",
+      "kontrola",
+      "opóźnienie",
+      "kawa",
+      "okno",
+      "start",
+      "lądowanie"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "words-28",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "restauracja",
+      "menu",
+      "kelner",
+      "stolik",
+      "rachunek",
+      "deser",
+      "wino",
+      "kuchnia",
+      "rezerwacja",
+      "smak",
+      "serwetka",
+      "świeca"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "words-29",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "przeprowadzka",
+      "karton",
+      "klucz",
+      "adres",
+      "sąsiad",
+      "remont",
+      "mebel",
+      "ściana",
+      "samochód",
+      "pomoc",
+      "bałagan",
+      "początek"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "words-30",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "kłótnia",
+      "cisza",
+      "przeprosiny",
+      "argument",
+      "emocja",
+      "czas",
+      "rozmowa",
+      "kompromis",
+      "złość",
+      "dotyk",
+      "spokój",
+      "wniosek"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "words-31",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "marzenie",
+      "lista",
+      "podróż",
+      "dom",
+      "praca",
+      "rodzina",
+      "wolność",
+      "spokój",
+      "przygoda",
+      "plan",
+      "odwaga",
+      "czas"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "words-32",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "pies",
+      "kot",
+      "smycz",
+      "miska",
+      "spacer",
+      "sierść",
+      "kanapa",
+      "weterynarz",
+      "zabawka",
+      "łapa",
+      "sen",
+      "dom"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "words-33",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "samochód",
+      "kluczyk",
+      "paliwo",
+      "radio",
+      "korek",
+      "droga",
+      "parking",
+      "mandat",
+      "mapa",
+      "myjnia",
+      "opona",
+      "podróż"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-34",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "zakupy",
+      "koszyk",
+      "lista",
+      "promocja",
+      "kasa",
+      "paragon",
+      "torba",
+      "sklep",
+      "cena",
+      "kolejka",
+      "produkt",
+      "karta"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "words-35",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "sen",
+      "poduszka",
+      "kołdra",
+      "budzik",
+      "noc",
+      "marzenie",
+      "cisza",
+      "chrapanie",
+      "światło",
+      "łóżko",
+      "zmęczenie",
+      "poranek"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "words-36",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "woda",
+      "ogień",
+      "ziemia",
+      "powietrze",
+      "lód",
+      "para",
+      "piasek",
+      "kamień",
+      "deszcz",
+      "słońce",
+      "wiatr",
+      "cień"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "words-37",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "szczęście",
+      "spokój",
+      "zaufanie",
+      "radość",
+      "wdzięczność",
+      "duma",
+      "nadzieja",
+      "odwaga",
+      "bliskość",
+      "wolność",
+      "bezpieczeństwo",
+      "miłość"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "words-38",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "zegarek",
+      "kalendarz",
+      "minuta",
+      "rok",
+      "przeszłość",
+      "przyszłość",
+      "termin",
+      "spóźnienie",
+      "chwila",
+      "weekend",
+      "urlop",
+      "rocznica"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "words-39",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "Warszawa",
+      "Kraków",
+      "Gdańsk",
+      "Paryż",
+      "Rzym",
+      "Londyn",
+      "Praga",
+      "Split",
+      "Reykjavik",
+      "Palermo",
+      "Wiedeń",
+      "Berlin"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "words-40",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "chipsy",
+      "cola",
+      "pizza",
+      "lody",
+      "burger",
+      "popcorn",
+      "czekolada",
+      "kebab",
+      "frytki",
+      "ciastko",
+      "ser",
+      "wino"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "story-1",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki był moment, w którym pierwszy raz pomyślałeś lub pomyślałaś, że to może być coś poważnego?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "story-2",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Które wspólne wspomnienie zawsze poprawia ci humor?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-3",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka mała rzecz z początku relacji najbardziej utkwiła ci w pamięci?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-4",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który wspólny wyjazd zmienił coś między wami?",
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "story-5",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Z czego jako para jesteście najbardziej dumni?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "story-6",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie wspólne zdjęcie najlepiej opowiada waszą historię?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-7",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jak zapamiętałeś lub zapamiętałaś pierwszą dłuższą rozmowę?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-8",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Która pierwsza wspólna decyzja była naprawdę ważna?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "story-9",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki drobny rytuał powstał między wami przypadkiem?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "story-10",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Kiedy najbardziej poczułeś lub poczułaś, że możecie na sobie polegać?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "story-11",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który dzień chętnie przeżyłbyś lub przeżyłabyś jeszcze raz?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-12",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki wspólny żart rozumiecie tylko wy?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "story-13",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka była wasza najbardziej nieudana randka i dlaczego dziś jest zabawna?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "story-14",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który prezent miał dla ciebie większe znaczenie, niż druga osoba mogła przypuszczać?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "story-15",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Co pamiętasz z pierwszego spotkania, czego druga osoba może nie pamiętać?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-16",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Kiedy po raz pierwszy zobaczyłeś lub zobaczyłaś partnera w zupełnie nowej roli?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "story-17",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki wspólny problem ostatecznie was wzmocnił?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "story-18",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Które wakacyjne wspomnienie ma najlepszą historię w tle?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "story-19",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jak zmieniliście się od początku relacji?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "story-20",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki komplement od partnera pamiętasz do dziś?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "story-21",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który wspólny posiłek wspominasz najlepiej?",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "story-22",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki był wasz najbardziej spontaniczny wspólny plan?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-23",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Kiedy ostatnio pomyślałeś lub pomyślałaś: „dobrze, że jesteśmy razem”?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "story-24",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka rzecz, która kiedyś was różniła, dziś was bawi?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "story-25",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jak wyglądał pierwszy moment, w którym poznaliście swoich bliskich?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-26",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który wspólny zakup miał największy wpływ na codzienność?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "story-27",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie miejsce stało się „waszym miejscem”?",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "story-28",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki kryzys organizacyjny na wyjeździe dziś wspominacie z uśmiechem?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "story-29",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Która rozmowa najbardziej zmieniła sposób, w jaki się rozumiecie?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "story-30",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie pierwsze wrażenie o partnerze okazało się całkowicie błędne?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "story-31",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki etap relacji był dla was największą zmianą?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "story-32",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Która wspólna tradycja jest dla ciebie najważniejsza?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "story-33",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki był najbardziej zaskakujący moment waszej relacji?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-34",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Kiedy partner zrobił coś małego, co miało ogromne znaczenie?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "story-35",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie wspólne osiągnięcie kosztowało was najwięcej pracy?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "story-36",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Które słowo lub zdanie kojarzy ci się z początkiem waszej relacji?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-37",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka piosenka najlepiej pasuje do konkretnego etapu waszej historii?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-38",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Co zrobiliście razem pierwszy raz dopiero dzięki tej relacji?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-39",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jak wyglądała wasza pierwsza wspólna podróż od strony organizacji?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "story-40",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Która chwila była kompletnie zwyczajna, ale została w pamięci?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "story-41",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka zmiana w partnerze najbardziej cię cieszy?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "story-42",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Co z początku relacji zachowalibyście dokładnie bez zmian?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "story-43",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka historia najlepiej pokazuje, jak różne macie charaktery?",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "story-44",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który wspólny wieczór był idealny mimo braku planu?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-45",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Co kiedyś wydawało się trudne, a dziś robicie naturalnie?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "story-46",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie miejsce chcielibyście kiedyś odwiedzić ponownie ze względu na wspomnienia?",
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "story-47",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Kiedy po raz pierwszy poczułeś lub poczułaś się naprawdę wysłuchany lub wysłuchana?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "story-48",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki przedmiot w domu ma dla was wspólną historię?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "story-49",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Która decyzja wymagała od was największego zaufania?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "story-50",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie wspomnienie opowiedziałbyś lub opowiedziałabyś komuś jako pierwsze, opisując waszą relację?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "tell-1",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Czego ostatnio najbardziej potrzebujesz ode mnie?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-2",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co sprawia, że czujesz się naprawdę kochany lub kochana?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "tell-3",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak wyglądałby nasz idealny zwykły dzień?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-4",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Czego chciałbyś lub chciałabyś spróbować razem w tym roku?",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "tell-5",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co we mnie najbardziej cię uspokaja?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-6",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaki temat odkładamy, a warto o nim spokojnie porozmawiać?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-7",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co chciałbyś lub chciałabyś, żebym częściej zauważał lub zauważała?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-8",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "W jakiej sytuacji najbardziej potrzebujesz wsparcia zamiast rozwiązania?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-9",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co oznacza dla ciebie „dobry związek” w codziennym życiu?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-10",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej odpoczywać razem?",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "tell-11",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaki wspólny cel dałby ci najwięcej energii?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "tell-12",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co mogę zrobić, gdy widzę, że masz gorszy dzień?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-13",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Który sposób okazywania uczuć działa na ciebie najmocniej?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "tell-14",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakiej wspólnej tradycji jeszcze nam brakuje?",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "tell-15",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Czego nauczyła cię nasza relacja o tobie samym lub samej?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-16",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak rozumiesz sprawiedliwy podział obowiązków?",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "tell-17",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "O jakim miejscu marzysz, żeby pojechać tam razem?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "tell-18",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Której swojej granicy chciałbyś lub chciałabyś lepiej pilnować?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-19",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co daje ci największe poczucie bezpieczeństwa?",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "tell-20",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak wyobrażasz sobie nas za pięć lat, bez presji na idealny plan?",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "tell-21",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co najczęściej błędnie interpretujemy w swoim zachowaniu?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-22",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakie małe gesty są dla ciebie ważniejsze niż wielkie niespodzianki?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "tell-23",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co pomaga ci wrócić do rozmowy po konflikcie?",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "tell-24",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej chronić czas tylko dla nas?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-25",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaką rzecz chciałbyś lub chciałabyś odważyć się zrobić razem?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "tell-26",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co ostatnio dało ci poczucie dumy z siebie?",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "tell-27",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Który aspekt wspólnej codzienności działa naprawdę dobrze?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-28",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "W czym czujesz, że najlepiej się uzupełniamy?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-29",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Czego nie chcesz poświęcać nawet dla ważnego wspólnego celu?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-30",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak wygląda dla ciebie idealne przepraszanie?",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "tell-31",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co pomaga ci mówić szczerze o trudnych rzeczach?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-32",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakie wspólne doświadczenie najbardziej chciałbyś lub chciałabyś sobie podarować?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "tell-33",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej świętować małe sukcesy?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-34",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaka rzecz z przyszłości ekscytuje cię, a jaka trochę przeraża?",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "tell-35",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "W jakich sytuacjach najbardziej cenisz moją obecność?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-36",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co jest dla ciebie ważniejsze: wspólny plan czy przestrzeń na spontaniczność?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "tell-37",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak rozumiesz lojalność w związku?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-38",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Który wspólny nawyk warto wprowadzić od przyszłego tygodnia?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-39",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co chciałbyś lub chciałabyś częściej robić tylko dla przyjemności?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-40",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej rozmawiać o pieniądzach?",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "tell-41",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co w naszym sposobie podróżowania najbardziej ci odpowiada?",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "tell-42",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaki rodzaj odpoczynku daje ci najwięcej energii?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-43",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co oznacza dla ciebie „mieć własną przestrzeń” w relacji?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-44",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "W czym chciałbyś lub chciałabyś dostać ode mnie więcej zaufania?",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "tell-45",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Który komplement chciałbyś lub chciałabyś słyszeć częściej?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "tell-46",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaką decyzję wolisz podejmować wspólnie, a jaką samodzielnie?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "tell-47",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co jest dla ciebie sygnałem, że naprawdę cię słucham?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-48",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakie ryzyko warto byłoby wspólnie podjąć?",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "tell-49",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy sprawić, żeby zwykłe dni były trochę lepsze?",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "tell-50",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Czego boisz się w trudnych rozmowach?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "tell-51",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co chciałbyś lub chciałabyś zachować w naszej relacji niezależnie od zmian?",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "tell-52",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakiej formy czułości najbardziej potrzebujesz w stresie?",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "tell-53",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co oznacza dla ciebie wspólny sukces?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "tell-54",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej zauważać swoje starania?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "tell-55",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakie pytanie chciałbyś lub chciałabyś mi zadać, ale zwykle nie ma na nie czasu?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "challenge-1",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Powiedzcie sobie po trzy rzeczy, które ostatnio w sobie doceniliście.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "challenge-2",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie randkę za maksymalnie 100 zł.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "challenge-3",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie wspólne zdjęcie i napiszcie jedno zdanie, dlaczego jest ważne.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "challenge-4",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez pięć minut tańczcie do losowej piosenki.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-5",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie sobie nawzajem napój dokładnie tak, jak druga osoba lubi.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "challenge-6",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Ustalcie jedną małą rzecz, którą zrobicie razem w tym tygodniu.",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "challenge-7",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Odłóżcie telefony na 20 minut i pójdźcie na spacer.",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "challenge-8",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba wybiera jedną piosenkę, która kojarzy jej się z partnerem.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "challenge-9",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przygotujcie wspólnie deser z tego, co macie w domu.",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "challenge-10",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Napiszcie po jednym krótkim liście do siebie i przeczytajcie je na głos.",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "challenge-11",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez dwie minuty patrzcie sobie w oczy bez rozmawiania.",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "challenge-12",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie listę pięciu miejsc, które chcecie razem odwiedzić.",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "challenge-13",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zamieńcie się obowiązkami, których zwykle nie wykonujecie.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "challenge-14",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wymyślcie nazwę dla waszego hipotetycznego wspólnego biznesu.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-15",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie sobie zdjęcie odtwarzające jedno ze starszych wspólnych zdjęć.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "challenge-16",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba wybiera jedną rzecz, którą druga zrobiła dobrze w tym tygodniu.",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "challenge-17",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie śniadanie, którego jeszcze nigdy razem nie przygotowywaliście.",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "challenge-18",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie losowe miejsce w promieniu 20 km i zaplanujcie krótki wypad.",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "challenge-19",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez dziesięć minut rozmawiajcie bez używania telefonów i telewizora.",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "challenge-20",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Stwórzcie wspólną playlistę z dziesięcioma piosenkami.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-21",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba opowiada o jednym marzeniu z dzieciństwa.",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "challenge-22",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wymyślcie własny rytuał na zakończenie trudnego dnia.",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "challenge-23",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie wspólnie jedną rzecz, którą odkładacie od co najmniej tygodnia.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "challenge-24",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie jednodniową wycieczkę bez sprawdzania mediów społecznościowych.",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "challenge-25",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba wymyśla jedno zabawne hasło opisujące waszą relację.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-26",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przygotujcie kolację z maksymalnie pięciu składników.",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "challenge-27",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie jeden wspólny cel na najbliższy miesiąc i zapiszcie pierwszy krok.",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "challenge-28",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zadzwońcie do kogoś bliskiego, z kim dawno nie rozmawialiście.",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "challenge-29",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez pięć minut wspominajcie tylko zabawne sytuacje z wyjazdów.",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "challenge-30",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie listę rzeczy, które chcielibyście zrobić pierwszy raz razem.",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "challenge-31",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba przygotowuje drugiej małą niespodziankę bez wydawania pieniędzy.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "challenge-32",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wymyślcie idealny weekend, ale każde z was może wybrać tylko jedną atrakcję.",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "challenge-33",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przejrzyjcie wspólne zdjęcia z jednego miesiąca lub wyjazdu.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "challenge-34",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zagrajcie w kamień, papier, nożyce. Przegrany robi wybrany napój.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-35",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba mówi jedną rzecz, za którą jest dziś wdzięczna.",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "challenge-36",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie wieczór tematyczny inspirowany wybranym krajem.",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "challenge-37",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie jedną rzecz, którą przez tydzień będziecie robić bardziej świadomie.",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "challenge-38",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Stwórzcie wspólną listę „kiedyś zrobimy” i wybierzcie jedną realną rzecz.",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "challenge-39",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez trzy minuty każda osoba opowiada, co ostatnio zaprząta jej głowę.",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "challenge-40",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie dziesięciominutowy masaż na zmianę.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "challenge-41",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wymyślcie własne święto pary i jego jedną tradycję.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-42",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie dzień bez wydawania pieniędzy poza koniecznymi wydatkami.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "challenge-43",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba wybiera jedną rzecz, której chciałaby nauczyć partnera.",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "challenge-44",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie wspólnie krótką listę rzeczy do spakowania na wymarzony wyjazd.",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "challenge-45",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Ułóżcie pięć pytań, które chcielibyście sobie zadać za rok.",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "challenge-46",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba opisuje idealny poranek w trzech zdaniach.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "challenge-47",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przygotujcie przekąskę i obejrzyjcie pierwszy odcinek serialu wybranego losowo.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "challenge-48",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie jedną wspólną przestrzeń i uporządkujcie ją przez dziesięć minut.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "challenge-49",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Nagrajcie krótką wiadomość głosową do was z przyszłości.",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "challenge-50",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie jedno zdjęcie, które ma symbolizować dzisiejszy dzień.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-who-1",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej zaczyna pakowanie przed wyjazdem?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 2
+  },
+  {
+    "id": "v03-who-2",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej sprawdza pogodę kilka razy dziennie?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-3",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej odnajduje drogę bez mapy?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-4",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej kupuje coś pod wpływem chwili?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-5",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej przejmuje się opinią innych?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-6",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej wybacza drobne pomyłki?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-who-7",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej rozpoczyna poważną rozmowę?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-8",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej pamięta daty i rocznice?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-9",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej proponuje wspólny spacer?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-10",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto dłużej wybiera film na wieczór?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-11",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto łatwiej nawiązuje rozmowę z obcymi?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-who-12",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej przyznaje się do błędu?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-13",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej zostawia kubek w przypadkowym miejscu?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-14",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej radzi sobie z niespodziewaną zmianą planu?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-15",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto ma większą ochotę na spontaniczny weekend?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-16",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej pamięta o zabraniu ładowarki?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 2
+  },
+  {
+    "id": "v03-who-17",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej lubi robić zdjęcia?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-18",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto łatwiej odpuszcza niepotrzebny spór?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-19",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej proponuje zamówienie jedzenia?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-20",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej organizuje większe spotkanie?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-21",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej potrzebuje czasu w samotności?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-who-22",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej nuci przypadkowe piosenki?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-23",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej zauważa zmianę nastroju partnera?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-24",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto chętniej próbuje nieznanego jedzenia?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-25",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej lubi niespodzianki?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-26",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej planuje kilka miesięcy do przodu?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-who-27",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej zasypia po ciężkim dniu?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-28",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto dłużej trzyma urazę po kłótni?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-29",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej robi listy zadań?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-30",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej negocjuje ceny lub warunki?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-31",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto pierwszy proponuje przerwę, gdy rozmowa robi się zbyt gorąca?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 2
+  },
+  {
+    "id": "v03-who-32",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej wybiera deser?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-33",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej lubi być gospodarzem spotkania?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-34",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej wymyśla przezwiska?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-35",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej podejmuje decyzję w restauracji?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-36",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej mówi „jeszcze pięć minut”?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-who-37",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej lubi długie podróże samochodem?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-38",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej zaczyna nowy serial?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-39",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto łatwiej zmienia zdanie po dobrym argumencie?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-40",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej proponuje wspólne zdjęcie?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-41",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej zachowuje spokój w kolejce lub korku?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-who-42",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej lubi planować urodziny?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-43",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej mówi wprost, czego potrzebuje?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-44",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej zauważa bałagan?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-45",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej wraca po zapomnianą rzecz?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-46",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto bardziej lubi świąteczne przygotowania?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 2
+  },
+  {
+    "id": "v03-who-47",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej pamięta historie opowiadane przez znajomych?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-48",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej sprawdza menu restauracji przed wyjściem?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-who-49",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej podejmuje ryzyko?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-who-50",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej zmienia pozycję podczas oglądania filmu?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-1",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny wolny piątek czy wspólna wolna niedziela?",
+    "options": [
+      "Piątek",
+      "Niedziela"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-2",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Jedna długa podróż rocznie czy cztery krótkie wyjazdy?",
+    "options": [
+      "Długa podróż",
+      "Krótkie wyjazdy"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-3",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze mieć idealną pogodę czy zawsze tanie loty?",
+    "options": [
+      "Idealna pogoda",
+      "Tanie loty"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-4",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieszkanie z wielkim balkonem czy z wielką kuchnią?",
+    "options": [
+      "Balkon",
+      "Kuchnia"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-5",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Miesiąc bez słodyczy czy miesiąc bez zamawiania jedzenia?",
+    "options": [
+      "Bez słodyczy",
+      "Bez zamawiania"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-6",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wiedzieć dokładnie, co partner myśli przez jeden dzień, czy móc cofnąć jedną kłótnię?",
+    "options": [
+      "Czytanie myśli",
+      "Cofnięcie kłótni"
+    ],
+    "category": "absurdalne",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-7",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Randka zaplanowana przez partnera czy całkowicie losowa?",
+    "options": [
+      "Plan partnera",
+      "Losowa"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-8",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Dom blisko natury czy mieszkanie w centrum?",
+    "options": [
+      "Blisko natury",
+      "Centrum"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-9",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny kurs gotowania czy wspólny kurs tańca?",
+    "options": [
+      "Gotowanie",
+      "Taniec"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-10",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze przyjeżdżać za wcześnie czy zawsze pięć minut za późno?",
+    "options": [
+      "Za wcześnie",
+      "Za późno"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-11",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Jedna wspólna pasja czy wiele osobnych zainteresowań?",
+    "options": [
+      "Wspólna pasja",
+      "Osobne zainteresowania"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-12",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Dostać darmowe bilety na koncert czy darmowy weekend w hotelu?",
+    "options": [
+      "Koncert",
+      "Hotel"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-13",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Przez rok nie oglądać seriali czy nie korzystać z social mediów?",
+    "options": [
+      "Bez seriali",
+      "Bez social mediów"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-14",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wakacje bez planu czy plan rozpisany na każdą godzinę?",
+    "options": [
+      "Bez planu",
+      "Dokładny plan"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-15",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć zawsze wolny poranek czy zawsze wolny wieczór?",
+    "options": [
+      "Poranek",
+      "Wieczór"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-16",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Dostać wspomnienie w formie filmu czy albumu zdjęć?",
+    "options": [
+      "Film",
+      "Album"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-17",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Przenieść się do wymarzonego miasta czy zostać blisko rodziny?",
+    "options": [
+      "Wymarzone miasto",
+      "Blisko rodziny"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-dilemma-18",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny budżet na zachcianki czy osobne kieszonkowe?",
+    "options": [
+      "Wspólny",
+      "Osobne"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-dilemma-19",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze wygrywać spory czy zawsze szybko się godzić?",
+    "options": [
+      "Wygrywać",
+      "Szybko się godzić"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-20",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Kolacja degustacyjna czy uliczne jedzenie w nowym mieście?",
+    "options": [
+      "Degustacja",
+      "Street food"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-21",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Pół roku w podróży czy pół roku w wymarzonym domu?",
+    "options": [
+      "Podróż",
+      "Dom"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-22",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Otrzymać idealny prezent czy idealnie zaplanowany dzień?",
+    "options": [
+      "Prezent",
+      "Dzień"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-23",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze mówić wszystko od razu czy najpierw spokojnie przemyśleć?",
+    "options": [
+      "Od razu",
+      "Po namyśle"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-24",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny pies czy wspólny ogród?",
+    "options": [
+      "Pies",
+      "Ogród"
+    ],
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-25",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Jedna noc w luksusowym miejscu czy tydzień w prostym domku?",
+    "options": [
+      "Luksusowa noc",
+      "Tydzień w domku"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-26",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Poznać przyszłość związku czy jeszcze raz przeżyć jego początek?",
+    "options": [
+      "Poznać przyszłość",
+      "Przeżyć początek"
+    ],
+    "category": "wspomnienia",
+    "level": 3
+  },
+  {
+    "id": "v03-dilemma-27",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze mieć energię rano czy nigdy nie być zmęczonym wieczorem?",
+    "options": [
+      "Energia rano",
+      "Energia wieczorem"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-28",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólnie prowadzić firmę czy nigdy nie rozmawiać o pracy w domu?",
+    "options": [
+      "Wspólna firma",
+      "Praca poza domem"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-dilemma-29",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wygrać duże pieniądze czy dostać rok wolnego czasu?",
+    "options": [
+      "Pieniądze",
+      "Wolny rok"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-30",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze wybierać muzykę w samochodzie czy film na wieczór?",
+    "options": [
+      "Muzyka",
+      "Film"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-31",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Spędzić weekend bez telefonu czy bez samochodu?",
+    "options": [
+      "Bez telefonu",
+      "Bez samochodu"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-32",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Móc teleportować się na randkę czy zatrzymywać czas podczas randki?",
+    "options": [
+      "Teleportacja",
+      "Zatrzymanie czasu"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-33",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Mieć jedną perfekcyjną rocznicę czy wiele małych niespodzianek?",
+    "options": [
+      "Perfekcyjna rocznica",
+      "Małe niespodzianki"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-34",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zamienić się obowiązkami na tydzień czy planami dnia na miesiąc?",
+    "options": [
+      "Obowiązki",
+      "Plany dnia"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-dilemma-35",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze znać koszt wyjazdu z góry czy zawsze mieć dodatkową niespodziankę w planie?",
+    "options": [
+      "Znany koszt",
+      "Niespodzianka"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-36",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Raz w tygodniu randka na mieście czy codziennie pół godziny bez telefonów?",
+    "options": [
+      "Randka na mieście",
+      "Czas bez telefonów"
+    ],
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-38",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Oglądać tylko komedie czy tylko thrillery przez rok?",
+    "options": [
+      "Komedie",
+      "Thrillery"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-dilemma-39",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Zawsze dostawać szczere odpowiedzi czy zawsze idealne wsparcie?",
+    "options": [
+      "Szczerość",
+      "Wsparcie"
+    ],
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "v03-dilemma-40",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólny album co roku czy jedna wielka kronika całej relacji?",
+    "options": [
+      "Album co roku",
+      "Jedna kronika"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-know-1",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy mam całkowicie wolny dzień, najczęściej wybiorę…",
+    "options": [
+      "odpoczynek w domu",
+      "wyjście na miasto",
+      "aktywny plan",
+      "spontaniczny wyjazd"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-know-2",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej motywuje mnie…",
+    "options": [
+      "konkretny cel",
+      "wsparcie bliskiej osoby",
+      "rywalizacja",
+      "swoboda działania"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "v03-know-3",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "W hotelu najbardziej zwracam uwagę na…",
+    "options": [
+      "łóżko",
+      "lokalizację",
+      "śniadanie",
+      "widok"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-know-4",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najchętniej dostaję komplement dotyczący…",
+    "options": [
+      "wyglądu",
+      "charakteru",
+      "umiejętności",
+      "tego, jak wpływam na innych"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-know-5",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy plan nagle się zmienia, zwykle…",
+    "options": [
+      "cieszę się zmianą",
+      "szybko układam nowy plan",
+      "potrzebuję chwili",
+      "irytuję się"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-know-6",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najlepsza forma odpoczynku to dla mnie…",
+    "options": [
+      "sen",
+      "spacer",
+      "serial lub gra",
+      "spotkanie z ludźmi"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-know-7",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "W podróży najbardziej stresuje mnie…",
+    "options": [
+      "spóźnienie",
+      "brak planu",
+      "koszty",
+      "tłum ludzi"
+    ],
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "v03-know-8",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najłatwiej rozmawia mi się o trudnych rzeczach…",
+    "options": [
+      "od razu",
+      "podczas spaceru",
+      "po napisaniu wiadomości",
+      "po chwili ciszy"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-know-9",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej cenię prezent, który jest…",
+    "options": [
+      "praktyczny",
+      "osobisty",
+      "zaskakujący",
+      "wspólnym przeżyciem"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-know-10",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy jestem głodny lub głodna, najczęściej wybiorę…",
+    "options": [
+      "coś znanego",
+      "coś nowego",
+      "coś szybkiego",
+      "coś słodkiego"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-know-11",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Wspólną przyszłość najchętniej planuję…",
+    "options": [
+      "dokładnie",
+      "w ogólnych zarysach",
+      "krok po kroku",
+      "prawie wcale"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-know-12",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej nie lubię, gdy ktoś…",
+    "options": [
+      "spóźnia się",
+      "nie słucha",
+      "zmienia zdanie bez słowa",
+      "obiecuje i nie robi"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-know-13",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Moje idealne tempo zwiedzania to…",
+    "options": [
+      "bardzo intensywne",
+      "spokojne",
+      "mieszane",
+      "prawie bez planu"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-know-14",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej poprawia mi humor…",
+    "options": [
+      "jedzenie",
+      "rozmowa",
+      "śmieszny film",
+      "ruch"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-know-15",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy potrzebuję wsparcia, wolę…",
+    "options": [
+      "radę",
+      "przytulenie",
+      "wysłuchanie",
+      "konkretną pomoc"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-know-16",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej romantyczne jest dla mnie…",
+    "options": [
+      "niespodzianka",
+      "czas i uwaga",
+      "słowa",
+      "wspólne miejsce"
+    ],
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v03-know-17",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najczęściej odkładam na później…",
+    "options": [
+      "porządki",
+      "trudną rozmowę",
+      "formalności",
+      "odpoczynek"
+    ],
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-know-18",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy wybieram restaurację, najważniejsze jest…",
+    "options": [
+      "menu",
+      "atmosfera",
+      "cena",
+      "opinie"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-know-19",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najchętniej uczę się czegoś nowego przez…",
+    "options": [
+      "praktykę",
+      "film lub kurs",
+      "rozmowę",
+      "samodzielne próby"
+    ],
+    "category": "głębsze",
+    "level": 1
+  },
+  {
+    "id": "v03-know-20",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "W konflikcie najbardziej pomaga mi…",
+    "options": [
+      "czas",
+      "przeprosiny",
+      "wyjaśnienie",
+      "ciepły gest"
+    ],
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "v03-know-21",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najlepsze wspomnienia powstają dla mnie przez…",
+    "options": [
+      "spontaniczność",
+      "dobry plan",
+      "ważnych ludzi",
+      "niezwykłe miejsce"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-know-22",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy muszę wydać większą kwotę, zwykle…",
+    "options": [
+      "porównuję długo",
+      "pytam o zdanie",
+      "decyduję szybko",
+      "odkładam decyzję"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-know-23",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej lubię zdjęcia…",
+    "options": [
+      "pozowane",
+      "spontaniczne",
+      "krajobrazów",
+      "jedzenia i miejsc"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-know-24",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Mój idealny wieczór zaczyna się od…",
+    "options": [
+      "dobrego jedzenia",
+      "spaceru",
+      "muzyki",
+      "braku planu"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-know-25",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy mam problem, najpierw…",
+    "options": [
+      "działam",
+      "analizuję",
+      "rozmawiam",
+      "odcinam się na chwilę"
+    ],
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "v03-know-26",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej chcę, żeby partner pamiętał o…",
+    "options": [
+      "ważnych datach",
+      "małych szczegółach",
+      "moich granicach",
+      "wspólnych planach"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-know-27",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najchętniej świętuję sukces przez…",
+    "options": [
+      "kolację",
+      "wyjazd",
+      "prezent",
+      "spokojny wieczór"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-know-28",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "W domu najbardziej potrzebuję…",
+    "options": [
+      "porządku",
+      "ciszy",
+      "przytulności",
+      "przestrzeni"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-know-29",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Na wakacjach najchętniej wstaję…",
+    "options": [
+      "bardzo wcześnie",
+      "normalnie",
+      "bez budzika",
+      "zależnie od planu"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-know-30",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej boję się, że wspólne plany będą…",
+    "options": [
+      "zbyt sztywne",
+      "zbyt niepewne",
+      "zbyt kosztowne",
+      "odkładane bez końca"
+    ],
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-wave-1",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Pomysł na randkę",
+    "low": "chcę wracać do domu",
+    "high": "chcę powtórzyć ją jutro",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-2",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Niespodziewany prezent",
+    "low": "niepotrzebny kłopot",
+    "high": "najlepsze zaskoczenie",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-3",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Plan na wspólny weekend",
+    "low": "zmęczenie bez sensu",
+    "high": "idealne dwa dni",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-4",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Nowe hobby dla dwojga",
+    "low": "rezygnujemy po pierwszym razie",
+    "high": "nasza stała pasja",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-5",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Mieszkanie do wynajęcia",
+    "low": "nie zostajemy nawet na noc",
+    "high": "podpisujemy od razu",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-wave-6",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Kolacja przygotowana w domu",
+    "low": "kuchenny dramat",
+    "high": "lepiej niż w restauracji",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-7",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólny zakup",
+    "low": "pieniądze wyrzucone w błoto",
+    "high": "najlepsza decyzja roku",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-wave-8",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wycieczka bez internetu",
+    "low": "katastrofa logistyczna",
+    "high": "pełna wolność",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-9",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Niedziela z rodziną",
+    "low": "obowiązek",
+    "high": "dzień, który daje energię",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-wave-12",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Podróż nocnym pociągiem",
+    "low": "bezsenna męczarnia",
+    "high": "przygoda jak z filmu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-13",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Dzień pełen atrakcji",
+    "low": "przebodźcowanie",
+    "high": "idealne wykorzystanie czasu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-14",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wieczór bez planu",
+    "low": "nudne siedzenie",
+    "high": "najlepsza spontaniczność",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-16",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Rozmowa po kłótni",
+    "low": "druga runda konfliktu",
+    "high": "prawdziwe porozumienie",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-wave-18",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Nocleg w kamperze",
+    "low": "ciasny koszmar",
+    "high": "wolność i przygoda",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-19",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólna playlista",
+    "low": "ciągłe przełączanie",
+    "high": "idealny soundtrack relacji",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-20",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Rocznica bez prezentów",
+    "low": "rozczarowanie",
+    "high": "najlepszy czas bez presji",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v03-wave-21",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Karta z głębokim pytaniem",
+    "low": "za poważnie",
+    "high": "rozmowa, której potrzebowaliśmy",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-wave-22",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Nowa restauracja",
+    "low": "ryzykowny wybór",
+    "high": "odkrycie roku",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-wave-23",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólna przeprowadzka",
+    "low": "niekończący się chaos",
+    "high": "początek najlepszego etapu",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-wave-24",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Dłuższa rozłąka",
+    "low": "bardzo trudny czas",
+    "high": "dowód siły relacji",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "v03-wave-25",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Album wspomnień",
+    "low": "zbieracz kurzu",
+    "high": "najważniejsza rzecz na półce",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-1",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak odważny ma być pomysł na najbliższą randkę?",
+    "low": "spokojna kawa",
+    "high": "przygoda, której długo nie zapomnimy",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-2",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak szczegółowy ma być plan wspólnego wyjazdu?",
+    "low": "tylko kierunek",
+    "high": "każda godzina rozpisana",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-3",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak duża ma być niespodzianka dla partnera?",
+    "low": "mały gest",
+    "high": "wydarzenie roku",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-4",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo potrzebujesz dziś ciszy i odpoczynku?",
+    "low": "mogę działać cały dzień",
+    "high": "najchętniej wyłączam cały świat",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-5",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ambitny powinien być nasz wspólny cel na rok?",
+    "low": "mała zmiana",
+    "high": "całkowicie nowe życie",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-6",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak poważna ma być dzisiejsza rozmowa?",
+    "low": "czysty żart",
+    "high": "najważniejszy temat roku",
+    "category": "głębsze",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-7",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak spontaniczny powinien być weekend?",
+    "low": "wszystko zaplanowane",
+    "high": "decydujemy dopiero po wyjściu z domu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-8",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak mocno chcemy ograniczyć telefony podczas randki?",
+    "low": "tylko wyciszenie",
+    "high": "zostają w domu",
+    "category": "relacja",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-9",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak luksusowa ma być wymarzona noc?",
+    "low": "koc i kanapa",
+    "high": "apartament z prywatnym basenem",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-10",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo chcemy dziś rywalizować?",
+    "low": "wcale",
+    "high": "pełny turniej z nagrodą",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-11",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak długo moglibyśmy podróżować bez powrotu do domu?",
+    "low": "jeden weekend",
+    "high": "cały rok",
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-12",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak odważnie powinniśmy zmienić wspólną rutynę?",
+    "low": "drobny nawyk",
+    "high": "pełne przemeblowanie życia",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-13",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ważne jest dla ciebie świętowanie rocznic?",
+    "low": "miły dodatek",
+    "high": "najważniejszy dzień roku",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-14",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo potrzebujesz teraz konkretnego planu?",
+    "low": "zero planu",
+    "high": "dokładna lista kroków",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-scale-15",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak mocno powinniśmy oszczędzać na wspólny cel?",
+    "low": "symbolicznie",
+    "high": "rezygnujemy z większości zachcianek",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-scale-16",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak trudne pytanie możesz dziś usłyszeć?",
+    "low": "bardzo lekkie",
+    "high": "bez unikania czegokolwiek",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-scale-17",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak daleko pojedziemy dla naprawdę dobrej restauracji?",
+    "low": "kilka ulic",
+    "high": "na drugi koniec kraju",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-18",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak dużo zdjęć powstaje podczas idealnego wyjazdu?",
+    "low": "ani jedno",
+    "high": "setki dziennie",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-19",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo chcemy zaskoczyć znajomych wspólnym planem?",
+    "low": "wcale",
+    "high": "nikt nie uwierzy",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-scale-20",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak ważna jest dla ciebie własna przestrzeń w relacji?",
+    "low": "prawie niepotrzebna",
+    "high": "absolutnie konieczna",
+    "category": "relacja",
+    "level": 3
+  },
+  {
+    "id": "v03-plan-1",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Darmowy miesiąc w luksusowym apartamencie",
+    "positives": [
+      "świetna lokalizacja",
+      "pełna obsługa"
+    ],
+    "twist": "w każdym pokoju gra ta sama piosenka",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-2",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wakacje all inclusive za darmo",
+    "positives": [
+      "piękna plaża",
+      "najlepsze jedzenie"
+    ],
+    "twist": "nie wolno opuszczać hotelu",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-3",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Samochód marzeń na rok",
+    "positives": [
+      "darmowe paliwo",
+      "pełne ubezpieczenie"
+    ],
+    "twist": "można słuchać tylko jednego albumu",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-4",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Dom z ogromnym ogrodem",
+    "positives": [
+      "świetna cena",
+      "idealny widok"
+    ],
+    "twist": "najbliższy sklep jest godzinę drogi",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-plan-5",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Kolacja przygotowana przez znanego szefa kuchni",
+    "positives": [
+      "dowolne menu",
+      "wszystko za darmo"
+    ],
+    "twist": "musicie jeść w całkowitej ciszy",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-6",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wyjazd do dowolnego miejsca",
+    "positives": [
+      "lot pierwszą klasą",
+      "hotel pięciogwiazdkowy"
+    ],
+    "twist": "pakowanie trwa tylko trzy minuty",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-7",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Rok bez rachunków za mieszkanie",
+    "positives": [
+      "wszystko opłacone",
+      "brak limitów"
+    ],
+    "twist": "co miesiąc zmieniacie mieszkanie",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-plan-8",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealny wspólny weekend",
+    "positives": [
+      "pogoda marzeń",
+      "zero obowiązków"
+    ],
+    "twist": "każdą aktywność wybiera losowanie",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-9",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Prywatny koncert ulubionego artysty",
+    "positives": [
+      "najlepsze miejsca",
+      "możecie wybrać setlistę"
+    ],
+    "twist": "publiczność stanowi cała wasza rodzina",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-10",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Mieszkanie w centrum za pół ceny",
+    "positives": [
+      "duży metraż",
+      "piękny balkon"
+    ],
+    "twist": "winda zatrzymuje się na każdym piętrze",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-11",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Restauracja dostępna tylko dla was",
+    "positives": [
+      "dowolne dania",
+      "idealna atmosfera"
+    ],
+    "twist": "kelner komentuje każdą decyzję",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-12",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Kamper gotowy do rocznej podróży",
+    "positives": [
+      "brak kosztów paliwa",
+      "pełne wyposażenie"
+    ],
+    "twist": "nie ma w nim lustra",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-13",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Dodatkowy wolny dzień każdego tygodnia",
+    "positives": [
+      "pełne wynagrodzenie",
+      "zero telefonów z pracy"
+    ],
+    "twist": "zawsze wypada w środku tygodnia",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-14",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Profesjonalna sesja zdjęciowa",
+    "positives": [
+      "dowolne miejsce",
+      "piękne zdjęcia"
+    ],
+    "twist": "fotograf wybiera wam stroje",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-16",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Domowa siłownia za darmo",
+    "positives": [
+      "pełne wyposażenie",
+      "trener raz w tygodniu"
+    ],
+    "twist": "sprzęt mówi motywacyjne hasła na głos",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-17",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Rok darmowych randek",
+    "positives": [
+      "dowolny budżet",
+      "wszystko zorganizowane"
+    ],
+    "twist": "nigdy nie znacie planu wcześniej",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-plan-18",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Wymarzony ślub lub odnowienie przysięgi",
+    "positives": [
+      "brak kosztów",
+      "idealne miejsce"
+    ],
+    "twist": "listę gości ustala losowanie",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v03-plan-19",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealna praca dla każdej osoby",
+    "positives": [
+      "świetne zarobki",
+      "pełna elastyczność"
+    ],
+    "twist": "pracujecie przy sąsiednich biurkach",
+    "category": "przyszłość",
+    "level": 3
+  },
+  {
+    "id": "v03-plan-20",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Magiczny album wspomnień",
+    "positives": [
+      "sam dodaje najlepsze chwile",
+      "nigdy się nie kończy"
+    ],
+    "twist": "pokazuje także wszystkie niezręczne momenty",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-story-1",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki dzień z ostatniego roku najlepiej pokazuje, jak działacie jako para?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-story-2",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który wspólny problem rozwiązaliście lepiej, niż początkowo zakładaliście?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-3",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie miejsce pierwszy raz poczuliście jako „nasze”?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-4",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka przypadkowa decyzja doprowadziła do dobrego wspomnienia?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-5",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który mały gest z początku relacji pamiętasz najbardziej?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-story-6",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka wspólna tradycja powinna przetrwać wiele lat?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-7",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Kiedy ostatnio partner pozytywnie cię zaskoczył?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-8",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki wasz żart ma najdłuższą historię?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-9",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Która wspólna podróż nauczyła was najwięcej o sobie?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-story-10",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki zwykły dzień okazał się wyjątkowo ważny?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-11",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Które wspólne zdjęcie ma najlepszą historię poza kadrem?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-12",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki moment pokazał, że potraficie działać jako zespół?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-13",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który plan nie wyszedł, ale stworzył dobre wspomnienie?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-story-14",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jakie pierwsze wrażenie o partnerze dziś najbardziej cię bawi?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-15",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Które wspólne jedzenie najbardziej kojarzy ci się z początkiem relacji?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-16",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaka rozmowa dała ci największe poczucie bliskości?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-17",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który etap relacji wymagał od was największej cierpliwości?",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-story-18",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki drobiazg w domu ma dla was ukryte znaczenie?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-19",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który sukces partnera świętowałeś lub świętowałaś najbardziej?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-story-20",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki moment chciałbyś lub chciałabyś zachować w idealnej pamięci?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-1",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak mogę lepiej rozpoznać, że potrzebujesz wsparcia?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-2",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co ostatnio najbardziej daje ci poczucie stabilności?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-3",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakiego wspólnego nawyku najbardziej nam brakuje?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-4",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Który temat finansowy warto omówić spokojniej?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-5",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak wygląda dla ciebie dobra równowaga między czasem razem i osobno?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-6",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co pomaga ci poczuć, że naprawdę jesteśmy drużyną?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-7",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaki wspólny cel jest dziś dla ciebie najważniejszy?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-8",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co możemy uprościć w naszej codzienności?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-9",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaka forma przeprosin jest dla ciebie najbardziej szczera?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-10",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Kiedy czujesz, że mam dla ciebie wystarczająco dużo czasu?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-11",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej reagować na zmęczenie drugiej osoby?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-12",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Czego chciałbyś lub chciałabyś nauczyć się ode mnie?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-13",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaka granica w relacji daje ci poczucie bezpieczeństwa?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-14",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co mogłoby sprawić, że częściej będziemy się śmiać?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-15",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jakiego planu na przyszłość nie chcemy odkładać w nieskończoność?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-16",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co oznacza dla ciebie bycie wysłuchanym lub wysłuchaną?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-17",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "W jakiej sytuacji najtrudniej jest ci poprosić o pomoc?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-18",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak możemy lepiej świętować zwykłe dobre dni?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-tell-19",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Co chciałbyś lub chciałabyś, żebyśmy robili częściej bez konkretnego celu?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v03-tell-20",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaka jedna zmiana najbardziej poprawiłaby nasz wspólny tydzień?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-challenge-1",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie trzy zdjęcia z ostatniego roku i ułóżcie z nich miniopowieść.",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v03-challenge-2",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez dziesięć minut planujcie randkę bez sprawdzania internetu.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-3",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba przygotowuje drugiej jedną małą niespodziankę do końca tygodnia.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-4",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie wspólną playlistę z pięciu piosenek na najbliższy wyjazd.",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-5",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez pięć minut opowiadajcie na zmianę tylko dobre rzeczy z dzisiejszego dnia.",
+    "category": "zabawne",
+    "level": 2
+  },
+  {
+    "id": "v03-challenge-6",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wymyślcie nazwę dla waszego wymarzonego domu lub mieszkania.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-7",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie jeden wieczór bez telefonów w ciągu najbliższych siedmiu dni.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-8",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba wybiera jedną restaurację, którą chce odwiedzić w tym miesiącu.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-9",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie zdjęcie przedmiotu, który najlepiej symbolizuje waszą relację.",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v03-challenge-10",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie jeden wspólny cel i zapiszcie najmniejszy pierwszy krok.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-11",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przygotujcie sobie nawzajem krótką listę trzech rzeczy, które doceniacie.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-12",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez trzy minuty patrzcie wspólnie na stare zdjęcia bez przewijania w pośpiechu.",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-13",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zaplanujcie śniadanie lub kolację, które przygotujecie razem.",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v03-challenge-14",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba opowiada o jednym miejscu, do którego chce wrócić.",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-15",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wymyślcie własne hasło kończące drobną kłótnię i przypominające o przerwie.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-16",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez pięć minut uczcie się razem prostego układu tanecznego.",
+    "category": "wspomnienia",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-17",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Wybierzcie jedną niepotrzebną rzecz, której pozbędziecie się dziś z domu.",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v03-challenge-18",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zapiszcie po jednym marzeniu, które chcecie zrealizować wspólnie w ciągu roku.",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-19",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przygotujcie napój dla partnera bez pytania, co wybiera.",
+    "category": "przyszłość",
+    "level": 1
+  },
+  {
+    "id": "v03-challenge-20",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Zróbcie krótki spacer i znajdźcie po jednej rzeczy, której wcześniej nie zauważaliście.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-words-1",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "latarnia",
+      "port",
+      "fala",
+      "piasek",
+      "muszla",
+      "statek",
+      "zachód",
+      "wiatr",
+      "wyspa",
+      "mapa",
+      "plaża",
+      "horyzont"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-words-2",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "koc",
+      "kanapa",
+      "herbata",
+      "deszcz",
+      "film",
+      "świeca",
+      "cisza",
+      "książka",
+      "okno",
+      "poduszka",
+      "muzyka",
+      "wieczór"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-words-3",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "paszport",
+      "walizka",
+      "bilet",
+      "hotel",
+      "mapa",
+      "lot",
+      "pociąg",
+      "droga",
+      "zdjęcie",
+      "przygoda",
+      "kawa",
+      "widok"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-words-4",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "śmiech",
+      "żart",
+      "mem",
+      "taniec",
+      "karaoke",
+      "kostium",
+      "gra",
+      "wyzwanie",
+      "niespodzianka",
+      "balon",
+      "impreza",
+      "zdjęcie"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v03-words-5",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "zaufanie",
+      "rozmowa",
+      "granica",
+      "wsparcie",
+      "dotyk",
+      "czas",
+      "spokój",
+      "szczerość",
+      "obietnica",
+      "bezpieczeństwo",
+      "cierpliwość",
+      "bliskość"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v03-words-6",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "kuchnia",
+      "przepis",
+      "patelnia",
+      "deser",
+      "ser",
+      "zioła",
+      "piec",
+      "stół",
+      "wino",
+      "smak",
+      "kelner",
+      "kolacja"
+    ],
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v03-words-7",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "budzik",
+      "tramwaj",
+      "kawa",
+      "biuro",
+      "telefon",
+      "lista",
+      "obiad",
+      "korek",
+      "zakupy",
+      "kanapa",
+      "prysznic",
+      "sen"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v03-words-8",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "góra",
+      "jezioro",
+      "las",
+      "szlak",
+      "kamień",
+      "namiot",
+      "ognisko",
+      "plecak",
+      "chmura",
+      "rzeka",
+      "buty",
+      "mapa"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v03-words-9",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "rocznica",
+      "kwiaty",
+      "list",
+      "prezent",
+      "zdjęcie",
+      "piosenka",
+      "kolacja",
+      "pocałunek",
+      "świeca",
+      "wspomnienie",
+      "sukienka",
+      "hotel"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v05-wave-1",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Spontaniczna randka po ciężkim tygodniu",
+    "low": "to ostatnia rzecz, na którą mam siłę",
+    "high": "dokładnie tego teraz potrzebuję",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v05-wave-2",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Wspólne planowanie budżetu",
+    "low": "gaszenie atmosfery",
+    "high": "poczucie bezpieczeństwa i drużyny",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v05-wave-3",
+    "mode": "wave",
+    "type": "scale",
+    "prompt": "Dzień całkowicie bez planu",
+    "low": "męczący chaos",
+    "high": "najlepsza forma odpoczynku",
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v05-know-1",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Po trudnym dniu najbardziej potrzebuję…",
+    "options": [
+      "chwili ciszy",
+      "rozmowy",
+      "przytulenia",
+      "konkretnej pomocy"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v05-know-2",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Gdy plan wyjazdu nagle się zmienia, zwykle…",
+    "options": [
+      "szybko się dostosowuję",
+      "potrzebuję chwili",
+      "szukam planu B",
+      "oddaję decyzję partnerowi"
+    ],
+    "category": "podróże",
+    "level": 2
+  },
+  {
+    "id": "v05-know-3",
+    "mode": "know",
+    "type": "choice",
+    "prompt": "Najbardziej cieszy mnie wspólny wieczór, gdy…",
+    "options": [
+      "dużo rozmawiamy",
+      "robimy coś nowego",
+      "po prostu odpoczywamy",
+      "śmiejemy się bez powodu"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v05-who-1",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto szybciej zauważa, że druga osoba potrzebuje wsparcia?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v05-who-2",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto częściej proponuje małą przyjemność bez okazji?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v05-who-3",
+    "mode": "who",
+    "type": "choice",
+    "prompt": "Kto lepiej potrafi zamienić kiepski plan w dobrą historię?",
+    "options": [
+      "Osoba 1",
+      "Osoba 2",
+      "Oboje"
+    ],
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v05-dilemma-1",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Wspólne wolne bez planu czy dokładnie zaplanowany dzień?",
+    "options": [
+      "Bez planu",
+      "Dokładny plan"
+    ],
+    "category": "codzienność",
+    "level": 1
+  },
+  {
+    "id": "v05-dilemma-2",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Jedna większa wspólna rzecz czy kilka małych przyjemności w miesiącu?",
+    "options": [
+      "Jedna większa",
+      "Kilka małych"
+    ],
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v05-dilemma-3",
+    "mode": "dilemma",
+    "type": "choice",
+    "prompt": "Powiedzieć trudną prawdę od razu czy poczekać na spokojniejszy moment?",
+    "options": [
+      "Od razu",
+      "Poczekać"
+    ],
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v05-scale-1",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo potrzebujesz w tym tygodniu wspólnego czasu?",
+    "low": "wystarczy zwykły wieczór",
+    "high": "potrzebuję prawdziwego resetu razem",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v05-scale-2",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak odważny powinien być nasz następny wspólny plan?",
+    "low": "bezpiecznie i spokojnie",
+    "high": "historia, którą będziemy opowiadać latami",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v05-scale-3",
+    "mode": "scale",
+    "type": "scale",
+    "prompt": "Jak bardzo romantyczna ma być najbliższa randka?",
+    "low": "pizza i wygodne ubrania",
+    "high": "pełny filmowy wieczór",
+    "category": "romantyczne",
+    "level": 1
+  },
+  {
+    "id": "v05-plan-1",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Miesiąc w pięknym mieszkaniu w centrum",
+    "positives": [
+      "czynsz jest opłacony",
+      "macie wolne weekendy"
+    ],
+    "twist": "w budynku trwa codzienny remont od 7:00",
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "v05-plan-2",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Idealna kolacja przygotowana przez prywatnego kucharza",
+    "positives": [
+      "menu jest stworzone pod was",
+      "nic nie sprzątacie"
+    ],
+    "twist": "kucharz komentuje każdą waszą decyzję",
+    "category": "jedzenie",
+    "level": 1
+  },
+  {
+    "id": "v05-plan-3",
+    "mode": "plan",
+    "type": "plan",
+    "title": "Darmowy weekend w wymarzonym mieście",
+    "positives": [
+      "hotel w centrum",
+      "wszystkie atrakcje gratis"
+    ],
+    "twist": "możecie zabrać tylko jeden mały plecak na dwoje",
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v05-words-1",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "most",
+      "tramwaj",
+      "kamienica",
+      "kawiarnia",
+      "rynek",
+      "park",
+      "neon",
+      "muzeum",
+      "deszcz",
+      "bilet",
+      "ulica",
+      "widok"
+    ],
+    "category": "podróże",
+    "level": 1
+  },
+  {
+    "id": "v05-words-2",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "wiadomość",
+      "cisza",
+      "żart",
+      "wsparcie",
+      "granica",
+      "zaufanie",
+      "gest",
+      "czas",
+      "przerwa",
+      "pytanie",
+      "uśmiech",
+      "decyzja"
+    ],
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v05-words-3",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "kosmos",
+      "walizka",
+      "pizza",
+      "smok",
+      "winda",
+      "księżyc",
+      "kapcie",
+      "robot",
+      "kaktus",
+      "tort",
+      "pirat",
+      "telewizor"
+    ],
+    "category": "absurdalne",
+    "level": 1
+  },
+  {
+    "id": "v05-story-1",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który zwykły dzień z naszego życia wspominasz zaskakująco dobrze?",
+    "category": "wspomnienia",
+    "level": 2
+  },
+  {
+    "id": "v05-story-2",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Jaki drobny kryzys z przeszłości dziś wydaje się zabawną historią?",
+    "category": "zabawne",
+    "level": 2
+  },
+  {
+    "id": "v05-story-3",
+    "mode": "story",
+    "type": "conversation",
+    "prompt": "Który wspólny rytuał powstał przypadkiem, a dziś jest ważny?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v05-tell-1",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Po czym najlepiej poznajesz, że naprawdę cię słucham?",
+    "category": "głębsze",
+    "level": 3
+  },
+  {
+    "id": "v05-tell-2",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jak moglibyśmy lepiej chronić nasz wspólny czas przed codziennym chaosem?",
+    "category": "relacja",
+    "level": 2
+  },
+  {
+    "id": "v05-tell-3",
+    "mode": "tell",
+    "type": "conversation",
+    "prompt": "Jaki wspólny plan wydaje ci się dziś bardziej realny niż rok temu?",
+    "category": "przyszłość",
+    "level": 2
+  },
+  {
+    "id": "v05-challenge-1",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Każda osoba wybiera jedną małą rzecz, którą przejmie od partnera w tym tygodniu.",
+    "category": "codzienność",
+    "level": 2
+  },
+  {
+    "id": "v05-challenge-2",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Przez trzy minuty opowiadajcie na zmianę historię, dodając po jednym zdaniu.",
+    "category": "zabawne",
+    "level": 1
+  },
+  {
+    "id": "v05-challenge-3",
+    "mode": "challenge",
+    "type": "challenge",
+    "prompt": "Ustalcie jeden wieczór w najbliższych siedmiu dniach bez planów i bez telefonów.",
+    "category": "romantyczne",
+    "level": 2
+  },
+  {
+    "id": "v05-words-4",
+    "mode": "words",
+    "type": "words",
+    "prompt": "Połącz trzy hasła jedną podpowiedzią",
+    "words": [
+      "aparat",
+      "album",
+      "ramka",
+      "bilet",
+      "muszla",
+      "kartka",
+      "magnes",
+      "pamiątka",
+      "mapa",
+      "pieczątka",
+      "notatka",
+      "walizka"
+    ],
+    "category": "wspomnienia",
+    "level": 1
+  }
+]

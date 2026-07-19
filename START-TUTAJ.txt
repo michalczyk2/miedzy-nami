@@ -1,0 +1,10 @@
+MIĘDZY NAMI v0.7.1 — START
+
+1. Uruchom CHECK-WINDOWS.bat.
+2. Uruchom PREVIEW-WINDOWS.bat i sprawdź konto oraz pulpit.
+3. Projekt Supabase jest już wpisany w cloud-config.js.
+4. Przed publikacją ustaw produkcyjny adres Vercela w Supabase:
+   Authentication -> URL Configuration.
+5. Wgraj cały folder do repozytorium GitHub, a następnie połącz repozytorium z Vercel.
+
+Aplikacja stworzona przez Michała Czerwińskiego.

@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-07-19T14:14:00.791Z",
+  "total": 754,
+  "errors": [],
+  "warnings": [],
+  "byMode": {
+    "wave": 74,
+    "know": 83,
+    "who": 103,
+    "dilemma": 92,
+    "scale": 63,
+    "plan": 62,
+    "words": 53,
+    "story": 73,
+    "tell": 78,
+    "challenge": 73
+  },
+  "byCategory": {
+    "codzienność": 121,
+    "romantyczne": 77,
+    "podróże": 90,
+    "jedzenie": 36,
+    "przyszłość": 93,
+    "zabawne": 88,
+    "relacja": 90,
+    "wspomnienia": 81,
+    "głębsze": 60,
+    "absurdalne": 18
+  },
+  "byLevel": {
+    "1": 451,
+    "2": 231,
+    "3": 72
+  }
+}
