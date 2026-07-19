@@ -32,3 +32,7 @@ npm run deploy
 ```
 
 Na Windows możesz użyć `DEPLOY-WINDOWS.bat`. Po wdrożeniu dodaj adres Vercela w `Authentication → URL Configuration` w Supabase. Szczegóły znajdują się w `PRODUCTION-CHECKLIST.md`.
+
+## Wersja produkcyjna
+
+Automatyczne wdrożenia realizowane są przez Vercel z gałęzi `main`.
