@@ -1,4 +1,4 @@
-# Architektura Między Nami v0.9.4
+# Architektura Między Nami v0.9.9
 
 ## Warstwa budowania
 
@@ -69,3 +69,12 @@ Migracja `006_v094_live_know_me.sql` rozszerza dozwolone typy sesji o `know_live
 ## v0.9.8 — Scale live + device capability labels
 
 `v098.js` dodaje tryb `scale_live`, korzystający z istniejących tabel sesji i odpowiedzi. Migracja 009 rozszerza dozwolony zakres odpowiedzi do 0–9. Ten sam moduł nakłada nieinwazyjne oznaczenia możliwości urządzeń na pulpit i hub Pikantne.
+
+
+## v0.9.9 — agregator sesji online
+
+`v099.js` jest warstwą prezentacyjną ponad istniejącymi modułami multiplayer. Nie zmienia protokołów gier ani schematu bazy. Pobiera aktywne i ostatnie ukończone rekordy z `multiplayer_sessions`, mapuje je na publiczne funkcje modułów v0.9.1–v0.9.8 i pokazuje w jednym widoku.
+
+Moduł usuwa starsze, niezależne banery z pulpitu i zastępuje je pojedynczą kartą centrum. Ponieważ poszczególne moduły mogą odświeżać się asynchronicznie, `MutationObserver` pilnuje, aby stare banery nie pojawiały się ponownie.
+
+Stan Codziennego Dopasowania jest dołączany z `MN_CLOUD_RUNTIME`, bez kopiowania odpowiedzi. Centrum nie przechowuje nowych danych i nie wymaga migracji SQL.

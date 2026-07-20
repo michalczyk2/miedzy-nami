@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.9 — centrum gier online
+
+- Zastąpiono osobne banery aktywnych gier jedną kartą centrum na pulpicie.
+- Dodano wspólną listę aktywnych sesji oraz wyników gotowych do obejrzenia.
+- Dodano obsługę sześciu gier sesyjnych i rozpoczętego Codziennego Dopasowania.
+- Dodano bezpieczne usuwanie sesji z obu telefonów.
+- Dodano skróty do rozpoczynania wszystkich gier online.
+- Centrum korzysta z istniejącego RLS i nie wyświetla prywatnych odpowiedzi.
+- Aktualizacja nie wymaga migracji SQL.
+
 ## 0.9.8 — Skala online i oznaczenia urządzeń
 
 - Dodano „Skalę” na dwóch telefonach z prywatnym wyborem 1–10.

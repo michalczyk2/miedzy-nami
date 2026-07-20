@@ -1,8 +1,20 @@
-# Między Nami v0.9.8
+# Między Nami v0.9.9
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
+
+## v0.9.9 — jedno centrum gier online
+
+- wszystkie aktywne gry online są widoczne w jednym centrum,
+- osobne banery sesji zostały zastąpione jedną kartą na pulpicie,
+- centrum pokazuje również wyniki gotowe do obejrzenia,
+- można wznowić albo usunąć sesję z obu telefonów,
+- dodano skróty do rozpoczęcia każdej dostępnej gry online,
+- rozpoczęte Codzienne Dopasowanie pojawia się w tym samym miejscu,
+- aktualizacja nie wymaga zmian w bazie danych.
+
+Szczegóły: `V099-ONLINE-CENTER.md`.
 
 ## v0.9.8 — Skala online i jasne oznaczenia trybów
 

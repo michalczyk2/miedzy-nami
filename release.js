@@ -2,8 +2,8 @@
   'use strict';
   root.MN_RELEASE=Object.freeze({
     name:'Między Nami',
-    version:'0.9.8',
-    cache:'miedzy-nami-v098',
+    version:'0.9.9',
+    cache:'miedzy-nami-v099',
     channel:'stable',
     foundation:'vite-typescript'
   });
