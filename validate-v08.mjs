@@ -20,7 +20,7 @@ for(const asset of ['/cloud-config.js','/app.js','/enhancements.js','/v05.js','/
 const version=JSON.parse(readFileSync(resolve(root,'version.json'),'utf8'));
 const library=JSON.parse(readFileSync(resolve(root,'content/library.json'),'utf8'));
 const daily=JSON.parse(readFileSync(resolve(root,'content/daily-match.json'),'utf8'));
-if(version.version!=='0.9.4')errors.push(`Nieprawidłowa wersja: ${version.version}`);
+if(version.version!=='0.9.5')errors.push(`Nieprawidłowa wersja: ${version.version}`);
 if(version.creator!=='Michał Czerwiński')errors.push('Nieprawidłowy autor');
 const libraryHasAdult=library.some(card=>card.category==='pikantne');
 const runtimeCards=library.length+(libraryHasAdult?0:Number(version.adult_pack_cards||0));
@@ -42,4 +42,4 @@ for(const fragment of ['MN_FRIENDLY_ERROR','SKIP_WAITING','Nowa wersja jest goto
 const migrationFix=readFileSync(resolve(root,'002_fix_invite_code.sql'),'utf8');
 for(const fragment of ['gen_random_uuid','generate_invite_code','security definer'])if(!migrationFix.toLowerCase().includes(fragment.toLowerCase()))errors.push(`Migracja 002 nie zawiera: ${fragment}`);
 if(errors.length){console.error(`\nKontrola nieudana (${errors.length}):\n- ${errors.join('\n- ')}\n`);process.exit(1)}
-console.log(`Kontrola v0.9.4 OK: ${library.length} kart, ${daily.questions.length} pytań, Vite, TypeScript i pojedynczy punkt wejścia.`);
+console.log(`Kontrola v0.9.5 OK: ${library.length} kart, ${daily.questions.length} pytań, Vite, TypeScript i pojedynczy punkt wejścia.`);

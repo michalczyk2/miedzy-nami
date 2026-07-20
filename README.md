@@ -1,3 +1,5 @@
+> Aktualna wersja: **v0.9.5** — hotfix łączenia dwóch telefonów i limitów czasu Supabase.
+
 # Między Nami v0.9.4
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.

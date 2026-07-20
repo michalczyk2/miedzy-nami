@@ -1,12 +1,14 @@
 (function(){
 'use strict';
 
-const V07_VERSION='0.8.0';
+const V07_VERSION='0.9.5';
 const CREATOR='Michał Czerwiński';
 const CLOUD_DRAFT_PREFIX='mn-v07-cloud-daily-draft';
 const OTP_EMAIL_KEY='mn-v072-otp-email';
 const OTP_SENT_AT_KEY='mn-v072-otp-sent-at';
 const OTP_RESEND_SECONDS=60;
+const CLOUD_REQUEST_TIMEOUT_MS=12000;
+const CLOUD_LOADING_WATCHDOG_MS=15000;
 const ENGINE=window.MN_DAILY_ENGINE;
 const config=window.MN_CLOUD_CONFIG||{};
 const cloud={
@@ -14,7 +16,10 @@ const cloud={
   client:null,session:null,user:null,profile:null,couple:null,members:[],subscription:null,
   loading:false,error:'',notice:'',daily:null,history:[],syncing:false,lastSyncAt:null,
   otpEmail:localStorage.getItem(OTP_EMAIL_KEY)||'',otpSentAt:Number(localStorage.getItem(OTP_SENT_AT_KEY)||0),
+  loadingStartedAt:null,
 };
+let cloudLoadingWatchdog=null;
+let cloudStatePromise=null;
 window.MN_CLOUD_RUNTIME=cloud;
 
 function cloudEscape(value){return escapeHtml(String(value??''))}
@@ -40,45 +45,76 @@ function formatCloudError(error){
 function cloudToast(message){cloud.notice=message;toast(message)}
 function setCloudError(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud]',error);render()}
 function clearCloudError(){cloud.error=''}
+function cloudWithTimeout(promise,label='Połączenie z chmurą',timeout=CLOUD_REQUEST_TIMEOUT_MS){
+  let timer;
+  return Promise.race([
+    Promise.resolve(promise),
+    new Promise((_,reject)=>{timer=setTimeout(()=>{const error=new Error(`${label} timed out`);error.code='CLOUD_TIMEOUT';reject(error)},timeout)}),
+  ]).finally(()=>clearTimeout(timer));
+}
+function cloudBeginLoading(){
+  cloud.loading=true;cloud.loadingStartedAt=Date.now();clearTimeout(cloudLoadingWatchdog);
+  cloudLoadingWatchdog=setTimeout(()=>{
+    if(!cloud.loading)return;
+    cloudEndLoading();cloud.loadingStartedAt=null;
+    cloud.error='Synchronizacja trwała zbyt długo. Sprawdź internet i spróbuj ponownie.';
+    try{render()}catch{}
+  },CLOUD_LOADING_WATCHDOG_MS);
+}
+function cloudEndLoading(){cloud.loading=false;cloud.loadingStartedAt=null;clearTimeout(cloudLoadingWatchdog);cloudLoadingWatchdog=null}
+async function cloudRetrySync(){clearCloudError();cloudBeginLoading();render();await loadCloudState();render()}
 
 async function initCloud(){
   if(!cloud.configured)return;
   cloud.client=window.supabase.createClient(config.supabaseUrl,config.supabasePublishableKey,{
     auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,flowType:'pkce'},
   });
-  const{data}=await cloud.client.auth.getSession();
-  cloud.session=data.session||null;cloud.user=data.session?.user||null;
-  cloud.client.auth.onAuthStateChange(async(_event,session)=>{
-    cloud.session=session||null;cloud.user=session?.user||null;cloud.error='';
-    await loadCloudState();render();
-  });
-  await loadCloudState();
+  try{
+    const{data}=await cloudWithTimeout(cloud.client.auth.getSession(),'Odczyt zapisanej sesji');
+    cloud.session=data.session||null;cloud.user=data.session?.user||null;
+    cloud.client.auth.onAuthStateChange((_event,session)=>{
+      cloud.session=session||null;cloud.user=session?.user||null;cloud.error='';
+      setTimeout(()=>{loadCloudState().finally(()=>render())},0);
+    });
+    await loadCloudState();
+  }catch(error){cloudEndLoading();cloud.error=formatCloudError(error);console.error('[Między Nami cloud init]',error)}
 }
 
 async function loadCloudState(){
-  unsubscribeCloud();cloud.profile=null;cloud.couple=null;cloud.members=[];cloud.daily=null;cloud.history=[];
-  if(!cloud.user||!cloud.client)return;
-  cloud.loading=true;
-  try{
-    const[{data:profileData},{data:membership,error:membershipError}]=await Promise.all([
-      cloud.client.from('profiles').select('id,display_name').eq('id',cloud.user.id).maybeSingle(),
-      cloud.client.from('couple_members').select('couple_id,user_id,display_name,role_index,joined_at').eq('user_id',cloud.user.id).maybeSingle(),
-    ]);
-    if(membershipError)throw membershipError;
-    cloud.profile=profileData||{id:cloud.user.id,display_name:cloud.user.email?.split('@')[0]||'Gracz'};
-    if(membership){
-      const[{data:couple,error:coupleError},{data:members,error:membersError}]=await Promise.all([
-        cloud.client.from('couples').select('id,invite_code,created_at').eq('id',membership.couple_id).single(),
-        cloud.client.from('couple_members').select('couple_id,user_id,display_name,role_index,joined_at').eq('couple_id',membership.couple_id).order('role_index'),
-      ]);
-      if(coupleError)throw coupleError;if(membersError)throw membersError;
-      cloud.couple=couple;cloud.members=members||[];
-      if(cloud.members.length===2){settings.names=cloud.members.map(member=>member.display_name);saveSettings()}
-      subscribeCloud();
-      await Promise.all([refreshCloudDaily(false),loadCloudHistory(),syncLocalSessions()]);
-    }
-    cloud.lastSyncAt=Date.now();
-  }catch(error){cloud.error=formatCloudError(error)}finally{cloud.loading=false}
+  if(cloudStatePromise)return cloudStatePromise;
+  const task=(async()=>{
+    unsubscribeCloud();cloud.profile=null;cloud.couple=null;cloud.members=[];cloud.daily=null;cloud.history=[];
+    if(!cloud.user||!cloud.client){cloudEndLoading();return}
+    cloudBeginLoading();
+    try{
+      const[{data:profileData,error:profileError},{data:membership,error:membershipError}]=await cloudWithTimeout(Promise.all([
+        cloud.client.from('profiles').select('id,display_name').eq('id',cloud.user.id).maybeSingle(),
+        cloud.client.from('couple_members').select('couple_id,user_id,display_name,role_index,joined_at').eq('user_id',cloud.user.id).maybeSingle(),
+      ]),'Ładowanie konta pary');
+      if(profileError)throw profileError;if(membershipError)throw membershipError;
+      cloud.profile=profileData||{id:cloud.user.id,display_name:cloud.user.email?.split('@')[0]||'Gracz'};
+      if(membership){
+        const[{data:couple,error:coupleError},{data:members,error:membersError}]=await cloudWithTimeout(Promise.all([
+          cloud.client.from('couples').select('id,invite_code,created_at').eq('id',membership.couple_id).single(),
+          cloud.client.from('couple_members').select('couple_id,user_id,display_name,role_index,joined_at').eq('couple_id',membership.couple_id).order('role_index'),
+        ]),'Ładowanie danych pary');
+        if(coupleError)throw coupleError;if(membersError)throw membersError;
+        cloud.couple=couple;cloud.members=members||[];
+        if(cloud.members.length===2){settings.names=cloud.members.map(member=>member.display_name);saveSettings()}
+        subscribeCloud();
+        const supplemental=await Promise.allSettled([
+          cloudWithTimeout(refreshCloudDaily(false),'Odświeżanie dzisiejszych pytań'),
+          cloudWithTimeout(loadCloudHistory(),'Ładowanie historii online'),
+        ]);
+        const failed=supplemental.find(item=>item.status==='rejected');
+        if(failed&&!cloud.error)cloud.error=formatCloudError(failed.reason);
+        setTimeout(()=>{cloudWithTimeout(syncLocalSessions(),'Synchronizacja historii').catch(error=>console.warn('Nie udało się zsynchronizować sesji',error))},0);
+      }
+      cloud.lastSyncAt=Date.now();
+    }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud state]',error)}finally{cloudEndLoading()}
+  })();
+  cloudStatePromise=task;
+  try{return await task}finally{if(cloudStatePromise===task)cloudStatePromise=null}
 }
 
 function subscribeCloud(){
@@ -99,9 +135,9 @@ async function cloudSendOtp(){
   if(!email){cloudToast('Wpisz adres e-mail.');return}
   const remaining=otpCooldownRemaining();
   if(cloud.otpEmail===email&&remaining>0){cloud.error=`Kod został już wysłany. Spróbuj ponownie za ${remaining} s.`;render();return}
-  cloud.loading=true;render();
-  const{error}=await cloud.client.auth.signInWithOtp({email,options:{shouldCreateUser:true,data:{display_name:email.split('@')[0]}}});
-  cloud.loading=false;
+  cloudBeginLoading();render();
+  const{error}=await cloudWithTimeout(cloud.client.auth.signInWithOtp({email,options:{shouldCreateUser:true,data:{display_name:email.split('@')[0]}}}),'Wysyłanie kodu logowania');
+  cloudEndLoading();
   if(error){setCloudError(error);return}
   saveOtpState(email);
   cloudToast('Kod logowania został wysłany. Wpisz go w tej aplikacji.');
@@ -114,45 +150,45 @@ async function cloudVerifyOtp(){
   const token=(document.querySelector('#cloud-otp')?.value||'').replace(/\D/g,'').slice(0,8);
   if(!email){cloudToast('Najpierw wyślij kod na e-mail.');return}
   if(token.length<6){cloudToast('Wpisz pełny kod z wiadomości.');return}
-  cloud.loading=true;render();
-  const{error}=await cloud.client.auth.verifyOtp({email,token,type:'email'});
-  cloud.loading=false;
+  cloudBeginLoading();render();
+  const{error}=await cloudWithTimeout(cloud.client.auth.verifyOtp({email,token,type:'email'}),'Weryfikacja kodu logowania');
+  cloudEndLoading();
   if(error){setCloudError(error);return}
   clearOtpState();cloudToast('Zalogowano na tym urządzeniu.');render();
 }
 function cloudChangeOtpEmail(){clearOtpState();clearCloudError();render()}
 async function cloudGoogleSignIn(){
   clearCloudError();
-  const{error}=await cloud.client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+location.pathname}});
+  const{error}=await cloudWithTimeout(cloud.client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+location.pathname}}),'Logowanie Google');
   if(error)setCloudError(error);
 }
-async function cloudSignOut(){unsubscribeCloud();await cloud.client?.auth.signOut();cloud.session=null;cloud.user=null;cloud.couple=null;cloud.members=[];ui.view='cloud';render()}
+async function cloudSignOut(){unsubscribeCloud();await cloudWithTimeout(cloud.client?.auth.signOut(),'Wylogowanie').catch(()=>{});cloud.session=null;cloud.user=null;cloud.couple=null;cloud.members=[];ui.view='cloud';render()}
 
 async function cloudCreatePair(){
   const name=document.querySelector('#cloud-create-name')?.value.trim()||cloud.profile?.display_name||settings.names[0];
-  cloud.loading=true;clearCloudError();render();
+  cloudBeginLoading();clearCloudError();render();
   try{
-    const{error}=await cloud.client.rpc('create_couple',{p_display_name:name});
+    const{error}=await cloudWithTimeout(cloud.client.rpc('create_couple',{p_display_name:name}),'Tworzenie pary');
     if(error)throw error;
     await loadCloudState();cloudToast('Para utworzona. Wyślij partnerowi kod zaproszenia.');
   }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud]',error)}
-  finally{cloud.loading=false;render()}
+  finally{cloudEndLoading();render()}
 }
 async function cloudJoinPair(){
   const name=document.querySelector('#cloud-join-name')?.value.trim()||cloud.profile?.display_name||settings.names[1];
   const code=(document.querySelector('#cloud-invite-code')?.value||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
   if(code.length!==6){cloudToast('Kod pary ma 6 znaków.');return}
-  cloud.loading=true;clearCloudError();render();
+  cloudBeginLoading();clearCloudError();render();
   try{
-    const{error}=await cloud.client.rpc('join_couple',{p_invite_code:code,p_display_name:name});
+    const{error}=await cloudWithTimeout(cloud.client.rpc('join_couple',{p_invite_code:code,p_display_name:name}),'Dołączanie do pary');
     if(error)throw error;
     await loadCloudState();cloudToast('Połączono z parą.');
   }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud]',error)}
-  finally{cloud.loading=false;render()}
+  finally{cloudEndLoading();render()}
 }
 async function cloudLeavePair(){
   if(!confirm('Rozwiązać parę online? Usunie to wspólne dane z chmury i odłączy oba konta. Dane lokalne na telefonach pozostaną.'))return;
-  cloud.loading=true;render();const{error}=await cloud.client.rpc('leave_couple');cloud.loading=false;
+  cloudBeginLoading();render();const{error}=await cloudWithTimeout(cloud.client.rpc('leave_couple'),'Rozwiązywanie pary');cloudEndLoading();
   if(error){setCloudError(error);return}await loadCloudState();ui.view='cloud';render();
 }
 async function copyInviteCode(){
@@ -215,11 +251,11 @@ function cloudDailyPrevious(){const definition=cloudQuestionDefinition();const d
 async function submitCloudDaily(){
   const definition=cloudQuestionDefinition(),draft=loadCloudDraft(definition);
   if(draft.answers.length!==5||draft.answers.some(answer=>!Number.isInteger(answer))){cloudToast('Odpowiedz na wszystkie 5 pytań.');return}
-  cloud.loading=true;render();
+  cloudBeginLoading();render();
   const{error}=await cloud.client.from('daily_submissions').upsert({couple_id:cloud.couple.id,quiz_date:definition.date,user_id:cloud.user.id,category:definition.category,question_ids:definition.questionIds,answers:draft.answers,completed_at:new Date().toISOString()},{onConflict:'couple_id,quiz_date,user_id'});
-  cloud.loading=false;if(error){setCloudError(error);return}clearCloudDraft(definition.date);await refreshCloudDaily(false);ui.view=cloud.daily?.result?'cloud-daily-summary':'cloud-daily-wait';render();
+  cloudEndLoading();if(error){setCloudError(error);return}clearCloudDraft(definition.date);await refreshCloudDaily(false);ui.view=cloud.daily?.result?'cloud-daily-summary':'cloud-daily-wait';render();
 }
-async function refreshCloudWait(){cloud.loading=true;render();await refreshCloudDaily(false);cloud.loading=false;if(cloud.daily?.result)ui.view='cloud-daily-summary';render()}
+async function refreshCloudWait(){cloudBeginLoading();render();await refreshCloudDaily(false);cloudEndLoading();if(cloud.daily?.result)ui.view='cloud-daily-summary';render()}
 
 async function loadCloudHistory(){
   if(!cloudReady())return;
@@ -252,9 +288,9 @@ function cloudStatusMarkup(){
 }
 
 function renderCloudHub(){
-  const error=cloud.error?`<div class="cloud-alert error">${cloudEscape(cloud.error)}</div>`:'';
+  const error=cloud.error?`<div class="cloud-alert error">${cloudEscape(cloud.error)}</div><button class="button tertiary full" onclick="cloudRetrySync()">Spróbuj ponownie</button>`:'';
   if(!cloud.configured){app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">v${V07_VERSION}</span></div><span class="cloud-big">☁</span><h1>Dwa telefony</h1><p class="muted">Frontend jest gotowy. Aby uruchomić synchronizację, trzeba utworzyć dedykowany projekt Supabase, wykonać migrację SQL i wkleić dwa publiczne parametry do <code>cloud-config.js</code>.</p><div class="cloud-steps"><div><b>1</b><span><strong>Oddzielny Supabase</strong><small>Bez mieszania danych z Typerzy 2026.</small></span></div><div><b>2</b><span><strong>Konta i kod pary</strong><small>Każda osoba loguje się na swoim telefonie.</small></span></div><div><b>3</b><span><strong>Odpowiedzi osobno</strong><small>Wynik odsłania się dopiero, gdy oboje skończą.</small></span></div></div><div class="cloud-alert">${cloudEscape(configMessage())}</div></section>`;return}
-  if(cloud.loading){app.innerHTML=`<section class="panel cloud-panel"><div class="app-loader"><span></span><span></span><span></span></div><p class="muted center">Synchronizuję dane…</p></section>`;return}
+  if(cloud.loading){app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Połączenie online</span></div><div class="app-loader"><span></span><span></span><span></span></div><p class="muted center">Synchronizuję dane…</p><p class="small center">Jeśli połączenie nie odpowie, ekran automatycznie pokaże możliwość ponowienia.</p></section>`;return}
   if(!cloud.user){
     const pending=cloud.otpEmail;
     const remaining=otpCooldownRemaining();
@@ -331,7 +367,7 @@ renderModal=function(){
   }
 };
 
-Object.assign(window,{showCloudHub,showAboutApp,cloudSendOtp,cloudVerifyOtp,cloudChangeOtpEmail,cloudGoogleSignIn,cloudSignOut,cloudCreatePair,cloudJoinPair,cloudLeavePair,copyInviteCode,shareInviteCode,openCloudDaily,cloudDailyChoose,cloudDailyPrevious,submitCloudDaily,refreshCloudWait,showCloudHistory,openCloudHistoryDay,syncLocalSessions});
+Object.assign(window,{showCloudHub,showAboutApp,cloudRetrySync,cloudSendOtp,cloudVerifyOtp,cloudChangeOtpEmail,cloudGoogleSignIn,cloudSignOut,cloudCreatePair,cloudJoinPair,cloudLeavePair,copyInviteCode,shareInviteCode,openCloudDaily,cloudDailyChoose,cloudDailyPrevious,submitCloudDaily,refreshCloudWait,showCloudHistory,openCloudHistoryDay,syncLocalSessions});
 
 document.documentElement.dataset.version=V07_VERSION;
 initCloud().finally(()=>render());

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.5 — niezawodne łączenie telefonów
+
+- usunięto możliwość nieskończonego ekranu „Synchronizuję dane…”,
+- dodano 12-sekundowe limity zapytań Supabase i 15-sekundowy watchdog interfejsu,
+- inicjalizacja sesji i zdarzenie auth korzystają z jednej współdzielonej operacji,
+- zapytania z `onAuthStateChange` są uruchamiane poza callbackiem auth,
+- synchronizacja lokalnej historii działa w tle i nie blokuje ekranu konta,
+- po błędzie dostępny jest przycisk „Spróbuj ponownie”,
+- aktualizacja nie wymaga żadnej migracji SQL.
+
 ## 0.9.4
 
 - Dodano „Jak dobrze mnie znasz?” na dwóch telefonach.

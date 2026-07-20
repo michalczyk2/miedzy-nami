@@ -6,10 +6,10 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
-test('v0.9.4 ładuje aplikację przez jeden moduł TypeScript',()=>{
+test('v0.9.5 ładuje aplikację przez jeden moduł TypeScript',()=>{
   const html=read('index.html');
   const main=read('main.ts');
-  assert.match(html,/Między Nami 0\.9\.4/);
+  assert.match(html,/Między Nami 0\.9\.5/);
   assert.match(html,/type="module" src="\/main\.ts"/);
   assert.match(main,/\/spicy-v082-data\.js/);
   assert.match(main,/\/v082\.js/);
@@ -112,7 +112,7 @@ test('v0.8.3 tłumaczy błędy sieci i zapisuje migrację kodu pary',()=>{
 });
 
 
-test('v0.9.4 ustawia wersję w buildzie i ładuje cztery tryby multiplayer',()=>{
+test('v0.9.5 ustawia wersję w buildzie i ładuje cztery tryby multiplayer',()=>{
   const main=read('main.ts');
   const appIndex=main.indexOf("'/app.js'");
   const v082Index=main.indexOf("'/v082.js'");
