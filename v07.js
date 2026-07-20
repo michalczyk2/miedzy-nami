@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 
-const V07_VERSION='0.9.5';
+const V07_VERSION='0.9.6';
 const CREATOR='Michał Czerwiński';
 const CLOUD_DRAFT_PREFIX='mn-v07-cloud-daily-draft';
 const OTP_EMAIL_KEY='mn-v072-otp-email';
@@ -9,6 +9,7 @@ const OTP_SENT_AT_KEY='mn-v072-otp-sent-at';
 const OTP_RESEND_SECONDS=60;
 const CLOUD_REQUEST_TIMEOUT_MS=12000;
 const CLOUD_LOADING_WATCHDOG_MS=15000;
+const INITIAL_INVITE_CODE=(new URLSearchParams(location.search).get('join')||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
 const ENGINE=window.MN_DAILY_ENGINE;
 const config=window.MN_CLOUD_CONFIG||{};
 const cloud={
@@ -16,13 +17,20 @@ const cloud={
   client:null,session:null,user:null,profile:null,couple:null,members:[],subscription:null,
   loading:false,error:'',notice:'',daily:null,history:[],syncing:false,lastSyncAt:null,
   otpEmail:localStorage.getItem(OTP_EMAIL_KEY)||'',otpSentAt:Number(localStorage.getItem(OTP_SENT_AT_KEY)||0),
-  loadingStartedAt:null,
+  loadingStartedAt:null,pendingInviteCode:INITIAL_INVITE_CODE,
 };
 let cloudLoadingWatchdog=null;
 let cloudStatePromise=null;
 window.MN_CLOUD_RUNTIME=cloud;
 
 function cloudEscape(value){return escapeHtml(String(value??''))}
+function normalizeInviteCode(value){return String(value||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6)}
+function clearInviteQuery(){
+  cloud.pendingInviteCode='';
+  const url=new URL(location.href);
+  if(url.searchParams.has('join')){url.searchParams.delete('join');history.replaceState({},'',url.pathname+url.search+url.hash)}
+}
+function inviteUrl(code){const url=new URL(location.origin+location.pathname);url.searchParams.set('join',code);return url.toString()}
 function ownMember(){return cloud.members.find(member=>member.user_id===cloud.user?.id)||null}
 function partnerMember(){return cloud.members.find(member=>member.user_id!==cloud.user?.id)||null}
 function cloudReady(){return Boolean(cloud.configured&&cloud.user&&cloud.couple&&ownMember())}
@@ -39,7 +47,7 @@ function formatCloudError(error){
   if(normalized.includes('load failed')||normalized.includes('failed to fetch')||normalized.includes('network request failed')||normalized.includes('networkerror')||normalized.includes('network error'))return'Nie udało się połączyć z chmurą. Sprawdź internet i spróbuj ponownie. Twoje dane lokalne nie zostały utracone.';
   if(normalized.includes('timeout')||normalized.includes('timed out'))return'Połączenie trwało zbyt długo. Spróbuj ponownie za chwilę.';
   if(normalized.includes('gen_random_bytes'))return'Baza wymaga poprawki generatora kodu pary. Uruchom migrację 002_fix_invite_code.sql.';
-  const map={AUTH_REQUIRED:'Najpierw zaloguj się.',DISPLAY_NAME_REQUIRED:'Wpisz imię.',ALREADY_IN_COUPLE:'To konto jest już połączone z parą.',INVALID_INVITE_CODE:'Nie znaleziono pary o takim kodzie.',COUPLE_FULL:'Do tej pary należą już dwie osoby.'};
+  const map={AUTH_REQUIRED:'Najpierw zaloguj się.',DISPLAY_NAME_REQUIRED:'Wpisz imię.',ALREADY_IN_COUPLE:'To konto jest już połączone z parą.',INVALID_INVITE_CODE:'Nie znaleziono pary o takim kodzie.',COUPLE_FULL:'Do tej pary należą już dwie osoby.',CURRENT_COUPLE_NOT_EMPTY:'Nie można zmienić kodu, ponieważ konto jest już połączone z partnerem.',SAME_COUPLE_CODE:'To jest kod pary, w której już jesteś.'};
   return Object.entries(map).find(([key])=>raw.includes(key))?.[1]||raw;
 }
 function cloudToast(message){cloud.notice=message;toast(message)}
@@ -176,15 +184,36 @@ async function cloudCreatePair(){
 }
 async function cloudJoinPair(){
   const name=document.querySelector('#cloud-join-name')?.value.trim()||cloud.profile?.display_name||settings.names[1];
-  const code=(document.querySelector('#cloud-invite-code')?.value||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
-  if(code.length!==6){cloudToast('Kod pary ma 6 znaków.');return}
+  const code=normalizeInviteCode(document.querySelector('#cloud-invite-code')?.value||cloud.pendingInviteCode);
+  if(code.length!==6){cloudToast('Wpisz pełny, 6-znakowy kod partnera.');return}
   cloudBeginLoading();clearCloudError();render();
   try{
     const{error}=await cloudWithTimeout(cloud.client.rpc('join_couple',{p_invite_code:code,p_display_name:name}),'Dołączanie do pary');
     if(error)throw error;
-    await loadCloudState();cloudToast('Połączono z parą.');
+    clearInviteQuery();await loadCloudState();cloudToast('Telefony zostały połączone.');
   }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud]',error)}
   finally{cloudEndLoading();render()}
+}
+async function cloudSwitchWaitingPair(){
+  const name=ownMember()?.display_name||cloud.profile?.display_name||settings.names[1];
+  const code=normalizeInviteCode(document.querySelector('#cloud-switch-code')?.value||'');
+  if(code.length!==6){cloudToast('Wpisz pełny, 6-znakowy kod partnera.');return}
+  if(code===cloud.couple?.invite_code){cloudToast('To jest kod pary, w której już jesteś.');return}
+  cloudBeginLoading();clearCloudError();render();
+  try{
+    const{error}=await cloudWithTimeout(cloud.client.rpc('switch_waiting_couple',{p_invite_code:code,p_display_name:name}),'Zmiana kodu pary');
+    if(error)throw error;
+    clearInviteQuery();await loadCloudState();cloudToast('Dołączono do pary partnera.');
+  }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud switch]',error)}
+  finally{cloudEndLoading();render()}
+}
+async function cloudPasteInviteCode(inputId){
+  try{
+    const text=normalizeInviteCode(await navigator.clipboard.readText());
+    const input=document.getElementById(inputId);
+    if(!input||text.length!==6)throw new Error('NO_CODE');
+    input.value=text;input.dispatchEvent(new Event('input',{bubbles:true}));input.focus();cloudToast('Kod został wklejony.');
+  }catch{cloudToast('Przytrzymaj pole kodu i wybierz „Wklej”.')}
 }
 async function cloudLeavePair(){
   if(!confirm('Rozwiązać parę online? Usunie to wspólne dane z chmury i odłączy oba konta. Dane lokalne na telefonach pozostaną.'))return;
@@ -197,8 +226,9 @@ async function copyInviteCode(){
 }
 async function shareInviteCode(){
   const code=cloud.couple?.invite_code;if(!code)return;
-  const text=`Dołącz do naszej pary w aplikacji Między Nami. Kod: ${code}`;
-  try{if(navigator.share)await navigator.share({title:'Między Nami — zaproszenie',text});else await copyInviteCode()}catch{}
+  const url=inviteUrl(code);
+  const text=`Dołącz do naszej pary w aplikacji Między Nami. Wspólny kod pary: ${code}`;
+  try{if(navigator.share)await navigator.share({title:'Między Nami — zaproszenie',text,url});else{await navigator.clipboard.writeText(`${text} ${url}`);cloudToast('Zaproszenie skopiowane.')}}catch{}
 }
 
 function cloudDraftKey(date=cloudDateKey()){return`${CLOUD_DRAFT_PREFIX}:${cloud.couple?.id}:${date}:${cloud.user?.id}`}
@@ -244,8 +274,12 @@ function openCloudDaily(){
   ui.modal=null;ui.view=cloud.daily?.result?'cloud-daily-summary':cloud.daily?.own?'cloud-daily-wait':'cloud-daily';render();
 }
 function cloudDailyChoose(answer){
-  const definition=cloudQuestionDefinition();const draft=loadCloudDraft(definition);draft.answers[draft.index]=Number(answer);
-  if(draft.index<4)draft.index++;saveCloudDraft(draft);render();
+  const definition=cloudQuestionDefinition();const draft=loadCloudDraft(definition);draft.answers[draft.index]=Number(answer);saveCloudDraft(draft);render();
+}
+function cloudDailyNext(){
+  const definition=cloudQuestionDefinition();const draft=loadCloudDraft(definition);
+  if(!Number.isInteger(draft.answers[draft.index])){cloudToast('Najpierw wybierz odpowiedź.');return}
+  draft.index=Math.min(4,draft.index+1);saveCloudDraft(draft);render();
 }
 function cloudDailyPrevious(){const definition=cloudQuestionDefinition();const draft=loadCloudDraft(definition);draft.index=Math.max(0,draft.index-1);saveCloudDraft(draft);render()}
 async function submitCloudDaily(){
@@ -297,14 +331,21 @@ function renderCloudHub(){
     if(pending){app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Kod jednorazowy</span></div><span class="cloud-big">✉</span><h1>Wpisz kod z e-maila</h1><p class="muted">Kod został wysłany na <strong>${cloudEscape(pending)}</strong>. Wpisz go tutaj, aby zalogować dokładnie tę aplikację z ekranu głównego.</p>${error}<label class="field"><span>Kod logowania</span><input class="input cloud-code-input otp-code-input" id="cloud-otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="8" placeholder="123456" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,8)"></label><button class="button primary full" onclick="cloudVerifyOtp()">Zaloguj się kodem</button><div class="button-row auth-secondary-row"><button class="button secondary" onclick="cloudSendOtp()">${remaining>0?`Wyślij ponownie za ${remaining} s`:'Wyślij kod ponownie'}</button><button class="button tertiary" onclick="cloudChangeOtpEmail()">Zmień e-mail</button></div><p class="small center">Nie otwieraj linku w Safari. Kod wpisany tutaj zapisze sesję bezpośrednio w skrócie na ekranie głównym.</p></section>`;return}
     app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Bezpieczne logowanie</span></div><span class="cloud-big">♡</span><h1>Twoje konto</h1><p class="muted">Każda osoba loguje się na swoim telefonie. Na iPhonie najpewniej działa kod jednorazowy wpisywany bezpośrednio w aplikacji.</p>${error}<label class="field"><span>Adres e-mail</span><input class="input" id="cloud-email" type="email" autocomplete="email" placeholder="twoj@email.pl"></label><button class="button primary full" onclick="cloudSendOtp()">Wyślij kod logowania</button><div class="cloud-alert auth-info">📱 Otwórz skrót Między Nami z ekranu głównego, wyślij kod i wpisz go tutaj. Dzięki temu logowanie zostanie zapisane w aplikacji, a nie tylko w Safari.</div><p class="small center">Po zalogowaniu sesja pozostaje zapisana na tym urządzeniu. Nie trzeba logować się codziennie.</p></section>`;return}
   
-  if(!cloud.couple){const defaultName=cloud.profile?.display_name||cloud.user.email?.split('@')[0]||settings.names[0];app.innerHTML=`<section class="panel wide cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><button class="link-button" onclick="cloudSignOut()">Wyloguj</button></div><span class="eyebrow">ZALOGOWANO · ${cloudEscape(cloud.user.email||'konto')}</span><h1>Połączcie telefony</h1><p class="muted">Jedna osoba tworzy parę i wysyła kod. Druga wybiera „Dołączam” i wpisuje ten kod.</p>${error}<div class="cloud-pair-grid"><article><span>1</span><h2>Tworzę parę</h2><label class="field"><span>Twoje imię</span><input class="input" id="cloud-create-name" value="${cloudEscape(defaultName)}" maxlength="40"></label><button class="button primary full" onclick="cloudCreatePair()">Utwórz parę</button></article><article><span>2</span><h2>Dołączam</h2><label class="field"><span>Twoje imię</span><input class="input" id="cloud-join-name" value="${cloudEscape(defaultName)}" maxlength="40"></label><label class="field"><span>Kod partnera</span><input class="input cloud-code-input" id="cloud-invite-code" maxlength="6" autocomplete="off" placeholder="A1B2C3" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')"></label><button class="button secondary full" onclick="cloudJoinPair()">Dołącz do pary</button></article></div></section>`;return}
-  const partner=partnerMember(),own=ownMember();app.innerHTML=`<section class="panel wide cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip connected-chip">● online</span></div><div class="cloud-account-head"><span>✓</span><div><small>PARA ONLINE</small><h1>${cloudEscape(own?.display_name||'Ty')} ${partner?'& '+cloudEscape(partner.display_name):''}</h1><p>${partner?'Oba telefony są połączone i mają wspólną historię.':'Druga osoba musi zalogować się i wpisać kod.'}</p></div></div>${error}<div class="invite-card"><small>KOD ZAPROSZENIA</small><strong>${cloudEscape(cloud.couple.invite_code)}</strong><p>${partner?'Kod pozostaje przypisany do waszej pary.':'Wyślij ten kod drugiej osobie.'}</p><div class="button-row"><button class="button primary" onclick="copyInviteCode()">Kopiuj kod</button><button class="button secondary" onclick="shareInviteCode()">Udostępnij</button></div></div><div class="member-list">${cloud.members.map(member=>`<div><span>${member.user_id===cloud.user.id?'TY':'♡'}</span><strong>${cloudEscape(member.display_name)}</strong><small>${member.user_id===cloud.user.id?'To urządzenie':'Partner/partnerka'}</small></div>`).join('')}${cloud.members.length<2?'<div class="waiting-member"><span>…</span><strong>Oczekiwanie</strong><small>na drugą osobę</small></div>':''}</div><div class="cloud-actions"><button class="button primary" onclick="openCloudDaily()" ${partner?'':'disabled'}>Dzisiejsze pytania</button><button class="button secondary" onclick="showCloudHistory()">Historia online</button><button class="button tertiary" onclick="syncLocalSessions().then(()=>toast('Synchronizacja zakończona.'))">Synchronizuj teraz</button></div><div class="cloud-danger-zone"><button class="link-button" onclick="cloudSignOut()">Wyloguj to urządzenie</button><button class="link-button danger-text" onclick="cloudLeavePair()">Rozwiąż parę online</button></div></section>`;
+  if(!cloud.couple){
+    const defaultName=cloud.profile?.display_name||cloud.user.email?.split('@')[0]||settings.names[0];
+    const invite=cloudEscape(cloud.pendingInviteCode||'');
+    app.innerHTML=`<section class="panel wide cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><button class="link-button" onclick="cloudSignOut()">Wyloguj</button></div><span class="eyebrow">ZALOGOWANO · ${cloudEscape(cloud.user.email||'konto')}</span><h1>Połączcie telefony</h1><p class="muted center">Kod nie jest przypisany do osoby. Jedna para ma jeden wspólny, unikalny kod.</p>${error}<div class="cloud-pair-grid cloud-pair-grid-v096"><article class="cloud-join-primary"><span>1</span><h2>Mam kod partnera</h2><p class="small">Wklej kod, który partner skopiował lub udostępnił.</p><label class="field"><span>Twoje imię</span><input class="input" id="cloud-join-name" value="${cloudEscape(defaultName)}" maxlength="40"></label><label class="field"><span>Wspólny kod pary</span><div class="cloud-code-row"><input class="input cloud-code-input" id="cloud-invite-code" maxlength="6" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" placeholder="A1B2C3" value="${invite}" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6)"><button class="button tertiary" type="button" onclick="cloudPasteInviteCode('cloud-invite-code')">Wklej</button></div></label><button class="button primary full" onclick="cloudJoinPair()">Połącz konta</button></article><article><span>2</span><h2>Nie mamy jeszcze kodu</h2><p class="small">Tylko jedna osoba tworzy nową parę. Druga wpisuje otrzymany kod w polu obok.</p><label class="field"><span>Twoje imię</span><input class="input" id="cloud-create-name" value="${cloudEscape(defaultName)}" maxlength="40"></label><button class="button secondary full" onclick="cloudCreatePair()">Utwórz nową parę</button></article></div></section>`;return
+  }
+  const partner=partnerMember(),own=ownMember();
+  const inviteBlock=partner?`<div class="cloud-connected-explainer"><span>✓</span><div><strong>Połączenie gotowe</strong><p>Oboje widzicie ten sam kod, ponieważ jest to wspólny kod tej pary — nie osobny kod konta.</p><details><summary>Pokaż kod pary</summary><code>${cloudEscape(cloud.couple.invite_code)}</code></details></div></div>`:`<div class="invite-card"><small>WSPÓLNY KOD ZAPROSZENIA</small><strong>${cloudEscape(cloud.couple.invite_code)}</strong><p>Wyślij kod partnerowi. Na drugim telefonie należy wybrać „Mam kod partnera” i wkleić go.</p><div class="button-row"><button class="button primary" onclick="copyInviteCode()">Kopiuj kod</button><button class="button secondary" onclick="shareInviteCode()">Udostępnij link</button></div></div><div class="cloud-switch-card"><h3>Partner też utworzył własny kod?</h3><p class="small">Nie musicie rozwiązywać tego ręcznie. Wpisz kod partnera, a pusta para zostanie bezpiecznie zamieniona.</p><div class="cloud-code-row"><input class="input cloud-code-input" id="cloud-switch-code" maxlength="6" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" placeholder="KOD PARTNERA" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6)"><button class="button tertiary" type="button" onclick="cloudPasteInviteCode('cloud-switch-code')">Wklej</button></div><button class="button secondary full" onclick="cloudSwitchWaitingPair()">Dołącz do kodu partnera</button></div>`;
+  app.innerHTML=`<section class="panel wide cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip connected-chip">● online</span></div><div class="cloud-account-head"><span>✓</span><div><small>PARA ONLINE</small><h1>${cloudEscape(own?.display_name||'Ty')} ${partner?'& '+cloudEscape(partner.display_name):''}</h1><p>${partner?'Oba telefony są połączone i mają wspólną historię.':'Czekamy, aż druga osoba wpisze wasz wspólny kod.'}</p></div></div>${error}${inviteBlock}<div class="member-list">${cloud.members.map(member=>`<div><span>${member.user_id===cloud.user.id?'TY':'♡'}</span><strong>${cloudEscape(member.display_name)}</strong><small>${member.user_id===cloud.user.id?'To urządzenie':'Partner/partnerka'}</small></div>`).join('')}${cloud.members.length<2?'<div class="waiting-member"><span>…</span><strong>Oczekiwanie</strong><small>na drugą osobę</small></div>':''}</div><div class="cloud-actions"><button class="button primary" onclick="openCloudDaily()" ${partner?'':'disabled'}>Dzisiejsze pytania</button><button class="button secondary" onclick="showCloudHistory()">Historia online</button><button class="button tertiary" onclick="syncLocalSessions().then(()=>toast('Synchronizacja zakończona.'))">Synchronizuj teraz</button></div><div class="cloud-danger-zone"><button class="link-button" onclick="cloudSignOut()">Wyloguj to urządzenie</button><button class="link-button danger-text" onclick="cloudLeavePair()">Rozwiąż parę online</button></div></section>`;
 }
 
 function renderCloudDaily(){
   const definition=cloudQuestionDefinition(),questions=cloudQuestions(definition.questionIds),draft=loadCloudDraft(definition),question=questions[draft.index],meta=ENGINE.categoryMeta(definition.category);
   if(!question){app.innerHTML='<section class="panel"><h1>Brak pytań</h1><button class="button" onclick="goHome()">Wróć</button></section>';return}
-  app.innerHTML=`<section class="panel daily-panel cloud-daily-panel" style="--daily-accent:${meta.accent}"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Telefon: ${cloudEscape(ownMember()?.display_name)}</span></div><div class="cloud-private-badge">🔒 Odpowiadasz samodzielnie. Partner nie zobaczy odpowiedzi przed ukończeniem.</div><div class="daily-progress"><span style="width:${(draft.index+1)/5*100}%"></span></div><div class="daily-question-head"><small>${meta.icon} ${cloudEscape(meta.label)} · PYTANIE ${draft.index+1}/5</small><h1>${cloudEscape(question.prompt)}</h1></div><div class="daily-answer-grid">${question.answers.map((answer,index)=>`<button class="${draft.answers[draft.index]===index?'selected':''}" onclick="cloudDailyChoose(${index})"><b>${String.fromCharCode(65+index)}</b><span>${cloudEscape(answer)}</span></button>`).join('')}</div><div class="daily-nav-row"><button class="button tertiary" onclick="cloudDailyPrevious()" ${draft.index===0?'disabled':''}>← Poprzednie</button>${draft.index===4?`<button class="button primary" onclick="submitCloudDaily()">Wyślij odpowiedzi</button>`:'<span class="muted">Wybierz odpowiedź, aby przejść dalej</span>'}</div></section>`;
+  const selected=draft.answers[draft.index];
+  app.innerHTML=`<section class="panel daily-panel cloud-daily-panel" style="--daily-accent:${meta.accent}"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Telefon: ${cloudEscape(ownMember()?.display_name)}</span></div><div class="cloud-private-badge">🔒 Odpowiadasz samodzielnie. Partner nie zobaczy odpowiedzi przed ukończeniem.</div><div class="daily-progress"><i style="width:${(draft.index+1)/5*100}%"></i></div><div class="daily-question-head"><small>${meta.icon} ${cloudEscape(meta.label)} · PYTANIE ${draft.index+1}/5</small><h1>${cloudEscape(question.prompt)}</h1></div><div class="daily-answer-list cloud-daily-answers">${question.answers.map((answer,index)=>`<button type="button" class="daily-answer ${selected===index?'selected':''}" aria-pressed="${selected===index}" onclick="cloudDailyChoose(${index})"><b>${String.fromCharCode(65+index)}</b><span>${cloudEscape(answer)}</span>${selected===index?'<i aria-hidden="true">✓</i>':''}</button>`).join('')}</div><div class="cloud-daily-nav"><button class="button tertiary" onclick="cloudDailyPrevious()" ${draft.index===0?'disabled':''}>← Poprzednie</button>${draft.index===4?`<button class="button primary" onclick="submitCloudDaily()" ${Number.isInteger(selected)?'':'disabled'}>Zatwierdź 5 odpowiedzi</button>`:`<button class="button primary" onclick="cloudDailyNext()" ${Number.isInteger(selected)?'':'disabled'}>Dalej →</button>`}</div><p class="daily-secret-note">Wybrana odpowiedź jest podświetlona i oznaczona ✓.</p></section>`;
 }
 function renderCloudWait(){
   const partner=partnerMember();app.innerHTML=`<section class="panel cloud-panel cloud-wait"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Odpowiedzi zapisane</span></div><div class="waiting-orbit"><span>✓</span><i></i><b></b></div><h1>Teraz kolej ${cloudEscape(partner?.display_name||'drugiej osoby')}</h1><p class="muted">Twoje odpowiedzi są bezpiecznie zapisane. Wynik pojawi się automatycznie po ukończeniu testu na drugim telefonie.</p><div class="cloud-alert">Możesz zamknąć aplikację. Historia zsynchronizuje się po ponownym uruchomieniu.</div><button class="button primary full" onclick="refreshCloudWait()">Sprawdź, czy wynik jest gotowy</button></section>`;
@@ -367,7 +408,7 @@ renderModal=function(){
   }
 };
 
-Object.assign(window,{showCloudHub,showAboutApp,cloudRetrySync,cloudSendOtp,cloudVerifyOtp,cloudChangeOtpEmail,cloudGoogleSignIn,cloudSignOut,cloudCreatePair,cloudJoinPair,cloudLeavePair,copyInviteCode,shareInviteCode,openCloudDaily,cloudDailyChoose,cloudDailyPrevious,submitCloudDaily,refreshCloudWait,showCloudHistory,openCloudHistoryDay,syncLocalSessions});
+Object.assign(window,{showCloudHub,showAboutApp,cloudRetrySync,cloudSendOtp,cloudVerifyOtp,cloudChangeOtpEmail,cloudGoogleSignIn,cloudSignOut,cloudCreatePair,cloudJoinPair,cloudSwitchWaitingPair,cloudPasteInviteCode,cloudLeavePair,copyInviteCode,shareInviteCode,openCloudDaily,cloudDailyChoose,cloudDailyNext,cloudDailyPrevious,submitCloudDaily,refreshCloudWait,showCloudHistory,openCloudHistoryDay,syncLocalSessions});
 
 document.documentElement.dataset.version=V07_VERSION;
 initCloud().finally(()=>render());

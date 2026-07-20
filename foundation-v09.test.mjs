@@ -6,7 +6,7 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname);
 const read = (file) => readFileSync(resolve(root, file), 'utf8');
 
-test('v0.9.5 ma jeden modułowy punkt wejścia', () => {
+test('v0.9.6 ma jeden modułowy punkt wejścia', () => {
   const html = read('index.html');
   assert.match(html, /type="module" src="\/main\.ts"/);
   assert.doesNotMatch(html, /cdn\.jsdelivr\.net\/npm\/@supabase/);

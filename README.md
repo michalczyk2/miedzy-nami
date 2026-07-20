@@ -1,10 +1,19 @@
-> Aktualna wersja: **v0.9.5** — hotfix łączenia dwóch telefonów i limitów czasu Supabase.
-
-# Między Nami v0.9.4
+# Między Nami v0.9.6
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
+
+## v0.9.6 — prostsze łączenie pary i czytelne odpowiedzi
+
+- pole do wpisania lub wklejenia kodu partnera jest teraz pierwszą opcją,
+- zaproszenie można udostępnić jako link z kodem,
+- jeżeli obie osoby utworzą osobne puste pary, jedna może bezpiecznie przełączyć się na kod partnera,
+- po połączeniu aplikacja wyjaśnia, że oboje mają ten sam wspólny kod pary,
+- odpowiedzi Codziennego Dopasowania online mają poprawny układ, odstępy i wyraźny stan zaznaczenia,
+- przechodzenie między pytaniami odbywa się przyciskiem „Dalej”, a ostatni wybór jest widoczny przed zatwierdzeniem.
+
+Szczegóły: `V096-PAIRING-UX.md`.
 
 ## v0.9.4 — Jak dobrze mnie znasz? na żywo
 

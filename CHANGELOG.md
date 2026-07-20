@@ -1,14 +1,14 @@
+## 0.9.6 — prostsze łączenie pary i czytelne odpowiedzi online
+
+- przebudowano ekran łączenia: „Mam kod partnera” jest pierwszą i główną ścieżką,
+- dodano przycisk wklejania kodu oraz link zaproszenia z automatycznym uzupełnieniem,
+- dodano atomową zmianę pustej pary na kod partnera, gdy obie osoby omyłkowo utworzą własne kody,
+- wyjaśniono, że kod jest wspólny dla pary i dlatego po połączeniu jest taki sam na obu telefonach,
+- naprawiono nieostylowane odpowiedzi Codziennego Dopasowania online,
+- dodano wyraźne podświetlenie, znacznik ✓ i jawny przycisk „Dalej”,
+- ostatnia odpowiedź pozostaje widocznie zaznaczona przed zatwierdzeniem.
+
 # Changelog
-
-## 0.9.5 — niezawodne łączenie telefonów
-
-- usunięto możliwość nieskończonego ekranu „Synchronizuję dane…”,
-- dodano 12-sekundowe limity zapytań Supabase i 15-sekundowy watchdog interfejsu,
-- inicjalizacja sesji i zdarzenie auth korzystają z jednej współdzielonej operacji,
-- zapytania z `onAuthStateChange` są uruchamiane poza callbackiem auth,
-- synchronizacja lokalnej historii działa w tle i nie blokuje ekranu konta,
-- po błędzie dostępny jest przycisk „Spróbuj ponownie”,
-- aktualizacja nie wymaga żadnej migracji SQL.
 
 ## 0.9.4
 

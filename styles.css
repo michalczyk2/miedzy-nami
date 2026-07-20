@@ -299,3 +299,31 @@ button,.button,.desktop-app,.menu-action,.v08-menu-item{touch-action:manipulatio
 .v094-summary .v082-result-ring{background:radial-gradient(circle at center,#201326 57%,transparent 58%),conic-gradient(#ec4899 calc(var(--score)*1%),rgba(255,255,255,.09) 0)}
 .v094-result-list article.same{border-color:rgba(236,72,153,.25)}
 @media(max-width:720px){.v094-home-session{grid-template-columns:auto 1fr}.v094-home-session i{grid-column:2}.v094-live-options{grid-template-columns:1fr}.v094-live-card h2{font-size:27px}}
+
+/* v0.9.6 — czytelne łączenie pary i odpowiedzi online */
+.cloud-pair-grid-v096 .cloud-join-primary{border-color:rgba(217,70,239,.34);background:linear-gradient(145deg,rgba(217,70,239,.1),rgba(139,92,246,.06))}
+.cloud-pair-grid-v096 article>p{min-height:42px;color:var(--muted);line-height:1.5}
+.cloud-code-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
+.cloud-code-row .button{min-width:88px;height:100%}
+.cloud-switch-card{margin:16px 0;padding:18px;border:1px dashed rgba(167,139,250,.28);border-radius:20px;background:rgba(139,92,246,.045)}
+.cloud-switch-card h3{margin:0 0 5px;font-size:17px}
+.cloud-switch-card p{margin:0 0 13px;color:var(--muted);line-height:1.5}
+.cloud-switch-card>.button{margin-top:10px}
+.cloud-connected-explainer{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;margin:16px 0;padding:18px;border:1px solid rgba(52,211,153,.25);border-radius:20px;background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(14,165,233,.045))}
+.cloud-connected-explainer>span{display:grid;place-items:center;width:52px;height:52px;border-radius:17px;background:rgba(16,185,129,.14);color:#6ee7b7;font-size:25px;font-weight:900}
+.cloud-connected-explainer strong{font-size:17px}
+.cloud-connected-explainer p{margin:5px 0 9px;color:var(--muted);line-height:1.5}
+.cloud-connected-explainer details{color:#c4b5fd;font-size:12px}
+.cloud-connected-explainer summary{cursor:pointer}
+.cloud-connected-explainer code{display:block;width:max-content;margin-top:8px;padding:8px 11px;border-radius:10px;background:rgba(0,0,0,.2);font-size:16px;letter-spacing:.15em}
+.cloud-daily-panel .daily-question-head{max-width:720px;margin:0 auto 22px;text-align:left}
+.cloud-daily-panel .daily-question-head small{display:block;margin-bottom:9px;color:color-mix(in srgb,var(--daily-accent) 65%,white);font-size:11px;font-weight:900;letter-spacing:.07em}
+.cloud-daily-panel .daily-question-head h1{margin:0;font-size:clamp(29px,5vw,46px);line-height:1.12}
+.cloud-daily-answers .daily-answer{position:relative;min-height:72px;padding-right:52px}
+.cloud-daily-answers .daily-answer b{font-size:15px}
+.cloud-daily-answers .daily-answer span{font-size:16px;line-height:1.4}
+.cloud-daily-answers .daily-answer>i{position:absolute;right:16px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:color-mix(in srgb,var(--daily-accent) 22%,transparent);color:color-mix(in srgb,var(--daily-accent) 58%,white);font-style:normal;font-weight:950}
+.cloud-daily-answers .daily-answer.selected{transform:none;border-width:2px;box-shadow:0 0 0 3px color-mix(in srgb,var(--daily-accent) 12%,transparent)}
+.cloud-daily-nav{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:10px;max-width:680px;margin:18px auto 0}
+.cloud-daily-nav .button{width:100%}
+@media(max-width:700px){.cloud-code-row{grid-template-columns:1fr}.cloud-code-row .button{height:auto}.cloud-connected-explainer{grid-template-columns:44px 1fr}.cloud-connected-explainer>span{width:44px;height:44px}.cloud-daily-nav{grid-template-columns:1fr}.cloud-daily-panel .daily-question-head h1{font-size:32px}.cloud-daily-answers .daily-answer span{font-size:15px}}

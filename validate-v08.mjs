@@ -3,7 +3,7 @@ import {readFileSync,existsSync,statSync} from 'node:fs';
 import {resolve} from 'node:path';
 
 const root=resolve(import.meta.dirname);
-const required=['index.html','main.ts','vite.config.ts','tsconfig.json','release.js','styles.css','cloud-config.js','app.js','enhancements.js','v05.js','v06.js','v07.js','v071.js','v08.js','spicy-v081-data.js','v081.js','spicy-v082-data.js','v082.js','v083.js','v091.js','multiplayer-core-v092.js','v092.js','manifest.webmanifest','sw.js','vercel.json','version.json','content/library.json','content/daily-match.json','002_fix_invite_code.sql','003_v091_spicy_match_two_phones.sql','004_v092_multiplayer_choice_engine.sql','005_v093_live_who_more.sql','006_v094_live_know_me.sql'];
+const required=['index.html','main.ts','vite.config.ts','tsconfig.json','release.js','styles.css','cloud-config.js','app.js','enhancements.js','v05.js','v06.js','v07.js','v071.js','v08.js','spicy-v081-data.js','v081.js','spicy-v082-data.js','v082.js','v083.js','v091.js','multiplayer-core-v092.js','v092.js','manifest.webmanifest','sw.js','vercel.json','version.json','content/library.json','content/daily-match.json','002_fix_invite_code.sql','003_v091_spicy_match_two_phones.sql','004_v092_multiplayer_choice_engine.sql','005_v093_live_who_more.sql','006_v094_live_know_me.sql','007_v096_pairing_ux.sql'];
 const errors=[];
 for(const file of required){const path=resolve(root,file);if(!existsSync(path)||statSync(path).size===0)errors.push(`Brak lub pusty plik: ${file}`)}
 for(const file of ['release.js','cloud-config.js','app.js','enhancements.js','v05.js','v06.js','v07.js','v071.js','v08.js','spicy-v081-data.js','v081.js','spicy-v082-data.js','v082.js','v083.js','v091.js','multiplayer-core-v092.js','v092.js','multiplayer-live-core-v093.js','v093.js','v094.js','sw.js']){
@@ -20,7 +20,7 @@ for(const asset of ['/cloud-config.js','/app.js','/enhancements.js','/v05.js','/
 const version=JSON.parse(readFileSync(resolve(root,'version.json'),'utf8'));
 const library=JSON.parse(readFileSync(resolve(root,'content/library.json'),'utf8'));
 const daily=JSON.parse(readFileSync(resolve(root,'content/daily-match.json'),'utf8'));
-if(version.version!=='0.9.5')errors.push(`Nieprawidłowa wersja: ${version.version}`);
+if(version.version!=='0.9.6')errors.push(`Nieprawidłowa wersja: ${version.version}`);
 if(version.creator!=='Michał Czerwiński')errors.push('Nieprawidłowy autor');
 const libraryHasAdult=library.some(card=>card.category==='pikantne');
 const runtimeCards=library.length+(libraryHasAdult?0:Number(version.adult_pack_cards||0));
@@ -42,4 +42,4 @@ for(const fragment of ['MN_FRIENDLY_ERROR','SKIP_WAITING','Nowa wersja jest goto
 const migrationFix=readFileSync(resolve(root,'002_fix_invite_code.sql'),'utf8');
 for(const fragment of ['gen_random_uuid','generate_invite_code','security definer'])if(!migrationFix.toLowerCase().includes(fragment.toLowerCase()))errors.push(`Migracja 002 nie zawiera: ${fragment}`);
 if(errors.length){console.error(`\nKontrola nieudana (${errors.length}):\n- ${errors.join('\n- ')}\n`);process.exit(1)}
-console.log(`Kontrola v0.9.5 OK: ${library.length} kart, ${daily.questions.length} pytań, Vite, TypeScript i pojedynczy punkt wejścia.`);
+console.log(`Kontrola v0.9.6 OK: ${library.length} kart, ${daily.questions.length} pytań, Vite, TypeScript i pojedynczy punkt wejścia.`);
