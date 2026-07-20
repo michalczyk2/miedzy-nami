@@ -1,8 +1,8 @@
 {
   "name": "miedzy-nami",
   "private": true,
-  "version": "0.8.0",
-  "description": "Intuicyjna PWA dla par z onboardingiem, trwałą sesją, czytelnym kontem i synchronizacją dwóch telefonów.",
+  "version": "0.8.1",
+  "description": "Intuicyjna PWA dla par z synchronizacją dwóch telefonów i opcjonalnym pakietem Pikantne 18+.",
   "scripts": {
     "content:export": "node scripts/export-library.mjs",
     "content:report": "node scripts/card-report.mjs",

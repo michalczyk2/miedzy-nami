@@ -1,12 +1,14 @@
 {
   "name": "Między Nami",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "channel": "stable",
-  "cards": 754,
+  "cards": 866,
   "daily_match_questions": 180,
   "apps": 11,
-  "release": "guided-onboarding-persistent-session",
+  "release": "optional-spicy-18-pack",
   "cloud_sync": true,
   "creator": "Michał Czerwiński",
-  "tests": 30
+  "tests": 31,
+  "adult_pack_cards": 112,
+  "adult_pack_optional": true
 }

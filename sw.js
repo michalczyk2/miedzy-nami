@@ -1,5 +1,5 @@
-const CACHE='miedzy-nami-v080';
-const CORE=['/','/index.html','/styles.css','/cloud-config.js','/app.js','/enhancements.js','/content/cards-v05.js','/v05.js','/content/daily-match.js','/v06.js','/v07.js','/v071.js','/v08.js','/manifest.webmanifest','/icon.svg','/icon-180.png','/icon-192.png','/icon-512.png','/version.json'];
+const CACHE='miedzy-nami-v081';
+const CORE=['/','/index.html','/styles.css','/cloud-config.js','/app.js','/enhancements.js','/content/cards-v05.js','/v05.js','/content/daily-match.js','/v06.js','/v07.js','/v071.js','/v08.js','/spicy-v081-data.js','/v081.js','/manifest.webmanifest','/icon.svg','/icon-180.png','/icon-192.png','/icon-512.png','/version.json'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',event=>{

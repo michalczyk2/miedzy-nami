@@ -6,11 +6,12 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
-test('v0.8 ładuje moduł interfejsu i odświeża cache PWA',()=>{
+test('v0.8.1 ładuje moduł interfejsu i odświeża cache PWA',()=>{
   assert.match(read('index.html'),/\/v08\.js/);
-  assert.match(read('index.html'),/0\.8\.0/);
-  assert.match(read('sw.js'),/miedzy-nami-v080/);
+  assert.match(read('index.html'),/0\.8\.1/);
+  assert.match(read('sw.js'),/miedzy-nami-v081/);
   assert.match(read('sw.js'),/\/v08\.js/);
+  assert.match(read('sw.js'),/\/v081\.js/);
 });
 
 test('logowanie iPhone PWA korzysta z kodu OTP',()=>{
@@ -44,4 +45,15 @@ test('v0.8 ma zwarte menu i pomoc pierwszego uruchomienia',()=>{
   assert.match(source,/Pomoc i aplikacja/);
   assert.match(source,/Jak zacząć/);
   assert.match(css,/\.v08-menu-copy strong,\.v08-menu-copy small\{display:block/);
+});
+
+
+test('pakiet Pikantne 18+ jest opcjonalny i ma zabezpieczenia',()=>{
+  const data=read('spicy-v081-data.js');
+  const ui=read('v081.js');
+  assert.match(data,/MN_V081_SPICY_CARDS/);
+  assert.match(ui,/Oboje mamy 18\+ i chcemy grać/);
+  assert.match(ui,/Każdą kartę możecie pominąć/);
+  assert.match(ui,/categories:\[SPICY_CATEGORY\]/);
+  assert.match(ui,/112 kart/);
 });

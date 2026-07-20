@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8.1 — Pikantne 18+
+
+- dodano opcjonalny pakiet 112 kart dla pełnoletniej pary,
+- trzy poziomy: Flirt, Pikantnie i Odważnie,
+- ekran potwierdzenia 18+ i zasad dobrowolnej zgody,
+- każdą kartę można pominąć bez tłumaczenia,
+- pakiet jest domyślnie wyłączony i nie trafia do zwykłych szybkich gier,
+- dodano skrót na pulpicie, w pakietach i w menu,
+- zaktualizowano PWA do wersji 0.8.1.
+
 ## 0.7.2
 
 - zastąpiono linki e-mail logowaniem kodem OTP wpisywanym bezpośrednio w aplikacji,
