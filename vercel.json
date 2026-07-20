@@ -93,5 +93,6 @@
     }
   ],
   "buildCommand": "npm run build:prod",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "installCommand": "npm ci --no-audit --no-fund"
 }
