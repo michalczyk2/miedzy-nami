@@ -277,3 +277,25 @@ button,.button,.desktop-app,.menu-action,.v08-menu-item{touch-action:manipulatio
 .v093-reveal .result-success,.v093-reveal .result-different{margin-top:20px}.v093-live-card.revealed .result-answers{margin-top:12px}.v093-round-score{display:flex;justify-content:center;gap:10px;margin:13px 0 18px}.v093-round-score span{padding:9px 13px;border-radius:999px;background:rgba(109,86,255,.09);color:#5d48cf;font-size:13px}.v093-round-score b{font-size:16px}
 .v093-summary .v082-result-hero{margin-bottom:22px}.v093-result-list article{grid-template-columns:minmax(0,1.4fr) minmax(250px,1fr) auto}
 @media(max-width:720px){.v093-live-rules{grid-template-columns:1fr}.v093-live-options{grid-template-columns:1fr}.v093-live-options button{min-height:76px;flex-direction:row;justify-content:flex-start}.v093-home-session{grid-template-columns:auto 1fr}.v093-home-session i{grid-column:2}.v093-result-list article{grid-template-columns:1fr}.v093-live-card{padding:20px}.v093-live-card h2{font-size:27px}}
+
+/* v0.9.4 — Jak dobrze mnie znasz? na dwóch telefonach */
+.v094-online-game-card{position:relative;border-color:rgba(236,72,153,.34)!important;box-shadow:0 18px 48px rgba(190,24,93,.11)}
+.v094-online-game-card::after{content:'2 TELEFONY';position:absolute;right:14px;bottom:14px;padding:5px 8px;border-radius:999px;background:rgba(236,72,153,.11);color:#be185d;font-size:10px;font-weight:900;letter-spacing:.08em}
+.v094-home-session{width:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;text-align:left;border:1px solid rgba(236,72,153,.27);border-radius:22px;background:linear-gradient(135deg,rgba(236,72,153,.11),rgba(255,255,255,.96));padding:17px 18px;margin:0 0 18px;color:inherit;box-shadow:0 18px 50px rgba(190,24,93,.1);cursor:pointer}
+.v094-home-session>span{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,#ec4899,#8b5cf6);color:#fff;font-size:25px;font-weight:900}
+.v094-home-session small,.v094-home-session strong,.v094-home-session p{display:block;margin:0}.v094-home-session small{color:#be185d;font-size:10px;font-weight:900;letter-spacing:.1em}.v094-home-session strong{font-size:16px;margin:3px 0}.v094-home-session p{color:var(--muted);font-size:13px}.v094-home-session i{font-style:normal;font-weight:800;color:#be185d;white-space:nowrap}
+.v094-lobby-hero>span{background:linear-gradient(145deg,#ec4899,#8b5cf6)!important}.v094-lobby-hero small{color:#db2777}
+.v094-active-session{border-color:rgba(236,72,153,.29)!important;background:linear-gradient(135deg,rgba(236,72,153,.11),rgba(139,92,246,.08))!important}.v094-active-session small{color:#db2777!important}
+.v094-mode-card{border-color:rgba(236,72,153,.23)!important;background:linear-gradient(145deg,rgba(236,72,153,.07),rgba(139,92,246,.04))!important}
+.v094-rules article>span{background:rgba(236,72,153,.11)!important;color:#be185d!important}
+.v094-live-head>span{background:linear-gradient(145deg,rgba(236,72,153,.14),rgba(139,92,246,.13));color:#be185d}
+.v094-live-card{border-color:rgba(236,72,153,.2);background:linear-gradient(160deg,#fff,rgba(253,242,248,.86))}
+.v094-subject-chip{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;padding:7px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(236,72,153,.1),rgba(139,92,246,.09));border:1px solid rgba(236,72,153,.16)}
+.v094-subject-chip span{font-size:9px;font-weight:950;letter-spacing:.11em;color:#be185d}.v094-subject-chip strong{font-size:12px;color:#7e22ce}
+.v094-live-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.v094-live-options button{display:flex;align-items:center;gap:11px;min-height:76px;padding:13px 14px;border:1px solid rgba(236,72,153,.2);border-radius:17px;background:#fff;color:inherit;text-align:left;cursor:pointer;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}.v094-live-options button:hover,.v094-live-options button:focus-visible{transform:translateY(-2px);border-color:#ec4899;box-shadow:0 13px 32px rgba(190,24,93,.12)}.v094-live-options button:disabled{opacity:.55;cursor:wait}.v094-live-options b{display:grid;place-items:center;flex:0 0 35px;height:35px;border-radius:11px;background:rgba(236,72,153,.11);color:#be185d}.v094-live-options span{font-size:14px;font-weight:800;line-height:1.35}
+.v094-wait-icon{background:linear-gradient(145deg,#ec4899,#8b5cf6)!important}
+.v094-result-answers .truth{border-color:rgba(52,211,153,.28);background:rgba(16,185,129,.06)}.v094-result-answers .guess{border-color:rgba(139,92,246,.22);background:rgba(139,92,246,.05)}
+.v094-round-score span{background:rgba(236,72,153,.09);color:#be185d}
+.v094-summary .v082-result-ring{background:radial-gradient(circle at center,#201326 57%,transparent 58%),conic-gradient(#ec4899 calc(var(--score)*1%),rgba(255,255,255,.09) 0)}
+.v094-result-list article.same{border-color:rgba(236,72,153,.25)}
+@media(max-width:720px){.v094-home-session{grid-template-columns:auto 1fr}.v094-home-session i{grid-column:2}.v094-live-options{grid-template-columns:1fr}.v094-live-card h2{font-size:27px}}

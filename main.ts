@@ -58,6 +58,7 @@ const LEGACY_SCRIPTS = [
   '/v092.js',
   '/multiplayer-live-core-v093.js',
   '/v093.js',
+  '/v094.js',
 ] as const;
 
 const boot: BootState = {

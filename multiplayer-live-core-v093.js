@@ -18,6 +18,7 @@ function friendlyError(error,migration='005_v093_live_who_more.sql'){
   const raw=String(error?.message||error||'Nieznany błąd');
   const lower=raw.toLowerCase();
   if(lower.includes('create_live_game_session')||lower.includes('get_live_game_state')||lower.includes('submit_live_game_answer')||lower.includes('multiplayer_live_answers')||lower.includes('schema cache'))return`Gra na żywo wymaga aktualizacji bazy. Uruchom migrację ${migration} w Supabase.`;
+  if(lower.includes('invalid_game_key'))return`Ten tryb wymaga aktualizacji bazy. Uruchom migrację ${migration} w Supabase.`;
   if(lower.includes('partner_required'))return'Druga osoba musi najpierw dołączyć do waszej pary.';
   if(lower.includes('couple_required'))return'Najpierw połączcie konta kodem pary.';
   if(lower.includes('question_locked'))return'Ta odpowiedź jest już odsłonięta i nie można jej zmienić.';

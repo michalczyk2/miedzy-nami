@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.4
+
+- Dodano „Jak dobrze mnie znasz?” na dwóch telefonach.
+- Jedna osoba odpowiada o sobie, a partner przewiduje jej wybór.
+- Role prawdy i zgadywania zmieniają się automatycznie co kartę.
+- Odpowiedzi pozostają ukryte do ruchu obojga.
+- Dodano wynik trafień, podsumowanie 10 kart i wznowienie aktywnej gry.
+- Rozszerzono wspólny silnik live bez naruszania „Kto bardziej?”.
+- Dodano migrację `006_v094_live_know_me.sql` i testy regresji.
+
 
 ## 0.9.3
 

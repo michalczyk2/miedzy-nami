@@ -1,4 +1,4 @@
-# Architektura Między Nami v0.9.3
+# Architektura Między Nami v0.9.4
 
 ## Warstwa budowania
 
@@ -58,3 +58,10 @@ Gry lokalne pozostają dostępne bez logowania. Konto jest wymagane wyłącznie 
 `multiplayer-live-core-v093.js` obsługuje sesje, które synchronizują każdą kartę osobno. Warstwa danych używa `multiplayer_live_answers`, a klient pobiera zamaskowany stan przez `get_live_game_state`. Partnerowski wybór jest zwracany dopiero wtedy, gdy istnieją dwie odpowiedzi dla tego samego indeksu pytania. Aktualizacja `multiplayer_sessions.updated_at` daje obu urządzeniom wspólny sygnał Realtime również wtedy, gdy RLS nadal ukrywa sam wiersz odpowiedzi.
 
 `v093.js` jest pierwszym konsumentem tego protokołu. Utrzymuje lokalny indeks oglądanej karty, lecz kolejność i blokady są egzekwowane przez PostgreSQL. Dzięki temu odświeżenie strony, utrata sieci albo równoczesne kliknięcia nie pozwalają pominąć pytania ani zmienić odsłoniętego wyniku.
+
+
+## Gra prawda kontra przewidywanie v0.9.4
+
+`v094.js` używa tego samego protokołu live co `v093.js`, lecz interpretuje dwa wybory asymetrycznie. Osoba odpowiadająca jest wyznaczana na podstawie kolejności członków pary i parzystości indeksu pytania. Dzięki temu oba telefony niezależnie wyliczają identyczną rolę bez dodatkowego stanu w bazie.
+
+Migracja `006_v094_live_know_me.sql` rozszerza dozwolone typy sesji o `know_live` i dopuszcza cztery opcje odpowiedzi. Blokady kolejności, maskowanie odpowiedzi, wygasanie sesji oraz RLS pozostają wspólne dla obu zwykłych gier live.

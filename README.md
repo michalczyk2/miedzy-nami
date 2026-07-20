@@ -1,9 +1,18 @@
-# Między Nami v0.9.3
+# Między Nami v0.9.4
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
 
+## v0.9.4 — Jak dobrze mnie znasz? na żywo
+
+- prawdziwa odpowiedź jednej osoby i przewidywanie partnera na osobnych telefonach,
+- automatyczna zmiana ról po każdej karcie,
+- ukrycie odpowiedzi do wspólnego odsłonięcia,
+- 10 kart, licznik trafień, podsumowanie i wznowienie przez 48 godzin,
+- pełna zgodność z działającym trybem „Kto bardziej?”.
+
+Szczegóły: `V094-LIVE-KNOW.md`.
 
 ## v0.9.3 — Kto bardziej? na żywo
 
