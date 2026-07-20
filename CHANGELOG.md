@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.8.2 — Pikantne jako cztery osobne gry
+
+- szeroki baner zastąpiony ikoną w głównej siatce gier,
+- osobny ekran wyboru gry 18+,
+- Dopasowanie 18+: 8 pytań, ukryte odpowiedzi i procent zgodności,
+- Ochota na dziś: 5 szybkich wyborów o najbliższej okazji,
+- Bez tabu: intymne pytania do rozmowy,
+- Tylko we dwoje: zadania wymagające wspólnej zgody,
+- dodano pytania o pozycje, potrzeby, tempo, fantazje i granice,
+- każdą kartę można pominąć lub zatrzymać bez tłumaczenia.
+
 ## 0.8.1 — Pikantne 18+
 
 - dodano opcjonalny pakiet 112 kart dla pełnoletniej pary,

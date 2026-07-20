@@ -6,10 +6,10 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
-test('v0.8.1 ładuje moduł interfejsu i odświeża cache PWA',()=>{
+test('v0.8.2 ładuje moduł interfejsu i odświeża cache PWA',()=>{
   assert.match(read('index.html'),/\/v08\.js/);
-  assert.match(read('index.html'),/0\.8\.1/);
-  assert.match(read('sw.js'),/miedzy-nami-v081/);
+  assert.match(read('index.html'),/0\.8\.2/);
+  assert.match(read('sw.js'),/miedzy-nami-v082/);
   assert.match(read('sw.js'),/\/v08\.js/);
   assert.match(read('sw.js'),/\/v081\.js/);
 });
@@ -56,4 +56,26 @@ test('pakiet Pikantne 18+ jest opcjonalny i ma zabezpieczenia',()=>{
   assert.match(ui,/Każdą kartę możecie pominąć/);
   assert.match(ui,/categories:\[SPICY_CATEGORY\]/);
   assert.match(ui,/112 kart/);
+});
+
+
+test('v0.8.2 pokazuje Pikantne jako ikonę w siatce gier',()=>{
+  const source=read('v082.js');
+  const css=read('styles.css');
+  assert.match(source,/v082-spicy-app/);
+  assert.match(source,/desktop-app-name">Pikantne/);
+  assert.match(css,/desktop-app\[data-tone="spicy"\]/);
+  assert.match(css,/\.v081-spicy-launch\{display:none!important\}/);
+});
+
+test('v0.8.2 ma cztery jasne gry erotyczne dla par',()=>{
+  const source=read('v082.js');
+  const data=read('spicy-v082-data.js');
+  assert.match(source,/Dopasowanie 18\+/);
+  assert.match(source,/Ochota na dziś/);
+  assert.match(source,/Bez tabu/);
+  assert.match(source,/Tylko we dwoje/);
+  assert.match(data,/Jaka pozycja jest twoją ulubioną\?/);
+  assert.match(data,/seks oralny/);
+  assert.match(data,/wspólnej zgody|oboje/);
 });

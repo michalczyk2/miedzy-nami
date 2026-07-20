@@ -1,8 +1,8 @@
 {
   "name": "miedzy-nami",
   "private": true,
-  "version": "0.8.1",
-  "description": "Intuicyjna PWA dla par z synchronizacją dwóch telefonów i opcjonalnym pakietem Pikantne 18+.",
+  "version": "0.8.2",
+  "description": "Intuicyjna PWA dla par z synchronizacją dwóch telefonów i czterema opcjonalnymi grami Pikantne 18+.",
   "scripts": {
     "content:export": "node scripts/export-library.mjs",
     "content:report": "node scripts/card-report.mjs",
