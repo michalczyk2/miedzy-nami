@@ -6,15 +6,17 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
-test('v0.9.1 ładuje aplikację przez jeden moduł TypeScript',()=>{
+test('v0.9.2 ładuje aplikację przez jeden moduł TypeScript',()=>{
   const html=read('index.html');
   const main=read('main.ts');
-  assert.match(html,/Między Nami 0\.9\.1/);
+  assert.match(html,/Między Nami 0\.9\.2/);
   assert.match(html,/type="module" src="\/main\.ts"/);
   assert.match(main,/\/spicy-v082-data\.js/);
   assert.match(main,/\/v082\.js/);
   assert.match(main,/\/v083\.js/);
   assert.match(main,/\/v091\.js/);
+  assert.match(main,/\/multiplayer-core-v092\.js/);
+  assert.match(main,/\/v092\.js/);
   assert.match(read('sw.js'),/miedzy-nami-v090|MN_RELEASE\?\.cache/);
 });
 
@@ -107,14 +109,16 @@ test('v0.8.3 tłumaczy błędy sieci i zapisuje migrację kodu pary',()=>{
 });
 
 
-test('v0.9.1 ustawia wersję w buildzie i ładuje multiplayer po stabilizacji',()=>{
+test('v0.9.2 ustawia wersję w buildzie i ładuje oba tryby multiplayer',()=>{
   const main=read('main.ts');
   const appIndex=main.indexOf("'/app.js'");
   const v082Index=main.indexOf("'/v082.js'");
   const v083Index=main.indexOf("'/v083.js'");
   const v091Index=main.indexOf("'/v091.js'");
+  const coreIndex=main.indexOf("'/multiplayer-core-v092.js'");
+  const v092Index=main.indexOf("'/v092.js'");
   assert.ok(appIndex>=0);
-  assert.ok(v082Index>=0&&v083Index>v082Index&&v091Index>v083Index);
+  assert.ok(v082Index>=0&&v083Index>v082Index&&v091Index>v083Index&&coreIndex>v091Index&&v092Index>coreIndex);
   assert.match(main,/__APP_VERSION__/);
   assert.match(read('check-release.mjs'),/const packageJson=.*const versionJson=.*const release=/s);
 });

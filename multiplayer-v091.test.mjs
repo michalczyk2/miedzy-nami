@@ -7,7 +7,7 @@ const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
 test('v0.9.1 dodaje bezpieczny model sesji na dwóch telefonach',()=>{
-  const sql=read('supabase/migrations/003_v091_spicy_match_two_phones.sql');
+  const sql=read('003_v091_spicy_match_two_phones.sql');
   assert.match(sql,/create table if not exists public\.multiplayer_sessions/);
   assert.match(sql,/create table if not exists public\.multiplayer_submissions/);
   assert.match(sql,/cardinality\(question_ids\) = 8/);
@@ -16,7 +16,7 @@ test('v0.9.1 dodaje bezpieczny model sesji na dwóch telefonach',()=>{
 });
 
 test('odpowiedzi partnera są ukryte do ukończenia przez oboje',()=>{
-  const sql=read('supabase/migrations/003_v091_spicy_match_two_phones.sql');
+  const sql=read('003_v091_spicy_match_two_phones.sql');
   assert.match(sql,/user_id = auth\.uid\(\)/);
   assert.match(sql,/multiplayer_both_submissions_present\(session_id\)/);
   assert.match(sql,/refresh_multiplayer_session_status/);
@@ -36,7 +36,7 @@ test('Dopasowanie 18+ ma wybór jednego lub dwóch telefonów i Realtime',()=>{
 
 test('prywatne odpowiedzi 18+ nie są dopisywane do ogólnej historii',()=>{
   const source=read('v091.js');
-  const sql=read('supabase/migrations/003_v091_spicy_match_two_phones.sql');
+  const sql=read('003_v091_spicy_match_two_phones.sql');
   assert.doesNotMatch(source,/from\('game_sessions'\)/);
   assert.match(source,/nie są dodawane do ogólnej historii/i);
   assert.match(sql,/rozpoczęcie nowej rundy usuwa poprzedni wynik/i);

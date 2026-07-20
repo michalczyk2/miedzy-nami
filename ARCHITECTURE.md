@@ -1,4 +1,4 @@
-# Architektura Między Nami v0.9.1
+# Architektura Między Nami v0.9.2
 
 ## Warstwa budowania
 
@@ -44,3 +44,11 @@ Gry lokalne pozostają dostępne bez logowania. Konto jest wymagane wyłącznie 
 - `multiplayer_submissions` przechowuje prywatne odpowiedzi każdego konta.
 - RLS ujawnia odpowiedzi partnera dopiero po dwóch ukończonych zgłoszeniach.
 - nowa runda usuwa poprzedni wynik i odpowiedzi gry 18+, ograniczając retencję prywatnych danych.
+
+
+## Silnik multiplayer v0.9.2
+
+- `multiplayer-core-v092.js` zawiera wspólne operacje sesji, Realtime, draftów i błędów.
+- `v091.js` zachowuje działające Dopasowanie 18+.
+- `v092.js` jest pierwszą grą opartą o generyczny silnik wyborów: Ochota na dziś.
+- `004_v092_multiplayer_choice_engine.sql` rozszerza model sesji z 8 na obsługę 8 lub 5 pytań i zachowuje stare RPC jako wrappery.

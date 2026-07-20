@@ -1,14 +1,14 @@
 {
   "name": "Między Nami",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "channel": "stable",
   "cards": 866,
   "daily_match_questions": 180,
   "apps": 11,
-  "release": "spicy-match-two-phones",
+  "release": "spicy-desire-two-phones",
   "cloud_sync": true,
   "creator": "Michał Czerwiński",
-  "tests": 44,
+  "tests": 49,
   "adult_pack_cards": 112,
   "adult_match_questions": 32,
   "adult_talk_cards": 18,
@@ -25,5 +25,9 @@
   "multiplayer_spicy_match_questions": 8,
   "hidden_partner_answers": true,
   "temporary_adult_answers": true,
-  "realtime_multiplayer": true
+  "realtime_multiplayer": true,
+  "multiplayer_spicy_desire": true,
+  "multiplayer_spicy_desire_questions": 5,
+  "shared_multiplayer_choice_engine": true,
+  "multiplayer_online_games": 2
 }

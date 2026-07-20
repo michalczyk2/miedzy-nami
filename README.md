@@ -1,8 +1,15 @@
-# Między Nami v0.9.1
+# Między Nami v0.9.2
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
+
+## v0.9.2 — Ochota na dziś na dwóch telefonach
+
+- 5 krótkich pytań na osobnych urządzeniach,
+- ukryte odpowiedzi do wspólnego końca,
+- wynik pokazuje przede wszystkim zgodne i uzupełniające się wybory,
+- wspólny silnik `multiplayer-core-v092.js` oraz generyczne RPC dla kolejnych gier.
 
 ## Najważniejsze funkcje
 
@@ -29,7 +36,7 @@ Aplikacja jest teraz budowana przez Vite i TypeScript:
 - Vite tworzy produkcyjny katalog `dist`,
 - Service Worker automatycznie buforuje hashowane pliki buildu.
 
-Migracja jest etapowa. Pliki `v05.js`–`v091.js` pozostają aktywne, ale kolejne wersje będą przenosiły ich logikę do modułów TypeScript bez jednorazowego przepisywania całej aplikacji.
+Migracja jest etapowa. Pliki `v05.js`–`v092.js` pozostają aktywne, ale kolejne wersje będą przenosiły ich logikę do modułów TypeScript bez jednorazowego przepisywania całej aplikacji.
 
 ## Uruchomienie
 

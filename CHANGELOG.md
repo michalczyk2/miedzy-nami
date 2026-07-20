@@ -1,5 +1,14 @@
 # Changelog
 
+
+## 0.9.2
+
+- dodano „Ochota na dziś” na dwóch telefonach,
+- dodano 5-pytaniowe prywatne rundy z wynikiem ujawnianym po ukończeniu przez oboje,
+- dodano wspólny silnik klienta `multiplayer-core-v092.js`,
+- dodano generyczne RPC i migrację `004_v092_multiplayer_choice_engine.sql`,
+- zachowano zgodność ze wszystkimi sesjami v0.9.1.
+
 ## 0.9.1 — Dopasowanie 18+ na dwóch telefonach
 
 - każda osoba odpowiada na swoim telefonie na ten sam zestaw 8 pytań,
