@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.10
+
+- Naprawiono kliknięcia ikon gier online na pulpicie.
+- Podzielono gry na grupę online/1–2 telefony i grupę tylko na jeden telefon.
+- Dodano informację, że partner nie musi być aktywny w tym samym czasie.
+- Wyjaśniono działanie Pakietów i oznaczono je jako lokalne.
+- Naprawiono ogromne plakietki zasłaniające gry Pikantne.
+- Połączono statystyki Codziennego Dopasowania z historią online.
+
+
 ## 0.9.9 — centrum gier online
 
 - Zastąpiono osobne banery aktywnych gier jedną kartą centrum na pulpicie.

@@ -1,10 +1,10 @@
-# Między Nami v0.9.9
+# Między Nami v0.9.10
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
 
-## v0.9.9 — jedno centrum gier online
+## v0.9.10 — jedno centrum gier online
 
 - wszystkie aktywne gry online są widoczne w jednym centrum,
 - osobne banery sesji zostały zastąpione jedną kartą na pulpicie,
@@ -130,3 +130,8 @@ Po wdrożeniu adres produkcyjny musi pozostać dodany w `Authentication → URL 
 ## v0.9.7 — Co wybierasz? na dwóch telefonach
 
 Tryb `dilemma` działa teraz online na dwóch urządzeniach. Każda osoba wybiera prywatnie jedną z dwóch opcji, jawnie zatwierdza wybór, a wynik karty jest odsłaniany dopiero po odpowiedzi obojga. Sesja ma 10 kart i może być wznowiona przez 48 godzin.
+
+
+## v0.9.10
+
+Audyt UX pulpitu, pakietów, gier Pikantnych i statystyk online.

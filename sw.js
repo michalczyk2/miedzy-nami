@@ -1,7 +1,7 @@
 importScripts('/release.js');
 const CACHE=globalThis.MN_RELEASE?.cache||'miedzy-nami-v083';
 const BUILD_ASSETS=/*__MN_VITE_ASSETS__*/[];
-const CORE=['/','/index.html','/release.js','/styles.css','/cloud-config.js','/app.js','/enhancements.js','/content/cards-v05.js','/v05.js','/content/daily-match.js','/v06.js','/v07.js','/v071.js','/v08.js','/spicy-v081-data.js','/v081.js','/spicy-v082-data.js','/v082.js','/v083.js','/v091.js','/multiplayer-core-v092.js','/v092.js','/multiplayer-live-core-v093.js','/v093.js','/v094.js','/v097.js','/v098.js','/v099.js','/manifest.webmanifest','/icon.svg','/icon-180.png','/icon-192.png','/icon-512.png','/version.json',...BUILD_ASSETS];
+const CORE=['/','/index.html','/release.js','/styles.css','/cloud-config.js','/app.js','/enhancements.js','/content/cards-v05.js','/v05.js','/content/daily-match.js','/v06.js','/v07.js','/v071.js','/v08.js','/spicy-v081-data.js','/v081.js','/spicy-v082-data.js','/v082.js','/v083.js','/v091.js','/multiplayer-core-v092.js','/v092.js','/multiplayer-live-core-v093.js','/v093.js','/v094.js','/v097.js','/v098.js','/v099.js','/v0910.js','/manifest.webmanifest','/icon.svg','/icon-180.png','/icon-192.png','/icon-512.png','/version.json',...BUILD_ASSETS];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
