@@ -1,52 +1,66 @@
-# Między Nami v0.8.3
+# Między Nami v0.9.0
 
-PWA dla par z pulpitem gier, Codziennym Dopasowaniem, kontami Supabase i synchronizacją dwóch telefonów.
+PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
 
 ## Najważniejsze funkcje
 
-- 754 karty w 10 mechanikach gry,
+- 866 kart w podstawowych i opcjonalnych trybach gry,
 - 180 pytań Codziennego Dopasowania,
-- konta osobne dla obu osób,
-- logowanie kodem OTP wpisywanym bezpośrednio w PWA,
+- osobne konta obu osób,
+- logowanie kodem OTP bezpośrednio w PWA,
 - kod łączący parę,
 - odpowiedzi ukryte do ukończenia zestawu przez oboje,
 - wspólny wynik i historia online,
-- czytelny profil konta w nagłówku,
-- onboarding prowadzący przez pierwszy start,
 - trwałe zapamiętywanie sesji na urządzeniu,
-- czytelny status pary i dzisiejszego zadania na pulpicie,
-- zwarte menu mobilne z pomocą „Jak zacząć?”,
-- PWA i działanie lokalne bez konta.
+- pakiet Pikantne 18+ z czterema jasno opisanymi grami,
+- bezpieczne aktualizacje PWA, stan offline i przyjazne błędy,
+- działanie lokalne bez konta.
+
+## Fundament v0.9
+
+Aplikacja jest teraz budowana przez Vite i TypeScript:
+
+- `main.ts` jest jednym punktem wejścia,
+- klient Supabase jest przypięty jako zależność npm,
+- dotychczasowe moduły są uruchamiane w kontrolowanej kolejności,
+- Vite tworzy produkcyjny katalog `dist`,
+- Service Worker automatycznie buforuje hashowane pliki buildu.
+
+Migracja jest etapowa. Pliki `v05.js`–`v083.js` pozostają aktywne, ale kolejne wersje będą przenosiły ich logikę do modułów TypeScript bez jednorazowego przepisywania całej aplikacji.
 
 ## Uruchomienie
 
 ```bash
+npm install
+npm run dev
+```
+
+Podgląd deweloperski: `http://localhost:5173`.
+
+## Kontrola i build
+
+```bash
 npm run check
+npm run build
 npm run preview
 ```
 
-Podgląd lokalny: `http://localhost:3000`.
-
 ## Wdrożenie
+
+Vercel korzysta z:
+
+```bash
+npm run build:prod
+```
+
+i publikuje katalog `dist`.
+
+Ręczne wdrożenie z komputera:
 
 ```bash
 npm run deploy
 ```
 
-Na Windows możesz użyć `DEPLOY-WINDOWS.bat`. Po wdrożeniu dodaj adres Vercela w `Authentication → URL Configuration` w Supabase. Szczegóły znajdują się w `PRODUCTION-CHECKLIST.md`.
-
-
-## Logowanie na iPhonie
-
-Wersja 0.8.0 używa kodu jednorazowego z e-maila zamiast linku. Kod wpisuje się w skrócie Między Nami otwartym z ekranu głównego, dzięki czemu sesja zapisuje się dokładnie w aplikacji PWA.
-
-## Pakiet Pikantne 18+
-
-Wersja 0.8.1 dodaje opcjonalny pakiet 112 kart dla pełnoletniej pary. Pakiet jest domyślnie wyłączony, wymaga potwierdzenia 18+ i nie trafia do zwykłych szybkich sesji. Każdą kartę można pominąć bez tłumaczenia.
-
-
-## Stabilizacja v0.8.3
-
-Wersja dodaje bezpieczne aktualizacje PWA, przyjazne błędy sieciowe, stan offline oraz utrwaloną migrację generatora kodu pary.
+Po wdrożeniu adres produkcyjny musi pozostać dodany w `Authentication → URL Configuration` w Supabase.

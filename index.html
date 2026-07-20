@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl" data-version="0.8.3">
+<html lang="pl" data-version="0.9.0">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -14,9 +14,8 @@
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/icon-180.png">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="/styles.css">
-  <title>Między Nami 0.8.3 — gry dla par</title>
+    <link rel="stylesheet" href="/styles.css">
+  <title>Między Nami 0.9.0 — gry dla par</title>
 </head>
 <body>
   <a class="skip-link" href="#app">Przejdź do treści</a>
@@ -41,22 +40,7 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <div id="modal-root"></div>
   <div id="confetti" class="confetti" aria-hidden="true"></div>
-  <script src="/release.js" defer></script>
-  <script src="/cloud-config.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-  <script src="/app.js" defer></script>
-  <script src="/enhancements.js" defer></script>
-  <script src="/content/cards-v05.js" defer></script>
-  <script src="/v05.js" defer></script>
-  <script src="/content/daily-match.js" defer></script>
-  <script src="/v06.js" defer></script>
-  <script src="/v07.js" defer></script>
-  <script src="/v071.js" defer></script>
-  <script src="/v08.js" defer></script>
-  <script src="/spicy-v081-data.js" defer></script>
-  <script src="/v081.js" defer></script>
-  <script src="/spicy-v082-data.js" defer></script>
-  <script src="/v082.js" defer></script>
-  <script src="/v083.js" defer></script>
+  <!-- Moduły kompatybilności ładowane przez main.ts: /v071.js -->
+  <script type="module" src="/main.ts"></script>
 </body>
 </html>

@@ -91,5 +91,7 @@
         }
       ]
     }
-  ]
+  ],
+  "buildCommand": "npm run build:prod",
+  "outputDirectory": "dist"
 }

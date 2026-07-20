@@ -1,13 +1,25 @@
-# Architektura Między Nami v0.7.1
+# Architektura Między Nami v0.9.0
 
-## Frontend
+## Warstwa budowania
 
-Statyczne PWA HTML/CSS/JavaScript wdrażane na Vercel. Warstwy runtime:
+- Vite tworzy produkcyjny katalog `dist`.
+- TypeScript działa w trybie `strict`.
+- `main.ts` jest jedynym punktem wejścia w `index.html`.
+- `vite.config.ts` kopiuje istniejące zasoby runtime i dopisuje hashowane pliki buildu do Service Workera.
+- Supabase JS jest przypięty w `package.json`, a nie pobierany z niezablokowanego CDN.
+
+## Runtime kompatybilności
+
+Migracja pozostaje etapowa. `main.ts` uruchamia w kontrolowanej kolejności:
 
 - `app.js` — podstawowy silnik gier,
-- `enhancements.js`, `v05.js`, `v06.js` — rozwój funkcji lokalnych, pulpit i Codzienne Dopasowanie,
+- `enhancements.js`, `v05.js`, `v06.js` — funkcje lokalne, pulpit i Codzienne Dopasowanie,
 - `v07.js` — logowanie, para, synchronizacja i historia online,
-- `v071.js` — produkcyjny UX konta, uporządkowane menu oraz obsługa powrotów z logowania.
+- `v071.js`, `v08.js` — UX konta, onboarding i menu,
+- `v081.js`, `v082.js` — pakiet Pikantne 18+,
+- `v083.js` — aktualizacje PWA, offline i obsługa błędów.
+
+Kolejne etapy będą przenosić te warstwy do modułów TypeScript bez zmiany kontraktów danych i bez jednorazowego przepisywania całej aplikacji.
 
 ## Backend
 
@@ -18,8 +30,8 @@ Dedykowany projekt Supabase:
 - Row Level Security — dostęp wyłącznie dla członków pary,
 - Realtime — automatyczne wykrycie odpowiedzi partnera.
 
-Publiczny `publishable key` znajduje się w frontendzie. Klucze `secret` i `service_role` nie są używane.
+Publiczny `publishable key` znajduje się w frontendzie. Klucze `secret` i `service_role` nie są używane w przeglądarce.
 
 ## Tryb bez konta
 
-Wszystkie dotychczasowe gry pozostają dostępne lokalnie. Konto jest wymagane wyłącznie do synchronizacji między urządzeniami.
+Gry lokalne pozostają dostępne bez logowania. Konto jest wymagane wyłącznie do synchronizacji między urządzeniami.

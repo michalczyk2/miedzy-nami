@@ -60,3 +60,13 @@
 - nowy ekran pomocy „Jak zacząć?”,
 - czytelniejsze konto, synchronizacja i wylogowanie,
 - poprawione odstępy, łamanie tekstu i widok na małych iPhone’ach.
+
+## 0.9.0 — fundament Vite + TypeScript
+
+- jeden modułowy punkt wejścia `main.ts` zamiast kilkunastu tagów `<script>`,
+- kontrolowane, sekwencyjne uruchamianie dotychczasowych modułów,
+- klient Supabase przypięty jako zależność npm zamiast niezablokowanego CDN,
+- produkcyjny build Vite do katalogu `dist`,
+- automatyczne dołączanie hashowanych zasobów Vite do Service Workera,
+- TypeScript w trybie strict oraz kontrola `typecheck`,
+- zachowany wygląd, dane lokalne, logowanie, para i wszystkie gry.
