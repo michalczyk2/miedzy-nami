@@ -1,8 +1,21 @@
-# Między Nami v0.9.2
+# Między Nami v0.9.3
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
+
+
+## v0.9.3 — Kto bardziej? na żywo
+
+- pierwszy zwykły tryb działający na dwóch telefonach,
+- wspólna karta i prywatna odpowiedź na każdym urządzeniu,
+- odsłonięcie wyniku po odpowiedzi obojga,
+- blokada przeskakiwania i zmiany ujawnionej odpowiedzi,
+- aktywna gra widoczna na ekranie głównym,
+- automatyczne wznowienie przez 48 godzin,
+- wspólny klient live do kolejnych gier.
+
+Szczegóły: `V093-LIVE-WHO.md`.
 
 ## v0.9.2 — Ochota na dziś na dwóch telefonach
 

@@ -1,4 +1,4 @@
-# Architektura Między Nami v0.9.2
+# Architektura Między Nami v0.9.3
 
 ## Warstwa budowania
 
@@ -52,3 +52,9 @@ Gry lokalne pozostają dostępne bez logowania. Konto jest wymagane wyłącznie 
 - `v091.js` zachowuje działające Dopasowanie 18+.
 - `v092.js` jest pierwszą grą opartą o generyczny silnik wyborów: Ochota na dziś.
 - `004_v092_multiplayer_choice_engine.sql` rozszerza model sesji z 8 na obsługę 8 lub 5 pytań i zachowuje stare RPC jako wrappery.
+
+## Silnik live multiplayer v0.9.3
+
+`multiplayer-live-core-v093.js` obsługuje sesje, które synchronizują każdą kartę osobno. Warstwa danych używa `multiplayer_live_answers`, a klient pobiera zamaskowany stan przez `get_live_game_state`. Partnerowski wybór jest zwracany dopiero wtedy, gdy istnieją dwie odpowiedzi dla tego samego indeksu pytania. Aktualizacja `multiplayer_sessions.updated_at` daje obu urządzeniom wspólny sygnał Realtime również wtedy, gdy RLS nadal ukrywa sam wiersz odpowiedzi.
+
+`v093.js` jest pierwszym konsumentem tego protokołu. Utrzymuje lokalny indeks oglądanej karty, lecz kolejność i blokady są egzekwowane przez PostgreSQL. Dzięki temu odświeżenie strony, utrata sieci albo równoczesne kliknięcia nie pozwalają pominąć pytania ani zmienić odsłoniętego wyniku.

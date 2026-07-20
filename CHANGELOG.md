@@ -1,6 +1,17 @@
 # Changelog
 
 
+## 0.9.3
+
+- Dodano „Kto bardziej?” na dwóch telefonach w trybie karta po karcie.
+- Odpowiedź partnera pozostaje ukryta do odpowiedzi obojga.
+- Dodano osobną tabelę odpowiedzi na żywo, RPC i polityki RLS.
+- Serwer blokuje przeskakiwanie pytań oraz zmianę ujawnionych odpowiedzi.
+- Dodano baner aktywnej gry na ekranie głównym.
+- Dodano wznowienie bieżącej karty i 48-godzinne sesje.
+- Dodano wspólny klient `MN_LIVE_MULTIPLAYER_CORE`.
+- Rozszerzono testy regresji i build produkcyjny.
+
 ## 0.9.2
 
 - dodano „Ochota na dziś” na dwóch telefonach,

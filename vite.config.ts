@@ -24,6 +24,8 @@ const LEGACY_ASSETS = [
   'v091.js',
   'multiplayer-core-v092.js',
   'v092.js',
+  'multiplayer-live-core-v093.js',
+  'v093.js',
   'spicy-v081-data.js',
   'spicy-v082-data.js',
   'content',
