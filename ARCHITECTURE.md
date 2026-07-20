@@ -65,3 +65,7 @@ Gry lokalne pozostają dostępne bez logowania. Konto jest wymagane wyłącznie 
 `v094.js` używa tego samego protokołu live co `v093.js`, lecz interpretuje dwa wybory asymetrycznie. Osoba odpowiadająca jest wyznaczana na podstawie kolejności członków pary i parzystości indeksu pytania. Dzięki temu oba telefony niezależnie wyliczają identyczną rolę bez dodatkowego stanu w bazie.
 
 Migracja `006_v094_live_know_me.sql` rozszerza dozwolone typy sesji o `know_live` i dopuszcza cztery opcje odpowiedzi. Blokady kolejności, maskowanie odpowiedzi, wygasanie sesji oraz RLS pozostają wspólne dla obu zwykłych gier live.
+
+## v0.9.8 — Scale live + device capability labels
+
+`v098.js` dodaje tryb `scale_live`, korzystający z istniejących tabel sesji i odpowiedzi. Migracja 009 rozszerza dozwolony zakres odpowiedzi do 0–9. Ten sam moduł nakłada nieinwazyjne oznaczenia możliwości urządzeń na pulpit i hub Pikantne.

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.9.8 — Skala online i oznaczenia urządzeń
+
+- Dodano „Skalę” na dwóch telefonach z prywatnym wyborem 1–10.
+- Dodano wspólne odsłonięcie, różnicę punktów i podsumowanie 10 skal.
+- Oznaczono każdą grę jako `1–2 TEL.` albo `1 TEL.`.
+- Dodano legendę trybów oraz oznaczenia wewnątrz pakietu Pikantne.
+- Rozszerzono silnik odpowiedzi online do zakresu 0–9.
+
+
 ## 0.9.7 — Co wybierasz? na dwóch telefonach
 
 - Dodano 10-kartową rozgrywkę `dilemma_live`.

@@ -1,8 +1,16 @@
-# Między Nami v0.9.7
+# Między Nami v0.9.8
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
+
+## v0.9.8 — Skala online i jasne oznaczenia trybów
+
+- „Skala” działa na dwóch telefonach: oboje wybierają prywatnie wartość 1–10.
+- Wynik odsłania liczby, różnicę i wspólne podsumowanie po 10 kartach.
+- Każda ikona gry na pulpicie ma oznaczenie `1–2 TEL.` albo `1 TEL.`.
+- Nad siatką gier znajduje się krótka legenda trybów.
+- Gry Pikantne również pokazują, które podtryby działają online.
 
 ## v0.9.7 — prostsze łączenie pary i czytelne odpowiedzi
 
