@@ -31,6 +31,9 @@ function formatCloudError(error){
   if(normalized.includes('rate limit')||normalized.includes('over_email_send_rate_limit')||normalized.includes('email rate limit exceeded'))return'Za dużo wiadomości w krótkim czasie. Poczekaj chwilę i spróbuj ponownie. Po zalogowaniu sesja zostaje zapisana na tym urządzeniu.';
   if(normalized.includes('otp_expired')||normalized.includes('token has expired')||normalized.includes('invalid or has expired'))return'Kod wygasł albo został już wykorzystany. Wyślij nowy kod i wpisz go z najnowszej wiadomości.';
   if(normalized.includes('invalid token')||normalized.includes('token is invalid'))return'Kod jest nieprawidłowy. Sprawdź cyfry albo wyślij nowy kod.';
+  if(normalized.includes('load failed')||normalized.includes('failed to fetch')||normalized.includes('network request failed')||normalized.includes('networkerror')||normalized.includes('network error'))return'Nie udało się połączyć z chmurą. Sprawdź internet i spróbuj ponownie. Twoje dane lokalne nie zostały utracone.';
+  if(normalized.includes('timeout')||normalized.includes('timed out'))return'Połączenie trwało zbyt długo. Spróbuj ponownie za chwilę.';
+  if(normalized.includes('gen_random_bytes'))return'Baza wymaga poprawki generatora kodu pary. Uruchom migrację 002_fix_invite_code.sql.';
   const map={AUTH_REQUIRED:'Najpierw zaloguj się.',DISPLAY_NAME_REQUIRED:'Wpisz imię.',ALREADY_IN_COUPLE:'To konto jest już połączone z parą.',INVALID_INVITE_CODE:'Nie znaleziono pary o takim kodzie.',COUPLE_FULL:'Do tej pary należą już dwie osoby.'};
   return Object.entries(map).find(([key])=>raw.includes(key))?.[1]||raw;
 }
@@ -128,16 +131,24 @@ async function cloudSignOut(){unsubscribeCloud();await cloud.client?.auth.signOu
 async function cloudCreatePair(){
   const name=document.querySelector('#cloud-create-name')?.value.trim()||cloud.profile?.display_name||settings.names[0];
   cloud.loading=true;clearCloudError();render();
-  const{error}=await cloud.client.rpc('create_couple',{p_display_name:name});
-  cloud.loading=false;if(error){setCloudError(error);return}await loadCloudState();cloudToast('Para utworzona. Wyślij partnerowi kod zaproszenia.');render();
+  try{
+    const{error}=await cloud.client.rpc('create_couple',{p_display_name:name});
+    if(error)throw error;
+    await loadCloudState();cloudToast('Para utworzona. Wyślij partnerowi kod zaproszenia.');
+  }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud]',error)}
+  finally{cloud.loading=false;render()}
 }
 async function cloudJoinPair(){
   const name=document.querySelector('#cloud-join-name')?.value.trim()||cloud.profile?.display_name||settings.names[1];
   const code=(document.querySelector('#cloud-invite-code')?.value||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6);
   if(code.length!==6){cloudToast('Kod pary ma 6 znaków.');return}
   cloud.loading=true;clearCloudError();render();
-  const{error}=await cloud.client.rpc('join_couple',{p_invite_code:code,p_display_name:name});
-  cloud.loading=false;if(error){setCloudError(error);return}await loadCloudState();cloudToast('Połączono z parą.');render();
+  try{
+    const{error}=await cloud.client.rpc('join_couple',{p_invite_code:code,p_display_name:name});
+    if(error)throw error;
+    await loadCloudState();cloudToast('Połączono z parą.');
+  }catch(error){cloud.error=formatCloudError(error);console.error('[Między Nami cloud]',error)}
+  finally{cloud.loading=false;render()}
 }
 async function cloudLeavePair(){
   if(!confirm('Rozwiązać parę online? Usunie to wspólne dane z chmury i odłączy oba konta. Dane lokalne na telefonach pozostaną.'))return;

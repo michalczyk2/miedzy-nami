@@ -6,12 +6,14 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
-test('v0.8.2 ładuje moduł interfejsu i odświeża cache PWA',()=>{
-  assert.match(read('index.html'),/\/v08\.js/);
-  assert.match(read('index.html'),/0\.8\.2/);
-  assert.match(read('sw.js'),/miedzy-nami-v082/);
-  assert.match(read('sw.js'),/\/v08\.js/);
-  assert.match(read('sw.js'),/\/v081\.js/);
+test('v0.8.3 ładuje komplet modułów i ma spójną wersję',()=>{
+  const html=read('index.html');
+  assert.match(html,/Między Nami 0\.8\.3/);
+  assert.match(html,/\/release\.js/);
+  assert.match(html,/\/spicy-v082-data\.js/);
+  assert.match(html,/\/v082\.js/);
+  assert.match(html,/\/v083\.js/);
+  assert.match(read('sw.js'),/miedzy-nami-v083|MN_RELEASE\?\.cache/);
 });
 
 test('logowanie iPhone PWA korzysta z kodu OTP',()=>{
@@ -78,4 +80,38 @@ test('v0.8.2 ma cztery jasne gry erotyczne dla par',()=>{
   assert.match(data,/Jaka pozycja jest twoją ulubioną\?/);
   assert.match(data,/seks oralny/);
   assert.match(data,/wspólnej zgody|oboje/);
+});
+
+
+test('v0.8.3 pokazuje bezpieczną aktualizację PWA',()=>{
+  const source=read('v083.js');
+  const sw=read('sw.js');
+  assert.match(source,/Nowa wersja jest gotowa/);
+  assert.match(source,/SKIP_WAITING/);
+  assert.match(source,/controllerchange/);
+  assert.match(sw,/event\.data\?\.type==='SKIP_WAITING'/);
+  assert.doesNotMatch(sw,/install[\s\S]{0,180}skipWaiting\(\)/);
+});
+
+test('v0.8.3 tłumaczy błędy sieci i zapisuje migrację kodu pary',()=>{
+  const cloud=read('v07.js');
+  const stability=read('v083.js');
+  const migration=read('supabase/migrations/002_fix_invite_code.sql');
+  assert.match(cloud,/Nie udało się połączyć z chmurą/);
+  assert.match(stability,/MN_FRIENDLY_ERROR/);
+  assert.match(stability,/Tryb offline/);
+  assert.match(migration,/gen_random_uuid/);
+  assert.match(migration,/generate_invite_code/);
+});
+
+
+test('v0.8.3 ładuje release przed aplikacją i stabilizację na końcu',()=>{
+  const html=read('index.html');
+  const releaseIndex=html.indexOf('/release.js');
+  const appIndex=html.indexOf('/app.js');
+  const v082Index=html.indexOf('/v082.js');
+  const v083Index=html.indexOf('/v083.js');
+  assert.ok(releaseIndex>=0&&releaseIndex<appIndex);
+  assert.ok(v082Index>=0&&v083Index>v082Index);
+  assert.match(read('check-release.mjs'),/package\.json, version\.json, release\.js/);
 });

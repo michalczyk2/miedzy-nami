@@ -1,15 +1,15 @@
 # Changelog
 
-## 0.8.2 — Pikantne jako cztery osobne gry
+## 0.8.3 — stabilizacja i optymalizacja PWA
 
-- szeroki baner zastąpiony ikoną w głównej siatce gier,
-- osobny ekran wyboru gry 18+,
-- Dopasowanie 18+: 8 pytań, ukryte odpowiedzi i procent zgodności,
-- Ochota na dziś: 5 szybkich wyborów o najbliższej okazji,
-- Bez tabu: intymne pytania do rozmowy,
-- Tylko we dwoje: zadania wymagające wspólnej zgody,
-- dodano pytania o pozycje, potrzeby, tempo, fantazje i granice,
-- każdą kartę można pominąć lub zatrzymać bez tłumaczenia.
+- naprawiono ładowanie pełnego modułu v0.8.2 i rozjazd numerów wersji,
+- dodano wspólny plik `release.js` oraz automatyczną kontrolę zgodności wydania,
+- aktualizacja PWA czeka na decyzję użytkownika i nie przeładowuje aplikacji w trakcie gry,
+- dodano czytelny stan offline/online i polskie komunikaty błędów sieciowych,
+- zabezpieczono tworzenie oraz dołączanie do pary przed surowym `TypeError: Load failed`,
+- dodano migrację `002_fix_invite_code.sql` do repozytorium,
+- poprawiono górny safe area i cele dotykowe na iPhonie,
+- dodano obsługę `prefers-reduced-motion`.
 
 ## 0.8.1 — Pikantne 18+
 

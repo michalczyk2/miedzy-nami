@@ -1,4 +1,4 @@
-# Między Nami v0.8.0
+# Między Nami v0.8.3
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, kontami Supabase i synchronizacją dwóch telefonów.
 
@@ -41,3 +41,12 @@ Na Windows możesz użyć `DEPLOY-WINDOWS.bat`. Po wdrożeniu dodaj adres Vercel
 ## Logowanie na iPhonie
 
 Wersja 0.8.0 używa kodu jednorazowego z e-maila zamiast linku. Kod wpisuje się w skrócie Między Nami otwartym z ekranu głównego, dzięki czemu sesja zapisuje się dokładnie w aplikacji PWA.
+
+## Pakiet Pikantne 18+
+
+Wersja 0.8.1 dodaje opcjonalny pakiet 112 kart dla pełnoletniej pary. Pakiet jest domyślnie wyłączony, wymaga potwierdzenia 18+ i nie trafia do zwykłych szybkich sesji. Każdą kartę można pominąć bez tłumaczenia.
+
+
+## Stabilizacja v0.8.3
+
+Wersja dodaje bezpieczne aktualizacje PWA, przyjazne błędy sieciowe, stan offline oraz utrwaloną migrację generatora kodu pary.
