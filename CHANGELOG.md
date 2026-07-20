@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.1 — Dopasowanie 18+ na dwóch telefonach
+
+- każda osoba odpowiada na swoim telefonie na ten sam zestaw 8 pytań,
+- odpowiedzi partnera pozostają ukryte do ukończenia rundy przez oboje,
+- wynik i porównanie odpowiedzi pojawiają się jednocześnie dzięki Supabase Realtime,
+- aktywną rundę można kontynuować po zamknięciu aplikacji,
+- zachowano wybór gry lokalnej na jednym telefonie,
+- odpowiedzi 18+ nie trafiają do ogólnej historii i są usuwane przy nowej rundzie,
+- dodano migrację `003_v091_spicy_match_two_phones.sql`.
+
 ## 0.8.3 — stabilizacja i optymalizacja PWA
 
 - naprawiono ładowanie pełnego modułu v0.8.2 i rozjazd numerów wersji,

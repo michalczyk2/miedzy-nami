@@ -1,4 +1,4 @@
-# Między Nami v0.9.0
+# Między Nami v0.9.1
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
@@ -15,6 +15,7 @@ PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchro
 - wspólny wynik i historia online,
 - trwałe zapamiętywanie sesji na urządzeniu,
 - pakiet Pikantne 18+ z czterema jasno opisanymi grami,
+- Dopasowanie 18+ na dwóch telefonach z ukrytymi odpowiedziami i wspólnym wynikiem,
 - bezpieczne aktualizacje PWA, stan offline i przyjazne błędy,
 - działanie lokalne bez konta.
 
@@ -28,7 +29,7 @@ Aplikacja jest teraz budowana przez Vite i TypeScript:
 - Vite tworzy produkcyjny katalog `dist`,
 - Service Worker automatycznie buforuje hashowane pliki buildu.
 
-Migracja jest etapowa. Pliki `v05.js`–`v083.js` pozostają aktywne, ale kolejne wersje będą przenosiły ich logikę do modułów TypeScript bez jednorazowego przepisywania całej aplikacji.
+Migracja jest etapowa. Pliki `v05.js`–`v091.js` pozostają aktywne, ale kolejne wersje będą przenosiły ich logikę do modułów TypeScript bez jednorazowego przepisywania całej aplikacji.
 
 ## Uruchomienie
 

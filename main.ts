@@ -53,6 +53,7 @@ const LEGACY_SCRIPTS = [
   '/spicy-v082-data.js',
   '/v082.js',
   '/v083.js',
+  '/v091.js',
 ] as const;
 
 const boot: BootState = {

@@ -1,4 +1,4 @@
-# Architektura Między Nami v0.9.0
+# Architektura Między Nami v0.9.1
 
 ## Warstwa budowania
 
@@ -35,3 +35,12 @@ Publiczny `publishable key` znajduje się w frontendzie. Klucze `secret` i `serv
 ## Tryb bez konta
 
 Gry lokalne pozostają dostępne bez logowania. Konto jest wymagane wyłącznie do synchronizacji między urządzeniami.
+
+
+## Warstwa v0.9.1 — sesje na dwóch telefonach
+
+- `v091.js` obsługuje pierwszą pełną grę Realtime poza Codziennym Dopasowaniem.
+- `multiplayer_sessions` przechowuje wspólny zestaw pytań i stan rundy.
+- `multiplayer_submissions` przechowuje prywatne odpowiedzi każdego konta.
+- RLS ujawnia odpowiedzi partnera dopiero po dwóch ukończonych zgłoszeniach.
+- nowa runda usuwa poprzedni wynik i odpowiedzi gry 18+, ograniczając retencję prywatnych danych.

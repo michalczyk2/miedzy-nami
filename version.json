@@ -1,14 +1,14 @@
 {
   "name": "Między Nami",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "channel": "stable",
   "cards": 866,
   "daily_match_questions": 180,
   "apps": 11,
-  "release": "vite-typescript-foundation",
+  "release": "spicy-match-two-phones",
   "cloud_sync": true,
   "creator": "Michał Czerwiński",
-  "tests": 40,
+  "tests": 44,
   "adult_pack_cards": 112,
   "adult_match_questions": 32,
   "adult_talk_cards": 18,
@@ -20,5 +20,10 @@
   "vite_build": true,
   "typescript_foundation": true,
   "single_entrypoint": true,
-  "bundled_supabase_client": true
+  "bundled_supabase_client": true,
+  "multiplayer_spicy_match": true,
+  "multiplayer_spicy_match_questions": 8,
+  "hidden_partner_answers": true,
+  "temporary_adult_answers": true,
+  "realtime_multiplayer": true
 }
