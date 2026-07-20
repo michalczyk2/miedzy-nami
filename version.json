@@ -1,12 +1,12 @@
 {
   "name": "Między Nami",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "channel": "stable",
   "cards": 754,
   "daily_match_questions": 180,
   "apps": 11,
-  "release": "production-ux",
+  "release": "guided-onboarding-persistent-session",
   "cloud_sync": true,
   "creator": "Michał Czerwiński",
-  "tests": 26
+  "tests": 30
 }

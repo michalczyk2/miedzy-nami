@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 
-const V071_VERSION='0.7.1';
+const V071_VERSION='0.8.0';
 const runtime=window.MN_CLOUD_RUNTIME||null;
 const creator='Michał Czerwiński';
 

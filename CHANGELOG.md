@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.7.2
+
+- zastąpiono linki e-mail logowaniem kodem OTP wpisywanym bezpośrednio w aplikacji,
+- rozwiązano problem osobnej sesji Safari i skrótu PWA na iPhonie,
+- dodano ekran wpisywania kodu, zmianę adresu i ponowne wysłanie,
+- dodano blokadę ponownej wysyłki przez 60 sekund,
+- dodano polskie komunikaty dla limitu wiadomości i wygasłego kodu,
+- zachowano sesję na urządzeniu po poprawnym zalogowaniu.
+
 ## 0.7.1
 
 - dodano stale widoczny profil konta w nagłówku,
@@ -17,3 +26,16 @@
 - konta Supabase, kod pary i synchronizacja dwóch telefonów,
 - wspólne Codzienne Dopasowanie i historia online,
 - zabezpieczenia RLS oraz Realtime.
+
+## 0.8.0 — intuicyjny start i trwałe konto
+
+- nowe wprowadzenie przy pierwszym uruchomieniu,
+- jasny wybór: jeden telefon albo dwa telefony,
+- prowadzenie krok po kroku przez logowanie i połączenie pary,
+- widoczna informacja, że sesja jest zapamiętana na urządzeniu,
+- automatyczne przywracanie konta po ponownym otwarciu PWA,
+- nowa karta stanu pary i dzisiejszego zadania na pulpicie,
+- całkowicie przebudowane, zwarte menu mobilne,
+- nowy ekran pomocy „Jak zacząć?”,
+- czytelniejsze konto, synchronizacja i wylogowanie,
+- poprawione odstępy, łamanie tekstu i widok na małych iPhone’ach.

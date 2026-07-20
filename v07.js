@@ -1,15 +1,19 @@
 (function(){
 'use strict';
 
-const V07_VERSION='0.7.1';
+const V07_VERSION='0.8.0';
 const CREATOR='Michał Czerwiński';
 const CLOUD_DRAFT_PREFIX='mn-v07-cloud-daily-draft';
+const OTP_EMAIL_KEY='mn-v072-otp-email';
+const OTP_SENT_AT_KEY='mn-v072-otp-sent-at';
+const OTP_RESEND_SECONDS=60;
 const ENGINE=window.MN_DAILY_ENGINE;
 const config=window.MN_CLOUD_CONFIG||{};
 const cloud={
   configured:Boolean(config.supabaseUrl&&config.supabasePublishableKey&&window.supabase?.createClient),
   client:null,session:null,user:null,profile:null,couple:null,members:[],subscription:null,
   loading:false,error:'',notice:'',daily:null,history:[],syncing:false,lastSyncAt:null,
+  otpEmail:localStorage.getItem(OTP_EMAIL_KEY)||'',otpSentAt:Number(localStorage.getItem(OTP_SENT_AT_KEY)||0),
 };
 window.MN_CLOUD_RUNTIME=cloud;
 
@@ -23,6 +27,10 @@ function cloudQuestions(ids){return(ids||[]).map(id=>ENGINE?.DAILY_BY_ID?.get(id
 function configMessage(){return cloud.configured?'Połączenie z Supabase jest skonfigurowane.':'Tryb dwóch telefonów wymaga jednorazowego podłączenia dedykowanego projektu Supabase.'}
 function formatCloudError(error){
   const raw=String(error?.message||error||'Nieznany błąd');
+  const normalized=raw.toLowerCase();
+  if(normalized.includes('rate limit')||normalized.includes('over_email_send_rate_limit')||normalized.includes('email rate limit exceeded'))return'Za dużo wiadomości w krótkim czasie. Poczekaj chwilę i spróbuj ponownie. Po zalogowaniu sesja zostaje zapisana na tym urządzeniu.';
+  if(normalized.includes('otp_expired')||normalized.includes('token has expired')||normalized.includes('invalid or has expired'))return'Kod wygasł albo został już wykorzystany. Wyślij nowy kod i wpisz go z najnowszej wiadomości.';
+  if(normalized.includes('invalid token')||normalized.includes('token is invalid'))return'Kod jest nieprawidłowy. Sprawdź cyfry albo wyślij nowy kod.';
   const map={AUTH_REQUIRED:'Najpierw zaloguj się.',DISPLAY_NAME_REQUIRED:'Wpisz imię.',ALREADY_IN_COUPLE:'To konto jest już połączone z parą.',INVALID_INVITE_CODE:'Nie znaleziono pary o takim kodzie.',COUPLE_FULL:'Do tej pary należą już dwie osoby.'};
   return Object.entries(map).find(([key])=>raw.includes(key))?.[1]||raw;
 }
@@ -79,13 +87,37 @@ function subscribeCloud(){
 }
 function unsubscribeCloud(){if(cloud.client&&cloud.subscription)cloud.client.removeChannel(cloud.subscription);cloud.subscription=null}
 
-async function cloudSendMagicLink(){
-  clearCloudError();const email=document.querySelector('#cloud-email')?.value.trim();
+function otpCooldownRemaining(){return Math.max(0,OTP_RESEND_SECONDS-Math.floor((Date.now()-Number(cloud.otpSentAt||0))/1000))}
+function saveOtpState(email){cloud.otpEmail=email;cloud.otpSentAt=Date.now();localStorage.setItem(OTP_EMAIL_KEY,email);localStorage.setItem(OTP_SENT_AT_KEY,String(cloud.otpSentAt))}
+function clearOtpState(){cloud.otpEmail='';cloud.otpSentAt=0;localStorage.removeItem(OTP_EMAIL_KEY);localStorage.removeItem(OTP_SENT_AT_KEY)}
+async function cloudSendOtp(){
+  clearCloudError();
+  const email=(document.querySelector('#cloud-email')?.value||cloud.otpEmail||'').trim().toLowerCase();
   if(!email){cloudToast('Wpisz adres e-mail.');return}
+  const remaining=otpCooldownRemaining();
+  if(cloud.otpEmail===email&&remaining>0){cloud.error=`Kod został już wysłany. Spróbuj ponownie za ${remaining} s.`;render();return}
   cloud.loading=true;render();
-  const{error}=await cloud.client.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+location.pathname,data:{display_name:email.split('@')[0]}}});
-  cloud.loading=false;if(error){setCloudError(error);return}cloud.notice='Link do logowania został wysłany. Otwórz go na tym telefonie.';render();
+  const{error}=await cloud.client.auth.signInWithOtp({email,options:{shouldCreateUser:true,data:{display_name:email.split('@')[0]}}});
+  cloud.loading=false;
+  if(error){setCloudError(error);return}
+  saveOtpState(email);
+  cloudToast('Kod logowania został wysłany. Wpisz go w tej aplikacji.');
+  setTimeout(()=>{if(!cloud.user&&cloud.otpEmail===email)render()},(OTP_RESEND_SECONDS+1)*1000);
+  render();
 }
+async function cloudVerifyOtp(){
+  clearCloudError();
+  const email=(cloud.otpEmail||document.querySelector('#cloud-email')?.value||'').trim().toLowerCase();
+  const token=(document.querySelector('#cloud-otp')?.value||'').replace(/\D/g,'').slice(0,8);
+  if(!email){cloudToast('Najpierw wyślij kod na e-mail.');return}
+  if(token.length<6){cloudToast('Wpisz pełny kod z wiadomości.');return}
+  cloud.loading=true;render();
+  const{error}=await cloud.client.auth.verifyOtp({email,token,type:'email'});
+  cloud.loading=false;
+  if(error){setCloudError(error);return}
+  clearOtpState();cloudToast('Zalogowano na tym urządzeniu.');render();
+}
+function cloudChangeOtpEmail(){clearOtpState();clearCloudError();render()}
 async function cloudGoogleSignIn(){
   clearCloudError();
   const{error}=await cloud.client.auth.signInWithOAuth({provider:'google',options:{redirectTo:location.origin+location.pathname}});
@@ -212,7 +244,12 @@ function renderCloudHub(){
   const error=cloud.error?`<div class="cloud-alert error">${cloudEscape(cloud.error)}</div>`:'';
   if(!cloud.configured){app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">v${V07_VERSION}</span></div><span class="cloud-big">☁</span><h1>Dwa telefony</h1><p class="muted">Frontend jest gotowy. Aby uruchomić synchronizację, trzeba utworzyć dedykowany projekt Supabase, wykonać migrację SQL i wkleić dwa publiczne parametry do <code>cloud-config.js</code>.</p><div class="cloud-steps"><div><b>1</b><span><strong>Oddzielny Supabase</strong><small>Bez mieszania danych z Typerzy 2026.</small></span></div><div><b>2</b><span><strong>Konta i kod pary</strong><small>Każda osoba loguje się na swoim telefonie.</small></span></div><div><b>3</b><span><strong>Odpowiedzi osobno</strong><small>Wynik odsłania się dopiero, gdy oboje skończą.</small></span></div></div><div class="cloud-alert">${cloudEscape(configMessage())}</div></section>`;return}
   if(cloud.loading){app.innerHTML=`<section class="panel cloud-panel"><div class="app-loader"><span></span><span></span><span></span></div><p class="muted center">Synchronizuję dane…</p></section>`;return}
-  if(!cloud.user){app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Bezpieczne logowanie</span></div><span class="cloud-big">♡</span><h1>Twoje konto</h1><p class="muted">Każda osoba loguje się na swoim telefonie. Najprościej użyć jednorazowego linku wysłanego na e-mail.</p>${error}<label class="field"><span>Adres e-mail</span><input class="input" id="cloud-email" type="email" autocomplete="email" placeholder="twoj@email.pl"></label><button class="button primary full" onclick="cloudSendMagicLink()">Wyślij link do logowania</button><div class="cloud-divider"><span>lub</span></div><button class="button secondary full" onclick="cloudGoogleSignIn()">Kontynuuj przez Google</button><p class="small center">Google zadziała po włączeniu dostawcy w panelu Supabase. Link e-mail działa bez hasła.</p></section>`;return}
+  if(!cloud.user){
+    const pending=cloud.otpEmail;
+    const remaining=otpCooldownRemaining();
+    if(pending){app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Kod jednorazowy</span></div><span class="cloud-big">✉</span><h1>Wpisz kod z e-maila</h1><p class="muted">Kod został wysłany na <strong>${cloudEscape(pending)}</strong>. Wpisz go tutaj, aby zalogować dokładnie tę aplikację z ekranu głównego.</p>${error}<label class="field"><span>Kod logowania</span><input class="input cloud-code-input otp-code-input" id="cloud-otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="8" placeholder="123456" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,8)"></label><button class="button primary full" onclick="cloudVerifyOtp()">Zaloguj się kodem</button><div class="button-row auth-secondary-row"><button class="button secondary" onclick="cloudSendOtp()">${remaining>0?`Wyślij ponownie za ${remaining} s`:'Wyślij kod ponownie'}</button><button class="button tertiary" onclick="cloudChangeOtpEmail()">Zmień e-mail</button></div><p class="small center">Nie otwieraj linku w Safari. Kod wpisany tutaj zapisze sesję bezpośrednio w skrócie na ekranie głównym.</p></section>`;return}
+    app.innerHTML=`<section class="panel cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">Bezpieczne logowanie</span></div><span class="cloud-big">♡</span><h1>Twoje konto</h1><p class="muted">Każda osoba loguje się na swoim telefonie. Na iPhonie najpewniej działa kod jednorazowy wpisywany bezpośrednio w aplikacji.</p>${error}<label class="field"><span>Adres e-mail</span><input class="input" id="cloud-email" type="email" autocomplete="email" placeholder="twoj@email.pl"></label><button class="button primary full" onclick="cloudSendOtp()">Wyślij kod logowania</button><div class="cloud-alert auth-info">📱 Otwórz skrót Między Nami z ekranu głównego, wyślij kod i wpisz go tutaj. Dzięki temu logowanie zostanie zapisane w aplikacji, a nie tylko w Safari.</div><p class="small center">Po zalogowaniu sesja pozostaje zapisana na tym urządzeniu. Nie trzeba logować się codziennie.</p></section>`;return}
+  
   if(!cloud.couple){const defaultName=cloud.profile?.display_name||cloud.user.email?.split('@')[0]||settings.names[0];app.innerHTML=`<section class="panel wide cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><button class="link-button" onclick="cloudSignOut()">Wyloguj</button></div><span class="eyebrow">ZALOGOWANO · ${cloudEscape(cloud.user.email||'konto')}</span><h1>Połączcie telefony</h1><p class="muted">Jedna osoba tworzy parę i wysyła kod. Druga wybiera „Dołączam” i wpisuje ten kod.</p>${error}<div class="cloud-pair-grid"><article><span>1</span><h2>Tworzę parę</h2><label class="field"><span>Twoje imię</span><input class="input" id="cloud-create-name" value="${cloudEscape(defaultName)}" maxlength="40"></label><button class="button primary full" onclick="cloudCreatePair()">Utwórz parę</button></article><article><span>2</span><h2>Dołączam</h2><label class="field"><span>Twoje imię</span><input class="input" id="cloud-join-name" value="${cloudEscape(defaultName)}" maxlength="40"></label><label class="field"><span>Kod partnera</span><input class="input cloud-code-input" id="cloud-invite-code" maxlength="6" autocomplete="off" placeholder="A1B2C3" oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')"></label><button class="button secondary full" onclick="cloudJoinPair()">Dołącz do pary</button></article></div></section>`;return}
   const partner=partnerMember(),own=ownMember();app.innerHTML=`<section class="panel wide cloud-panel"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip connected-chip">● online</span></div><div class="cloud-account-head"><span>✓</span><div><small>PARA ONLINE</small><h1>${cloudEscape(own?.display_name||'Ty')} ${partner?'& '+cloudEscape(partner.display_name):''}</h1><p>${partner?'Oba telefony są połączone i mają wspólną historię.':'Druga osoba musi zalogować się i wpisać kod.'}</p></div></div>${error}<div class="invite-card"><small>KOD ZAPROSZENIA</small><strong>${cloudEscape(cloud.couple.invite_code)}</strong><p>${partner?'Kod pozostaje przypisany do waszej pary.':'Wyślij ten kod drugiej osobie.'}</p><div class="button-row"><button class="button primary" onclick="copyInviteCode()">Kopiuj kod</button><button class="button secondary" onclick="shareInviteCode()">Udostępnij</button></div></div><div class="member-list">${cloud.members.map(member=>`<div><span>${member.user_id===cloud.user.id?'TY':'♡'}</span><strong>${cloudEscape(member.display_name)}</strong><small>${member.user_id===cloud.user.id?'To urządzenie':'Partner/partnerka'}</small></div>`).join('')}${cloud.members.length<2?'<div class="waiting-member"><span>…</span><strong>Oczekiwanie</strong><small>na drugą osobę</small></div>':''}</div><div class="cloud-actions"><button class="button primary" onclick="openCloudDaily()" ${partner?'':'disabled'}>Dzisiejsze pytania</button><button class="button secondary" onclick="showCloudHistory()">Historia online</button><button class="button tertiary" onclick="syncLocalSessions().then(()=>toast('Synchronizacja zakończona.'))">Synchronizuj teraz</button></div><div class="cloud-danger-zone"><button class="link-button" onclick="cloudSignOut()">Wyloguj to urządzenie</button><button class="link-button danger-text" onclick="cloudLeavePair()">Rozwiąż parę online</button></div></section>`;
 }
@@ -283,7 +320,7 @@ renderModal=function(){
   }
 };
 
-Object.assign(window,{showCloudHub,showAboutApp,cloudSendMagicLink,cloudGoogleSignIn,cloudSignOut,cloudCreatePair,cloudJoinPair,cloudLeavePair,copyInviteCode,shareInviteCode,openCloudDaily,cloudDailyChoose,cloudDailyPrevious,submitCloudDaily,refreshCloudWait,showCloudHistory,openCloudHistoryDay,syncLocalSessions});
+Object.assign(window,{showCloudHub,showAboutApp,cloudSendOtp,cloudVerifyOtp,cloudChangeOtpEmail,cloudGoogleSignIn,cloudSignOut,cloudCreatePair,cloudJoinPair,cloudLeavePair,copyInviteCode,shareInviteCode,openCloudDaily,cloudDailyChoose,cloudDailyPrevious,submitCloudDaily,refreshCloudWait,showCloudHistory,openCloudHistoryDay,syncLocalSessions});
 
 document.documentElement.dataset.version=V07_VERSION;
 initCloud().finally(()=>render());
