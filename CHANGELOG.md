@@ -1,3 +1,15 @@
+# Changelog
+
+## 0.9.7 — Co wybierasz? na dwóch telefonach
+
+- Dodano 10-kartową rozgrywkę `dilemma_live`.
+- Każde odpowiada prywatnie na swoim telefonie.
+- Wybór A/B jest najpierw zaznaczany, a następnie jawnie zatwierdzany.
+- Wynik odsłania się dopiero po odpowiedzi obojga.
+- Dodano zgodność procentową, podsumowanie wszystkich dylematów i wznowienie przez 48 godzin.
+- Klasyczny tryb na jednym telefonie pozostaje dostępny.
+- Rozszerzono wspólny silnik Supabase bez nowych tabel.
+
 ## 0.9.6 — prostsze łączenie pary i czytelne odpowiedzi online
 
 - przebudowano ekran łączenia: „Mam kod partnera” jest pierwszą i główną ścieżką,

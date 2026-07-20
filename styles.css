@@ -327,3 +327,14 @@ button,.button,.desktop-app,.menu-action,.v08-menu-item{touch-action:manipulatio
 .cloud-daily-nav{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:10px;max-width:680px;margin:18px auto 0}
 .cloud-daily-nav .button{width:100%}
 @media(max-width:700px){.cloud-code-row{grid-template-columns:1fr}.cloud-code-row .button{height:auto}.cloud-connected-explainer{grid-template-columns:44px 1fr}.cloud-connected-explainer>span{width:44px;height:44px}.cloud-daily-nav{grid-template-columns:1fr}.cloud-daily-panel .daily-question-head h1{font-size:32px}.cloud-daily-answers .daily-answer span{font-size:15px}}
+
+/* v0.9.7 — Co wybierasz? na dwóch telefonach */
+.v097-choice-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+.v097-choice-options button{position:relative;min-height:132px;padding:20px}
+.v097-choice-options button>i{position:absolute;right:14px;top:14px;display:grid;place-items:center;width:27px;height:27px;border-radius:999px;background:transparent;color:transparent;font-style:normal;font-weight:900}
+.v097-choice-options button.selected{border-color:#6d56ff;background:linear-gradient(145deg,rgba(109,86,255,.13),#fff);box-shadow:0 15px 38px rgba(74,51,178,.18);transform:translateY(-2px)}
+.v097-choice-options button.selected>b{background:#6d56ff;color:#fff}
+.v097-choice-options button.selected>i{background:#6d56ff;color:#fff}
+.v097-confirm-choice{margin-top:16px}
+.v097-confirm-choice:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:720px){.v097-choice-options{grid-template-columns:1fr}.v097-choice-options button{min-height:84px;padding:16px 48px 16px 16px}}

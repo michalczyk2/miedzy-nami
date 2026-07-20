@@ -1,10 +1,10 @@
-# Między Nami v0.9.6
+# Między Nami v0.9.7
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
 
-## v0.9.6 — prostsze łączenie pary i czytelne odpowiedzi
+## v0.9.7 — prostsze łączenie pary i czytelne odpowiedzi
 
 - pole do wpisania lub wklejenia kodu partnera jest teraz pierwszą opcją,
 - zaproszenie można udostępnić jako link z kodem,
@@ -105,3 +105,8 @@ npm run deploy
 ```
 
 Po wdrożeniu adres produkcyjny musi pozostać dodany w `Authentication → URL Configuration` w Supabase.
+
+
+## v0.9.7 — Co wybierasz? na dwóch telefonach
+
+Tryb `dilemma` działa teraz online na dwóch urządzeniach. Każda osoba wybiera prywatnie jedną z dwóch opcji, jawnie zatwierdza wybór, a wynik karty jest odsłaniany dopiero po odpowiedzi obojga. Sesja ma 10 kart i może być wznowiona przez 48 godzin.
