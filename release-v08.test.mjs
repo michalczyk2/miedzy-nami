@@ -6,10 +6,10 @@ import {resolve} from 'node:path';
 const root=resolve(import.meta.dirname);
 const read=file=>readFileSync(resolve(root,file),'utf8');
 
-test('v0.9.10 ładuje aplikację przez jeden moduł TypeScript',()=>{
+test('v0.9.11 ładuje aplikację przez jeden moduł TypeScript',()=>{
   const html=read('index.html');
   const main=read('main.ts');
-  assert.match(html,/Między Nami 0\.9\.10/);
+  assert.match(html,/Między Nami 0\.9\.11/);
   assert.match(html,/type="module" src="\/main\.ts"/);
   assert.match(main,/\/spicy-v082-data\.js/);
   assert.match(main,/\/v082\.js/);
@@ -24,6 +24,7 @@ test('v0.9.10 ładuje aplikację przez jeden moduł TypeScript',()=>{
   assert.match(main,/\/v098\.js/);
   assert.match(main,/\/v099\.js/);
   assert.match(main,/\/v0910\.js/);
+  assert.match(main,/\/v0911\.js/);
   assert.match(read('sw.js'),/miedzy-nami-v090|MN_RELEASE\?\.cache/);
 });
 
@@ -116,7 +117,7 @@ test('v0.8.3 tłumaczy błędy sieci i zapisuje migrację kodu pary',()=>{
 });
 
 
-test('v0.9.10 ustawia wersję w buildzie i ładuje centrum multiplayer',()=>{
+test('v0.9.11 ustawia wersję w buildzie i ładuje centrum multiplayer',()=>{
   const main=read('main.ts');
   const appIndex=main.indexOf("'/app.js'");
   const v082Index=main.indexOf("'/v082.js'");
@@ -131,8 +132,9 @@ test('v0.9.10 ustawia wersję w buildzie i ładuje centrum multiplayer',()=>{
   const v098Index=main.indexOf("'/v098.js'");
   const v099Index=main.indexOf("'/v099.js'");
   const v0910Index=main.indexOf("'/v0910.js'");
+  const v0911Index=main.indexOf("'/v0911.js'");
   assert.ok(appIndex>=0);
-  assert.ok(v082Index>=0&&v083Index>v082Index&&v091Index>v083Index&&coreIndex>v091Index&&v092Index>coreIndex&&liveCoreIndex>v092Index&&v093Index>liveCoreIndex&&v094Index>v093Index&&v097Index>v094Index&&v098Index>v097Index&&v099Index>v098Index&&v0910Index>v099Index);
+  assert.ok(v082Index>=0&&v083Index>v082Index&&v091Index>v083Index&&coreIndex>v091Index&&v092Index>coreIndex&&liveCoreIndex>v092Index&&v093Index>liveCoreIndex&&v094Index>v093Index&&v097Index>v094Index&&v098Index>v097Index&&v099Index>v098Index&&v0910Index>v099Index&&v0911Index>v0910Index);
   assert.match(main,/__APP_VERSION__/);
   assert.match(read('check-release.mjs'),/const packageJson=.*const versionJson=.*const release=/s);
 });

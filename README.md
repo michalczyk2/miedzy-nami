@@ -1,8 +1,20 @@
-# Między Nami v0.9.10
+# Między Nami v0.9.11
 
 PWA dla par z pulpitem gier, Codziennym Dopasowaniem, osobnymi kontami i synchronizacją dwóch telefonów.
 
 **Aplikacja stworzona przez Michała Czerwińskiego.**
+
+## v0.9.11 — stabilizacja i wspólne statystyki
+
+- naprawiono otwieranie gier online z pulpitu,
+- dodano kontrolowany most stanu dla modułów multiplayer,
+- wynik zwykłej gry rozegranej na jednym telefonie jest wysyłany do wspólnej historii pary,
+- statystyki zwykłych sesji oraz Codziennego Dopasowania są widoczne na obu kontach,
+- lokalne i chmurowe rekordy są deduplikowane,
+- oznaczenia trybu w Pikantnych są małe i nie zasłaniają treści,
+- aktualizacja nie wymaga zmian w bazie danych.
+
+Szczegóły: `V0911-RUNTIME-AND-SHARED-STATS.md`.
 
 ## v0.9.10 — jedno centrum gier online
 

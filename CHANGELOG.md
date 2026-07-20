@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.9.11 — stabilizacja routingu i wspólnych statystyk
+
+- Naprawiono komunikat „Nie udało się otworzyć gry” po kliknięciu trybu online.
+- Dodano most kompatybilności między starszym globalnym stanem aplikacji a modułami multiplayer.
+- Dodano bezpieczny fallback otwierający lokalny ekran gry.
+- Zwykłe sesje rozegrane na jednym telefonie są automatycznie wysyłane do wspólnej historii pary.
+- Statystyki zwykłych gier i Codziennego Dopasowania są odczytywane z Supabase i widoczne na obu kontach.
+- Dodano deduplikację sesji lokalnych i chmurowych.
+- Przebudowano oznaczenia w Pikantnych, aby nie zasłaniały opisów.
+- Aktualizacja nie wymaga migracji SQL.
+
 ## 0.9.10
 
 - Naprawiono kliknięcia ikon gier online na pulpicie.

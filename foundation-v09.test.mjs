@@ -6,7 +6,7 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname);
 const read = (file) => readFileSync(resolve(root, file), 'utf8');
 
-test('v0.9.10 ma jeden modułowy punkt wejścia', () => {
+test('v0.9.11 ma jeden modułowy punkt wejścia', () => {
   const html = read('index.html');
   assert.match(html, /type="module" src="\/main\.ts"/);
   assert.doesNotMatch(html, /cdn\.jsdelivr\.net\/npm\/@supabase/);
@@ -29,7 +29,8 @@ test('loader TypeScript uruchamia starsze moduły w kontrolowanej kolejności', 
   const scaleLive = source.indexOf("'/v098.js'");
   const onlineCenter = source.indexOf("'/v099.js'");
   const uxAudit = source.indexOf("'/v0910.js'");
-  assert.ok(app >= 0 && cloud > app && spicy > cloud && stability > spicy && multiplayer > stability && core > multiplayer && desire > core && liveCore > desire && whoLive > liveCore && knowLive > whoLive && dilemmaLive > knowLive && scaleLive > dilemmaLive && onlineCenter > scaleLive && uxAudit > onlineCenter);
+  const stabilization = source.indexOf("'/v0911.js'");
+  assert.ok(app >= 0 && cloud > app && spicy > cloud && stability > spicy && multiplayer > stability && core > multiplayer && desire > core && liveCore > desire && whoLive > liveCore && knowLive > whoLive && dilemmaLive > knowLive && scaleLive > dilemmaLive && onlineCenter > scaleLive && uxAudit > onlineCenter && stabilization > uxAudit);
   assert.match(source, /for \(const script of LEGACY_SCRIPTS\)/);
   assert.match(source, /await loadClassicScript\(script\)/);
 });

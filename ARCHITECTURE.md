@@ -1,4 +1,4 @@
-# Architektura Między Nami v0.9.9
+# Architektura Między Nami v0.9.10
 
 ## Warstwa budowania
 
@@ -78,3 +78,15 @@ Migracja `006_v094_live_know_me.sql` rozszerza dozwolone typy sesji o `know_live
 Moduł usuwa starsze, niezależne banery z pulpitu i zastępuje je pojedynczą kartą centrum. Ponieważ poszczególne moduły mogą odświeżać się asynchronicznie, `MutationObserver` pilnuje, aby stare banery nie pojawiały się ponownie.
 
 Stan Codziennego Dopasowania jest dołączany z `MN_CLOUD_RUNTIME`, bez kopiowania odpowiedzi. Centrum nie przechowuje nowych danych i nie wymaga migracji SQL.
+
+
+## v0.9.10 — warstwa audytu UX
+
+Ostatni moduł runtime porządkuje routing ikon, grupy urządzeń, Pakiety, Pikantne i prezentację historii online.
+
+
+## Warstwa kompatybilności v0.9.11
+
+`v0911.js` jest ostatnim klasycznym modułem runtime. Udostępnia przez `globalThis` kontrolowane gettery do leksykalnego stanu starszego rdzenia (`ui`, `app`, `profile`, `settings`, `currentSession`). Dzięki temu moduły multiplayer mogą korzystać ze wspólnego stanu bez jednorazowego przepisywania `app.js`.
+
+Zwykłe sesje są lokalne-first, ale w pełnej parze są upsertowane do `game_sessions` z kluczem `(couple_id, client_session_id)`. Widok statystyk scala je z danymi `daily_results`, deduplikuje i prezentuje identyczny obraz na obu telefonach.
