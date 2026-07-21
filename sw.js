@@ -1,105 +1,50 @@
-const CACHE = 'miedzy-nami-v0917';
-const VITE_ASSETS = /*__MN_VITE_ASSETS__*/[];
-const STATIC_ASSETS = /*__MN_STATIC_ASSETS__*/[];
-const CORE = [...new Set(['/', '/index.html', ...STATIC_ASSETS, ...VITE_ASSETS])];
+importScripts('/release.js');
+const CACHE=globalThis.MN_RELEASE?.cache||'miedzy-nami-v083';
+const BUILD_ASSETS=/*__MN_VITE_ASSETS__*/[];
+const CORE=['/','/index.html','/release.js','/styles.css','/v0912.css','/v0913.css','/v0914.css','/cloud-config.js','/app.js','/enhancements.js','/content/cards-v05.js','/v05.js','/content/daily-match.js','/v06.js','/v07.js','/v071.js','/v08.js','/spicy-v081-data.js','/v081.js','/spicy-v082-data.js','/v082.js','/v083.js','/v091.js','/multiplayer-core-v092.js','/v092.js','/multiplayer-live-core-v093.js','/v093.js','/v094.js','/v097.js','/v098.js','/v099.js','/v0910.js','/v0911.js','/v0913.js','/manifest.webmanifest','/icon.svg','/icon-180.png','/icon-192.png','/icon-512.png','/version.json',...BUILD_ASSETS];
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install',event=>{
+  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
+});
+
+self.addEventListener('activate',event=>{
   event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE);
-      await cache.addAll(CORE);
-      await self.skipWaiting();
-    })(),
+    caches.keys()
+      .then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))
+      .then(()=>self.clients.claim())
   );
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    (async () => {
-      const keys = await caches.keys();
-
-      await Promise.all(
-        keys
-          .filter((key) => key.startsWith('miedzy-nami-') && key !== CACHE)
-          .map((key) => caches.delete(key)),
-      );
-
-      await self.clients.claim();
-    })(),
-  );
+self.addEventListener('message',event=>{
+  if(event.data?.type==='SKIP_WAITING')self.skipWaiting();
 });
 
-self.addEventListener('message', (event) => {
-  if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
-});
-
-function pathRequest(pathname) {
-  return new Request(new URL(pathname, self.location.origin), {
-    method: 'GET',
-    credentials: 'same-origin',
-  });
-}
-
-async function networkFirst(request, fallbackPath) {
-  const fallback = fallbackPath ? pathRequest(fallbackPath) : request;
-
-  try {
-    const response = await fetch(request, { cache: 'no-store' });
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status} dla ${new URL(request.url).pathname}`);
-    }
-
-    const cache = await caches.open(CACHE);
-    await cache.put(fallback, response.clone());
-
+async function networkFirst(request,fallback){
+  try{
+    const response=await fetch(request,{cache:'no-store'});
+    if(response.ok){const cache=await caches.open(CACHE);await cache.put(fallback||request,response.clone())}
     return response;
-  } catch (error) {
-    const cached =
-      (await caches.match(fallback)) ||
-      (fallback !== request ? await caches.match(request) : null);
-
-    if (cached) return cached;
+  }catch(error){
+    const cached=await caches.match(fallback||request);
+    if(cached)return cached;
     throw error;
   }
 }
 
-async function cacheFirst(request) {
-  const cached = await caches.match(request);
-
-  if (cached) return cached;
-
-  const response = await fetch(request);
-
-  if (response.ok) {
-    const cache = await caches.open(CACHE);
-    await cache.put(request, response.clone());
-  }
-
-  return response;
-}
-
-self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
-
-  const url = new URL(event.request.url);
-
-  if (url.origin !== self.location.origin) return;
-
-  if (event.request.mode === 'navigate') {
-    event.respondWith(networkFirst(event.request, '/index.html'));
+self.addEventListener('fetch',event=>{
+  if(event.request.method!=='GET')return;
+  const url=new URL(event.request.url);
+  if(url.origin!==self.location.origin)return;
+  if(event.request.mode==='navigate'){
+    event.respondWith(networkFirst(event.request,'/index.html'));
     return;
   }
-
-  if (url.pathname.startsWith('/assets/')) {
-    event.respondWith(cacheFirst(event.request));
+  if(['/cloud-config.js','/version.json','/release.js','/sw.js','/v0913.js','/v0913.css','/v0914.css'].includes(url.pathname)){
+    event.respondWith(networkFirst(event.request));
     return;
   }
-
-  if (/\.(?:png|svg|webp|jpg|jpeg)$/i.test(url.pathname)) {
-    event.respondWith(cacheFirst(event.request));
-    return;
-  }
-
-  event.respondWith(networkFirst(event.request, url.pathname));
+  event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(async response=>{
+    if(response.ok){const cache=await caches.open(CACHE);await cache.put(event.request,response.clone())}
+    return response;
+  })));
 });

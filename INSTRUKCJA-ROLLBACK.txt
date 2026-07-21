@@ -1,0 +1,32 @@
+MIĘDZY NAMI — ROLLBACK REPOZYTORIUM DO STABILNEJ v0.9.14
+
+Produkcja została już poprawnie przywrócona przez Promote w Vercelu.
+Ta paczka służy tylko do wyrównania gałęzi main w GitHubie z działającą produkcją.
+
+WAŻNE:
+- nie uruchamiaj SQL-a,
+- nie usuwaj aplikacji z telefonu,
+- nie czyść danych Safari,
+- nie wrzucaj samego ZIP-a.
+
+1. Rozpakuj ZIP w aplikacji Pliki.
+2. GitHub → michalczyk2/miedzy-nami.
+3. Upewnij się, że jesteś na gałęzi main i w głównym katalogu.
+4. Add file → Upload files.
+5. Wgraj wszystkie 9 plików.
+6. Commit:
+   revert: restore stable repository v0.9.14
+7. Commit directly to main.
+8. Poczekaj na Ready w Vercelu.
+
+Po tym:
+- produkcja i GitHub będą znowu zgodne,
+- kolejne wdrożenie nie przywróci wadliwej v0.9.17,
+- pliki v0.9.15–v0.9.17 mogą nadal leżeć w repozytorium, ale stabilny main ich nie ładuje.
+
+Test po Ready:
+- wersja v0.9.14,
+- pulpit się ładuje,
+- można wejść i wyjść z gry,
+- Pikantne działają,
+- nie zaczynamy jeszcze żadnej dalszej przebudowy Skali.
