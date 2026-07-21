@@ -1,0 +1,46 @@
+/* Między Nami v0.9.14 — odstęp kart pulpitu i poprawne przycinanie dekoracji */
+
+/*
+  Karta Codziennego Dopasowania i Centrum online są sąsiadami na pulpicie.
+  Jawny dolny margines zapobiega ich stykaniu się niezależnie od kolejności
+  modułów, które dodają te elementy do DOM.
+*/
+.daily-launch-card {
+  margin-bottom: 20px !important;
+}
+
+/*
+  Safari/iOS potrafi wyświetlić rozmyty pseudo-element poza zaokrąglonym
+  kontenerem mimo overflow:hidden. clip-path tworzy jednoznaczną granicę
+  malowania bez zmiany wymiarów ani obsługi kliknięć karty.
+*/
+.daily-launch-card {
+  overflow: hidden !important;
+  isolation: isolate;
+  contain: paint;
+  -webkit-clip-path: inset(0 round 28px);
+  clip-path: inset(0 round 28px);
+  transform: translateZ(0);
+}
+
+.daily-launch-card::after {
+  z-index: 0;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
+.daily-launch-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Centrum zachowuje własny dolny odstęp; odstęp od góry zapewnia karta dzienna. */
+.v099-home-center {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 390px) {
+  .daily-launch-card {
+    margin-bottom: 18px !important;
+  }
+}
