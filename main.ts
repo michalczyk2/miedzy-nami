@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import './scale-v2-content';
 
 declare const __APP_VERSION__: string;
 
@@ -65,6 +66,7 @@ const LEGACY_SCRIPTS = [
   '/v0910.js',
   '/v0911.js',
   '/v0913.js',
+  '/v0915.js',
 ] as const;
 
 const boot: BootState = {
