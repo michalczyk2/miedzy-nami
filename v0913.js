@@ -30,7 +30,7 @@ function renderSafeSpicyHub(){
       <div>
         <span class="eyebrow">PIKANTNE 18+</span>
         <h1>Wybierzcie grę</h1>
-        <p>Każdą kartę można pominąć, zatrzymać albo odłożyć. Gracie wyłącznie za wspólną zgodą.</p>
+        <p>Trzy różne tryby: delikatne dopasowanie, szczera rozmowa i zadania wykonywane wyłącznie za wspólną zgodą.</p>
       </div>
     </div>
     <div class="v082-safety-strip">
@@ -43,16 +43,13 @@ function renderSafeSpicyHub(){
     </div>
     <div class="v082-game-grid v0913-spicy-grid">
       <button class="v082-game-tile" type="button" onclick="v0913OpenMatch()">
-        <span>💞</span><div><strong>Dopasowanie 18+</strong><p>Każde odpowiada osobno na 8 pytań. Potem zobaczycie zgodność i odpowiedzi.</p><em class="v0913-mode-pill online">1–2 telefony</em><small>8 pytań · wybór trybu</small></div><i>›</i>
-      </button>
-      <button class="v082-game-tile" type="button" onclick="v0913OpenDesire()">
-        <span>🔥</span><div><strong>Ochota na dziś</strong><p>Pięć szybkich wyborów o tym, na co oboje macie ochotę.</p><em class="v0913-mode-pill online">1–2 telefony</em><small>5 pytań · wybór trybu</small></div><i>›</i>
+        <span>💞</span><div><strong>Dopasowanie 18+</strong><p>Delikatniejsze pytania o preferencje i komfort. Każde odpowiada osobno, a odpowiedzi odsłaniają się razem.</p><em class="v0913-mode-pill online">1–2 telefony</em><small>8 pytań · wybór trybu</small></div><i>›</i>
       </button>
       <button class="v082-game-tile" type="button" onclick='v082StartCards("talk")'>
-        <span>💬</span><div><strong>Bez tabu</strong><p>Intymne pytania o potrzeby, fantazje, granice i to, co działa między wami.</p><em class="v0913-mode-pill">1 telefon</em><small>rozmowa bez punktów</small></div><i>›</i>
+        <span>💬</span><div><strong>Bez tabu</strong><p>Bardziej konkretne pytania o seks, potrzeby, fantazje, granice i pożądanie.</p><em class="v0913-mode-pill">1 telefon</em><small>30 pytań · bez punktów</small></div><i>›</i>
       </button>
       <button class="v082-game-tile" type="button" onclick='v082StartCards("action")'>
-        <span>✦</span><div><strong>Tylko we dwoje</strong><p>Zadania wykonywane wyłącznie wtedy, gdy oboje świadomie mówicie „tak”.</p><em class="v0913-mode-pill">1 telefon</em><small>zadania za wspólną zgodą</small></div><i>›</i>
+        <span>✦</span><div><strong>Tylko we dwoje</strong><p>Konkretne zadania do wykonania razem. Każde zaczyna się dopiero po wspólnym, wyraźnym „tak”.</p><em class="v0913-mode-pill">1 telefon</em><small>30 zadań · zgoda i pauza</small></div><i>›</i>
       </button>
     </div>
     <button class="v082-legacy-button" type="button" onclick="v082LegacyMix()">
@@ -80,11 +77,6 @@ function v0913OpenMatch(){
   return safeCall('v082StartMatch','match');
 }
 
-function v0913OpenDesire(){
-  if(typeof root.v092OpenDesire==='function')return root.v092OpenDesire();
-  return safeCall('v082StartMatch','desire');
-}
-
 root.render=function(){
   if(root.ui?.view===SAFE_SPICY_VIEW||root.ui?.view===LEGACY_SPICY_VIEW){
     root.ui.view=SAFE_SPICY_VIEW;
@@ -99,7 +91,6 @@ Object.assign(root,{
   showSpicyHub:showSafeSpicyHub,
   startSpicyPack:showSafeSpicyHub,
   v0913OpenMatch,
-  v0913OpenDesire,
 });
 
 setVersion();
