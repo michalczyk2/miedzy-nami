@@ -6,8 +6,36 @@ const CONSENT_KEY='mn-spicy-consent-v1';
 const MATCH_KEY='mn-v082-spicy-match-v1';
 const CARD_KEY='mn-v082-spicy-card-v1';
 const MATCH_QUESTIONS=Array.isArray(globalThis.MN_V082_SPICY_MATCH)?globalThis.MN_V082_SPICY_MATCH:[];
-const TALK_CARDS=Array.isArray(globalThis.MN_V082_SPICY_TALKS)?globalThis.MN_V082_SPICY_TALKS:[];
-const ACTION_CARDS=Array.isArray(globalThis.MN_V082_SPICY_ACTIONS)?globalThis.MN_V082_SPICY_ACTIONS:[];
+const EXTRA_TALK_CARDS=[
+  {id:'spicy-v2-talk-01',level:2,prompt:'Jakiego rodzaju dotyk najszybciej buduje u ciebie podniecenie?'},
+  {id:'spicy-v2-talk-02',level:2,prompt:'Czy jest miejsce na ciele, któremu chciałbyś albo chciałabyś poświęcać więcej uwagi podczas bliskości?'},
+  {id:'spicy-v2-talk-03',level:3,prompt:'Która fantazja wraca do ciebie najczęściej, nawet jeśli na razie ma zostać tylko fantazją?'},
+  {id:'spicy-v2-talk-04',level:3,prompt:'Jakie słowa podczas seksu działają na ciebie najmocniej, a jakich zdecydowanie nie chcesz słyszeć?'},
+  {id:'spicy-v2-talk-05',level:2,prompt:'Czy wolisz, kiedy druga osoba przejmuje kontrolę, czy kiedy prowadzenie zmienia się między wami?'},
+  {id:'spicy-v2-talk-06',level:2,prompt:'Jaki element gry wstępnej chciałbyś albo chciałabyś częściej powtarzać?'},
+  {id:'spicy-v2-talk-07',level:3,prompt:'Co musi się wydarzyć, żeby bardziej odważny pomysł nadal był dla ciebie bezpieczny i przyjemny?'},
+  {id:'spicy-v2-talk-08',level:3,prompt:'Czy jest pozycja albo forma bliskości, którą chcesz lepiej dopasować do swojego komfortu i przyjemności?'},
+  {id:'spicy-v2-talk-09',level:2,prompt:'Co chciałbyś albo chciałabyś zmienić w tempie lub długości naszych zbliżeń?'},
+  {id:'spicy-v2-talk-10',level:2,prompt:'Jak najłatwiej powiedzieć ci podczas bliskości: wolniej, mocniej, więcej albo stop?'},
+  {id:'spicy-v2-talk-11',level:2,prompt:'Jaka rzecz z naszego ostatniego seksu podobała ci się najbardziej i co dokładnie w niej zadziałało?'},
+  {id:'spicy-v2-talk-12',level:3,prompt:'Co od dawna chcesz zaproponować, ale dotąd brakowało odpowiedniego momentu?'},
+];
+const EXTRA_ACTION_CARDS=[
+  {id:'spicy-v2-action-01',level:2,prompt:'Osoba całowana wskazuje trzy miejsca na swoim ciele. Całuj każde przez około 20 sekund i po każdym zapytaj, czy kontynuować.'},
+  {id:'spicy-v2-action-02',level:2,prompt:'Każde zapisuje jedną rzecz, na którą ma teraz ochotę. Odsłońcie kartki razem i wybierzcie tylko to, na co oboje mówicie „tak”.'},
+  {id:'spicy-v2-action-03',level:1,prompt:'Zróbcie sobie nawzajem po trzy minuty masażu. Przed startem każda osoba wskazuje miejsca, które są dziś mile widziane.'},
+  {id:'spicy-v2-action-04',level:2,prompt:'Całujcie się przez minutę bez używania dłoni. Po minucie każde mówi: kontynuujemy, zmieniamy coś albo kończymy.'},
+  {id:'spicy-v2-action-05',level:2,prompt:'Powiedzcie sobie po jednej rzeczy, która podobała wam się podczas ostatniego seksu i którą chcecie kiedyś powtórzyć.'},
+  {id:'spicy-v2-action-06',level:3,prompt:'Po wspólnym „tak” jedna osoba zakłada opaskę na oczy. Druga przez minutę dotyka wyłącznie wcześniej uzgodnionych miejsc. Ustalcie słowo „stop”.'},
+  {id:'spicy-v2-action-07',level:2,prompt:'Każde może zdjąć jedną część ubrania drugiej osoby, ale dopiero po wyraźnym pytaniu i odpowiedzi „tak”.'},
+  {id:'spicy-v2-action-08',level:2,prompt:'Przez dwie minuty jedna osoba prowadzi dotyk, a druga używa tylko słów: wolniej, mocniej, więcej albo stop. Potem zamiana.'},
+  {id:'spicy-v2-action-09',level:3,prompt:'Każde proponuje jedną pozycję albo formę bliskości. Wybierzcie jedną tylko wtedy, gdy obie propozycje zostały spokojnie omówione i jest wspólna zgoda.'},
+  {id:'spicy-v2-action-10',level:2,prompt:'Osoba całowana wybiera pięć miejsc na ciele. Drugie z was całuje każde przez dziesięć sekund i pyta, gdzie ma wrócić.'},
+  {id:'spicy-v2-action-11',level:2,prompt:'Siedząc obok siebie, wyślijcie sobie po jednej pikantnej wiadomości. Przeczytajcie je razem, bez obowiązku realizowania propozycji.'},
+  {id:'spicy-v2-action-12',level:3,prompt:'Ustawcie timer na pięć minut. Jedna osoba prowadzi w ustalonych granicach, druga może w każdej chwili zmieniać tempo lub powiedzieć „pauza”. Potem zamiana.'},
+];
+const TALK_CARDS=[...(Array.isArray(globalThis.MN_V082_SPICY_TALKS)?globalThis.MN_V082_SPICY_TALKS:[]),...EXTRA_TALK_CARDS];
+const ACTION_CARDS=[...(Array.isArray(globalThis.MN_V082_SPICY_ACTIONS)?globalThis.MN_V082_SPICY_ACTIONS:[]),...EXTRA_ACTION_CARDS];
 const MATCH_BY_ID=new Map(MATCH_QUESTIONS.map(item=>[item.id,item]));
 const TALK_BY_ID=new Map(TALK_CARDS.map(item=>[item.id,item]));
 const ACTION_BY_ID=new Map(ACTION_CARDS.map(item=>[item.id,item]));
@@ -58,7 +86,7 @@ function v082InjectHomeIcon(){
   if(typeof ui==='undefined'||ui.view!=='home'||document.querySelector('.v082-spicy-app'))return;
   const grid=document.querySelector('.desktop-app-grid');
   if(!grid)return;
-  grid.insertAdjacentHTML('beforeend',`<button class="desktop-app v082-spicy-app" data-tone="spicy" onclick="showSpicyHub()" aria-label="Otwórz gry Pikantne 18+"><span class="desktop-app-icon"><span class="desktop-app-mini">18+</span><strong>♥</strong><em>🔥</em><i></i><b></b></span><span class="desktop-app-name">Pikantne</span><small>4 gry</small></button>`);
+  grid.insertAdjacentHTML('beforeend',`<button class="desktop-app v082-spicy-app" data-tone="spicy" onclick="showSpicyHub()" aria-label="Otwórz gry Pikantne 18+"><span class="desktop-app-icon"><span class="desktop-app-mini">18+</span><strong>♥</strong><em>🔥</em><i></i><b></b></span><span class="desktop-app-name">Pikantne</span><small>3 gry</small></button>`);
 }
 function v082InjectMenu(){
   if(ui.modal!=='main-menu')return;
@@ -66,19 +94,19 @@ function v082InjectMenu(){
   if(old){
     old.setAttribute('onclick','showSpicyHub()');
     const title=old.querySelector('strong');if(title)title.textContent='Pikantne 18+';
-    const desc=old.querySelector('small');if(desc)desc.textContent='4 jasne gry dla pełnoletniej pary';
+    const desc=old.querySelector('small');if(desc)desc.textContent='3 różne gry dla pełnoletniej pary';
   }
 }
 function v082InjectPackHub(){
   const old=document.querySelector('.v081-spicy-pack');
   if(old){
     old.setAttribute('onclick','showSpicyHub()');
-    const p=old.querySelector('p');if(p)p.textContent='Dopasowanie, ochota na dziś, pytania bez tabu i zadania.';
+    const p=old.querySelector('p');if(p)p.textContent='Delikatne dopasowanie, odważniejsze pytania bez tabu i konkretne zadania.';
   }
 }
 
 function renderSpicyHub(){
-  app.innerHTML=`<section class="panel wide v082-spicy-hub"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">18+ · dobrowolnie</span></div><div class="v082-spicy-hero"><span class="v082-hub-icon">♥<i>🔥</i></span><div><span class="eyebrow">PIKANTNE 18+</span><h1>Wybierzcie grę</h1><p>Każda gra mówi jasno, co będziecie robić. Wszystko można pominąć, zatrzymać albo odłożyć na później.</p></div></div><div class="v082-safety-strip"><b>Najważniejsza zasada</b><span>Gracie tylko w to, na co oboje macie ochotę. „Nie”, „pauza” i „pomiń” zawsze kończą kartę bez tłumaczenia.</span></div><div class="v082-game-grid">${v082HubTile('💞','Dopasowanie 18+','Każde odpowiada osobno na 8 pytań. Na końcu zobaczycie zgodność i wszystkie odpowiedzi.',"v082StartMatch('match')",'8 pytań · jeden telefon')}${v082HubTile('🔥','Ochota na dziś','Pięć szybkich wyborów o najbliższej okazji. Odkrywacie, na co oboje macie ochotę.',"v082StartMatch('desire')",'5 pytań · szybka gra')}${v082HubTile('💬','Bez tabu','Losowe intymne pytania o potrzeby, fantazje, granice i to, co działa między wami.','v082StartCards("talk")','rozmowa · bez punktów')}${v082HubTile('✦','Tylko we dwoje','Konkretne zadania do gry, kiedy jesteście sami. Każde zadanie wymaga wspólnego „tak”.','v082StartCards("action")','zadania · prywatny czas')}</div><button class="v082-legacy-button" onclick="v082LegacyMix()"><span>🌶</span><span><strong>Klasyczny miks 112 kart</strong><small>Flirt, skale, wybory, rozmowy i wyzwania w jednej sesji.</small></span><i>Otwórz →</i></button></section>`;
+  app.innerHTML=`<section class="panel wide v082-spicy-hub"><div class="top-row"><button class="back-button" onclick="goHome()">← Pulpit</button><span class="chip">TEST · PIKANTNE V2</span></div><div class="v082-spicy-hero"><span class="v082-hub-icon">♥<i>🔥</i></span><div><span class="eyebrow">PIKANTNE 18+</span><h1>Wybierzcie grę</h1><p>Trzy wyraźnie różne tryby: delikatne dopasowanie, szczera rozmowa i wspólnie zaakceptowane działania.</p></div></div><div class="v082-safety-strip"><b>Najważniejsza zasada</b><span>Gracie tylko w to, na co oboje macie ochotę. „Nie”, „pauza” i „pomiń” zawsze kończą kartę bez tłumaczenia.</span></div><div class="v082-game-grid">${v082HubTile('💞','Dopasowanie 18+','Delikatniejsze pytania o preferencje i komfort. Każde odpowiada osobno, a odpowiedzi odsłaniają się razem.',"v082StartMatch('match')",'8 pytań · jeden telefon')}${v082HubTile('💬','Bez tabu','Bardziej intymne i konkretne pytania o seks, potrzeby, fantazje, granice i pożądanie.','v082StartCards("talk")','30 pytań · bez punktów')}${v082HubTile('✦','Tylko we dwoje','Konkretne zadania do wykonania razem. Każde zaczyna się dopiero po wspólnym, wyraźnym „tak”.','v082StartCards("action")','30 zadań · zgoda i pauza')}</div><button class="v082-legacy-button" onclick="v082LegacyMix()"><span>🌶</span><span><strong>Klasyczny miks 112 kart</strong><small>Flirt, skale, wybory, rozmowy i wyzwania w jednej sesji.</small></span><i>Otwórz →</i></button></section>`;
 }
 function v082HubTile(icon,title,text,action,meta){
   return`<button class="v082-game-tile" onclick="${String(action).replace(/\"/g,'&quot;')}"><span>${icon}</span><div><strong>${title}</strong><p>${text}</p><small>${meta}</small></div><i>›</i></button>`;
