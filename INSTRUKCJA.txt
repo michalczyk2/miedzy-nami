@@ -1,0 +1,24 @@
+MIĘDZY NAMI v0.9.15 — HOTFIX INSTALACJI VERCEL
+
+Problem:
+W package-lock.json znalazły się adresy wewnętrznego rejestru pakietów, których Vercel nie może użyć.
+Poprawiono 79 adresów na oficjalny rejestr npm:
+https://registry.npmjs.org/
+
+Zakres:
+- tylko package-lock.json,
+- bez zmiany wersji aplikacji,
+- bez zmian w kodzie gry,
+- bez SQL-a,
+- bez zmian w danych.
+
+Wgranie:
+1. Rozpakuj ZIP.
+2. GitHub → michalczyk2/miedzy-nami → Add file → Upload files.
+3. Wgraj package-lock.json i zastąp obecny plik.
+4. Commit:
+   fix: restore public npm registry in lockfile
+5. Commit directly to main.
+6. Poczekaj na nowy deployment Vercela.
+
+Jeżeli Vercel pokaże opcję ponownego wdrożenia z cache, wybierz nowy deployment z commita.
