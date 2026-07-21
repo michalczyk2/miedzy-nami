@@ -1,0 +1,50 @@
+/* Między Nami v0.9.16 — spójna wersja UI i czytelne stare sesje Skali */
+
+.v0916-legacy-label{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin:0 0 7px;
+  padding:5px 8px;
+  border:1px solid rgba(251,191,36,.28);
+  border-radius:999px;
+  background:rgba(146,64,14,.13);
+  color:#fde68a;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+
+.v0916-legacy-local{
+  border-color:rgba(251,191,36,.3)!important;
+  background:
+    linear-gradient(135deg,rgba(146,64,14,.12),rgba(255,255,255,.025)),
+    var(--panel)!important;
+}
+
+.v099-session-card.v0916-scale-legacy{
+  border-color:rgba(251,191,36,.3);
+}
+
+.v099-session-card.v0916-scale-legacy .v099-session-icon{
+  background:linear-gradient(145deg,#92400e,#78350f);
+  color:#fef3c7;
+}
+
+.v099-session-card.v0916-scale-modern{
+  border-color:rgba(45,212,191,.3);
+}
+
+.v099-session-card.v0916-scale-modern .v099-session-icon{
+  background:linear-gradient(145deg,#2dd4bf,#0e7490 60%,#5b21b6);
+  color:#fff;
+}
+
+.v0916-legacy-scale-card{
+  border-color:rgba(251,191,36,.34)!important;
+}
+
+.v0916-legacy-button{
+  border-color:rgba(251,191,36,.34)!important;
+  color:#fde68a!important;
+}

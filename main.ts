@@ -67,6 +67,7 @@ const LEGACY_SCRIPTS = [
   '/v0911.js',
   '/v0913.js',
   '/v0915.js',
+  '/v0916.js',
 ] as const;
 
 const boot: BootState = {
