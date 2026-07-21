@@ -1,0 +1,119 @@
+/* Między Nami v0.9.12 — kontrast gier online i bezpieczny obszar iOS */
+
+/* Jasne karty gier online mają własną ciemną paletę tekstu. */
+.v093-live-card,
+.v094-live-card {
+  color: #24182f;
+}
+
+.v093-live-card h2,
+.v093-live-card h3,
+.v093-live-card strong,
+.v094-live-card h2,
+.v094-live-card h3,
+.v094-live-card strong {
+  color: #24182f;
+}
+
+.v093-live-card > small,
+.v094-live-card > small {
+  color: #6747d9;
+}
+
+.v093-live-card > p,
+.v094-live-card > p,
+.v093-live-card .muted,
+.v094-live-card .muted {
+  color: #655c70;
+}
+
+/* Odpowiedzi w Znasz mnie, Kto bardziej i Co wybierasz. */
+.v093-live-options button,
+.v094-live-options button {
+  color: #24182f;
+  background: #fff;
+}
+
+.v093-live-options button span,
+.v094-live-options button span {
+  color: #24182f;
+}
+
+.v093-live-options button:disabled,
+.v094-live-options button:disabled {
+  color: #62586d;
+  opacity: .62;
+}
+
+.v097-choice-options button.selected,
+.v094-live-options button:focus-visible,
+.v093-live-options button:focus-visible {
+  color: #24182f;
+}
+
+/* Skala 1–10 na jasnej karcie. */
+.v098-scale-card,
+.v098-scale-card h2 {
+  color: #24182f;
+}
+
+.v098-scale-ends > span {
+  background: rgba(109, 86, 255, .055);
+  border-color: rgba(109, 86, 255, .18);
+}
+
+.v098-scale-ends small,
+.v098-selected-value {
+  color: #655c70;
+}
+
+.v098-number-grid button {
+  color: #30253a;
+  background: rgba(109, 86, 255, .045);
+  border-color: rgba(109, 86, 255, .18);
+}
+
+.v098-number-grid button:disabled {
+  color: #655c70;
+}
+
+.v098-number-grid button.selected {
+  color: #17372f;
+}
+
+/* Karty zasad w lobby nie dziedziczą już białego tekstu. */
+.v093-live-rules article {
+  color: #24182f;
+  background: rgba(255, 255, 255, .92);
+}
+
+.v093-live-rules article strong {
+  color: #24182f;
+}
+
+.v093-live-rules article small {
+  color: #655c70;
+}
+
+/* Czytelność odpowiedzi po wspólnym odsłonięciu. */
+.v093-live-card .result-answer,
+.v094-live-card .result-answer {
+  color: #24182f;
+}
+
+.v093-live-card .result-answer span,
+.v094-live-card .result-answer span {
+  color: #655c70;
+}
+
+.v093-live-card .result-answer strong,
+.v094-live-card .result-answer strong {
+  color: #24182f;
+}
+
+/* iOS PWA z black-translucent nie może nakładać nagłówka na pasek systemowy. */
+@media (max-width: 700px) {
+  .shell {
+    padding-top: max(58px, calc(env(safe-area-inset-top) + 12px));
+  }
+}

@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
 
-const VERSION='0.9.11';
+const VERSION='0.9.12';
 const REQUEST_TIMEOUT_MS=12000;
 const previousRender=root.render;
 
@@ -26,7 +26,7 @@ function exposeState(){
   };
   for(const[name,descriptor]of Object.entries(definitions)){
     try{Object.defineProperty(root,name,{configurable:true,enumerable:false,...descriptor})}
-    catch(error){console.warn(`[Między Nami v0.9.11] Nie udało się udostępnić ${name}`,error)}
+    catch(error){console.warn(`[Między Nami v0.9.12] Nie udało się udostępnić ${name}`,error)}
   }
 }
 exposeState();
@@ -74,9 +74,9 @@ function openGame(id){
     if(typeof opener==='function')return opener();
     return openLocalGame(id);
   }catch(error){
-    console.error('[Między Nami v0.9.11 game router]',error);
+    console.error('[Między Nami v0.9.12 game router]',error);
     try{return openLocalGame(id)}catch(fallbackError){
-      console.error('[Między Nami v0.9.11 fallback]',fallbackError);
+      console.error('[Między Nami v0.9.12 fallback]',fallbackError);
       root.toast?.('Nie udało się otworzyć gry. Zamknij aplikację i uruchom ją ponownie.');
     }
   }
@@ -106,14 +106,16 @@ function cleanupSpicyTiles(){
       const meta=copy.querySelector('small');
       if(meta)copy.insertBefore(pill,meta);else copy.appendChild(pill);
     }
-    pill.className=`v0911-spicy-mode ${online?'online':'local'}`;
-    pill.textContent=online?'1–2 telefony':'1 telefon';
+    const nextClass=`v0911-spicy-mode ${online?'online':'local'}`;
+    const nextLabel=online?'1–2 telefony':'1 telefon';
+    if(pill.className!==nextClass)pill.className=nextClass;
+    if(pill.textContent!==nextLabel)pill.textContent=nextLabel;
     const meta=copy.querySelector('small');
     if(meta){
-      if(text.includes('Dopasowanie 18+'))meta.textContent='8 pytań · wybór trybu';
-      else if(text.includes('Ochota na dziś'))meta.textContent='5 pytań · wybór trybu';
-      else if(text.includes('Bez tabu'))meta.textContent='rozmowa bez punktów';
-      else if(text.includes('Tylko we dwoje'))meta.textContent='zadania za wspólną zgodą';
+      if(text.includes('Dopasowanie 18+')&&meta.textContent!=='8 pytań · wybór trybu')meta.textContent='8 pytań · wybór trybu';
+      else if(text.includes('Ochota na dziś')&&meta.textContent!=='5 pytań · wybór trybu')meta.textContent='5 pytań · wybór trybu';
+      else if(text.includes('Bez tabu')&&meta.textContent!=='rozmowa bez punktów')meta.textContent='rozmowa bez punktów';
+      else if(text.includes('Tylko we dwoje')&&meta.textContent!=='zadania za wspólną zgodą')meta.textContent='zadania za wspólną zgodą';
     }
   }
 }
@@ -218,7 +220,7 @@ async function refreshSharedStats({force=false,renderAfter=true}={}){
     shared.loaded=true;shared.lastFetch=Date.now();
   }catch(error){
     shared.error=friendly(error);
-    console.error('[Między Nami v0.9.11 shared stats]',error);
+    console.error('[Między Nami v0.9.12 shared stats]',error);
   }finally{
     shared.loading=false;
     if(renderAfter&&['stats','home'].includes(ui?.view))root.render();
@@ -282,7 +284,7 @@ function syncFinishedLocalSession(){
       await uploadLocalSessions();
       shared.loaded=false;
       await refreshSharedStats({force:true,renderAfter:false});
-    }catch(error){console.warn('[Między Nami v0.9.11 session upload]',error)}
+    }catch(error){console.warn('[Między Nami v0.9.12 session upload]',error)}
   });
 }
 
@@ -297,10 +299,6 @@ root.render=function(){
   document.querySelectorAll('.version-badge,.version-chip,.v08-menu-header>span').forEach(node=>node.textContent=`v${VERSION}`);
 };
 
-const spicyObserver=new MutationObserver(()=>{
-  if(ui?.view==='v082-spicy-hub')cleanupSpicyTiles();
-});
-queueMicrotask(()=>{if(app)spicyObserver.observe(app,{childList:true,subtree:true})});
 window.addEventListener('online',()=>{if(paired())void refreshSharedStats({force:true,renderAfter:['stats','home'].includes(ui?.view)})});
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&paired()&&['stats','home'].includes(ui?.view))void refreshSharedStats({force:true})});
 
