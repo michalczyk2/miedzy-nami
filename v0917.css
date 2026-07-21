@@ -1,0 +1,77 @@
+/* Między Nami v0.9.17 — naprawa runtime, cache i rozróżnienie starej Skali */
+
+.v0917-legacy-banner{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto auto!important;
+  gap:10px!important;
+  align-items:center!important;
+  border-color:rgba(251,191,36,.34)!important;
+  background:
+    linear-gradient(135deg,rgba(146,64,14,.14),rgba(255,255,255,.025)),
+    var(--panel)!important;
+}
+
+.v0917-legacy-banner strong{
+  color:#fef3c7;
+}
+
+.v0917-discard-local{
+  color:#fde68a!important;
+  border-color:rgba(251,191,36,.28)!important;
+}
+
+.v0917-legacy-notice{
+  display:grid;
+  gap:4px;
+  margin:0 0 16px;
+  padding:12px 14px;
+  border:1px solid rgba(251,191,36,.3);
+  border-radius:16px;
+  background:rgba(146,64,14,.12);
+}
+
+.v0917-legacy-notice strong{
+  color:#fef3c7;
+  font-size:13px;
+}
+
+.v0917-legacy-notice span{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+
+.v099-session-card.v0917-scale-legacy,
+.v0917-legacy-online-card{
+  border-color:rgba(251,191,36,.34)!important;
+}
+
+.v099-session-card.v0917-scale-legacy .v099-session-icon{
+  background:linear-gradient(145deg,#92400e,#78350f)!important;
+  color:#fef3c7!important;
+}
+
+.v099-session-card.v0917-scale-modern{
+  border-color:rgba(45,212,191,.32)!important;
+}
+
+.v099-session-card.v0917-scale-modern .v099-session-icon{
+  background:linear-gradient(145deg,#2dd4bf,#0e7490 60%,#5b21b6)!important;
+  color:#fff!important;
+}
+
+.v0917-remove-legacy-online{
+  margin:-4px 0 14px;
+  color:#fde68a!important;
+  border-color:rgba(251,191,36,.3)!important;
+}
+
+@media(max-width:620px){
+  .v0917-legacy-banner{
+    grid-template-columns:1fr 1fr!important;
+  }
+
+  .v0917-legacy-banner>div{
+    grid-column:1 / -1;
+  }
+}

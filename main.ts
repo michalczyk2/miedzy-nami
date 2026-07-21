@@ -68,6 +68,7 @@ const LEGACY_SCRIPTS = [
   '/v0913.js',
   '/v0915.js',
   '/v0916.js',
+  '/v0917.js',
 ] as const;
 
 const boot: BootState = {
@@ -87,7 +88,8 @@ document.documentElement.dataset.foundation = 'vite-typescript';
 function loadClassicScript(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.src = src;
+    script.src = `${src}?v=${encodeURIComponent(VERSION)}`;
+    script.dataset.mnVersion = VERSION;
     script.async = false;
     script.dataset.mnLegacy = 'true';
     script.addEventListener('load', () => {
@@ -122,20 +124,38 @@ function showBootError(error: unknown): void {
 
 async function ensureServiceWorker(): Promise<void> {
   if (!('serviceWorker' in navigator)) return;
+
+  const reloadKey = `mn-sw-controller-reload-${VERSION}`;
+
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (sessionStorage.getItem(reloadKey) === 'done') return;
+    sessionStorage.setItem(reloadKey, 'done');
+    location.reload();
+  });
+
   try {
-    await navigator.serviceWorker.register('/sw.js');
+    const registration = await navigator.serviceWorker.register('/sw.js', {
+      updateViaCache: 'none',
+    });
+
+    await registration.update();
+
+    if (registration.waiting) {
+      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+    }
   } catch (error) {
     console.warn('[Między Nami SW]', error);
   }
 }
 
 async function bootApplication(): Promise<void> {
+  await ensureServiceWorker();
+
   for (const script of LEGACY_SCRIPTS) {
     await loadClassicScript(script);
   }
   boot.completedAt = Date.now();
   document.documentElement.dataset.boot = 'ready';
-  await ensureServiceWorker();
 }
 
 void bootApplication().catch(showBootError);
