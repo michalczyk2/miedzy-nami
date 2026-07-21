@@ -1,0 +1,27 @@
+MIĘDZY NAMI — PLAN PREVIEW V1
+
+WAŻNE: NIE WGRYWAJ TYCH PLIKÓW NA MAIN.
+Produkcja v0.9.14 ma pozostać nietknięta.
+
+1. Otwórz repozytorium michalczyk2/miedzy-nami w GitHubie.
+2. Kliknij nazwę gałęzi „main”.
+3. Wybierz „View all branches” / „Zobacz wszystkie gałęzie”.
+4. Utwórz nową gałąź:
+   preview-plan-content-v1
+   jako kopię main.
+5. Przełącz się na tę nową gałąź.
+6. Add file → Upload files.
+7. Wgraj wszystkie 8 plików z paczki oprócz tego pliku instrukcji.
+8. Commit:
+   feat: add Plan content preview v1
+9. Upewnij się, że commit trafia do gałęzi preview-plan-content-v1, NIE do main.
+10. Poczekaj, aż Vercel utworzy Preview Deployment.
+
+TEST:
+- otwórz wyłącznie adres Preview, nie domenę produkcyjną,
+- kafelek Plan powinien pokazywać 40 kart i plakietkę PREVIEW V1,
+- rozpocznij co najmniej dwie sesje po 10 kart,
+- produkcja miedzy-nami-seven.vercel.app nadal ma pozostać v0.9.14.
+
+Nie uruchamiaj SQL-a.
+Nie zmieniaj package.json, sw.js ani Supabase.

@@ -65,6 +65,8 @@ const LEGACY_SCRIPTS = [
   '/v0910.js',
   '/v0911.js',
   '/v0913.js',
+  '/plan-preview-v1-data.js',
+  '/plan-preview-v1.js',
 ] as const;
 
 const boot: BootState = {
