@@ -1,0 +1,223 @@
+/* Między Nami v0.9.13 — ciemne gry online i bezpieczny hub Pikantnych */
+
+/* Wspólna ciemna karta, zgodna z klasycznym ekranem gry. */
+.v093-live-card,
+.v094-live-card,
+.v098-scale-card,
+.v091-online-game .v082-question-card,
+.v092-online-game .v082-question-card {
+  background:linear-gradient(145deg,rgba(43,34,63,.98),rgba(24,19,35,.98))!important;
+  border-color:rgba(255,255,255,.14)!important;
+  color:var(--text)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.05),0 22px 55px rgba(0,0,0,.24)!important;
+}
+
+.v093-live-card h2,
+.v093-live-card h3,
+.v093-live-card strong,
+.v094-live-card h2,
+.v094-live-card h3,
+.v094-live-card strong,
+.v098-scale-card h2,
+.v091-online-game .v082-question-card h2,
+.v092-online-game .v082-question-card h2 {
+  color:var(--text)!important;
+}
+
+.v093-live-card>small,
+.v094-live-card>small,
+.v091-online-game .v082-question-card>small,
+.v092-online-game .v082-question-card>small {
+  color:#c4b5fd!important;
+}
+
+.v093-live-card>p,
+.v094-live-card>p,
+.v093-live-card .muted,
+.v094-live-card .muted,
+.v091-online-game .v082-private-note,
+.v092-online-game .v082-private-note {
+  color:var(--muted)!important;
+}
+
+/* Odpowiedzi online. */
+.v093-live-options button,
+.v094-live-options button,
+.v091-online-game .v082-answer-grid button,
+.v092-online-game .v082-answer-grid button {
+  background:rgba(255,255,255,.055)!important;
+  border-color:rgba(255,255,255,.14)!important;
+  color:var(--text)!important;
+  box-shadow:none!important;
+}
+
+.v093-live-options button span,
+.v094-live-options button span,
+.v091-online-game .v082-answer-grid button span,
+.v092-online-game .v082-answer-grid button span {
+  color:var(--text)!important;
+}
+
+.v093-live-options button:hover,
+.v093-live-options button:focus-visible,
+.v094-live-options button:hover,
+.v094-live-options button:focus-visible,
+.v091-online-game .v082-answer-grid button:hover,
+.v092-online-game .v082-answer-grid button:hover {
+  background:rgba(139,92,246,.16)!important;
+  border-color:rgba(196,181,253,.62)!important;
+}
+
+.v093-live-options button:disabled,
+.v094-live-options button:disabled {
+  color:var(--muted)!important;
+  opacity:.55;
+}
+
+.v093-live-options b,
+.v094-live-options b,
+.v091-online-game .v082-answer-grid b,
+.v092-online-game .v082-answer-grid b {
+  background:rgba(217,70,239,.14)!important;
+  color:#f0abfc!important;
+}
+
+/* Wybrana odpowiedź w Co wybierasz. */
+.v097-choice-options button.selected {
+  background:linear-gradient(145deg,rgba(109,86,255,.32),rgba(217,70,239,.13))!important;
+  border-color:#a78bfa!important;
+  color:var(--text)!important;
+}
+.v097-choice-options button.selected>b,
+.v097-choice-options button.selected>i {
+  background:#8b5cf6!important;
+  color:#fff!important;
+}
+
+/* Skala na ciemnej karcie. */
+.v098-scale-ends>span {
+  background:rgba(255,255,255,.045)!important;
+  border-color:rgba(255,255,255,.12)!important;
+}
+.v098-scale-ends small,
+.v098-selected-value {
+  color:var(--muted)!important;
+}
+.v098-number-grid button {
+  background:rgba(255,255,255,.045)!important;
+  border-color:rgba(255,255,255,.13)!important;
+  color:var(--text)!important;
+}
+.v098-number-grid button.selected {
+  background:linear-gradient(145deg,rgba(13,148,136,.34),rgba(59,130,246,.18))!important;
+  border-color:rgba(94,234,212,.72)!important;
+  color:#ecfeff!important;
+}
+
+/* Instrukcje pod wyborem trybu również są ciemne. */
+.v093-live-rules article {
+  background:rgba(255,255,255,.045)!important;
+  border-color:rgba(255,255,255,.12)!important;
+  color:var(--text)!important;
+}
+.v093-live-rules article strong {
+  color:var(--text)!important;
+}
+.v093-live-rules article small {
+  color:var(--muted)!important;
+}
+
+/* Odsłonięcia i wyniki. */
+.v093-live-card .result-answer,
+.v094-live-card .result-answer {
+  background:rgba(0,0,0,.17)!important;
+  color:var(--text)!important;
+}
+.v093-live-card .result-answer span,
+.v094-live-card .result-answer span {
+  color:var(--muted)!important;
+}
+.v093-live-card .result-answer strong,
+.v094-live-card .result-answer strong {
+  color:var(--text)!important;
+}
+.v093-summary .v082-result-list article,
+.v094-summary .v082-result-list article,
+.v098-summary .v082-result-list article {
+  background:rgba(255,255,255,.045)!important;
+  border-color:rgba(255,255,255,.12)!important;
+  color:var(--text)!important;
+}
+
+/* Bezpieczny hub Pikantnych nie używa starego obserwowanego widoku. */
+.v0913-spicy-hub {
+  overflow:hidden;
+}
+.v0913-spicy-mode-note {
+  display:grid;
+  gap:8px;
+  margin:14px 0 18px;
+  padding:13px 14px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  font-size:12px;
+}
+.v0913-spicy-mode-note span {
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+.v0913-spicy-mode-note i {
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#8b8391;
+  flex:0 0 auto;
+}
+.v0913-spicy-mode-note i.online {
+  background:#34d399;
+  box-shadow:0 0 0 4px rgba(52,211,153,.09);
+}
+.v0913-spicy-mode-note b {
+  color:#f4edf7;
+}
+.v0913-spicy-grid .v082-game-tile {
+  position:relative;
+}
+.v0913-mode-pill {
+  display:inline-flex;
+  width:max-content;
+  margin:8px 0 4px;
+  padding:5px 8px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(255,255,255,.055);
+  color:#d8ccd9;
+  font-size:9px;
+  font-style:normal;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.v0913-mode-pill.online {
+  border-color:rgba(52,211,153,.28);
+  background:rgba(16,185,129,.11);
+  color:#a7f3d0;
+}
+.v0913-spicy-footnote {
+  margin:16px 0 0;
+  text-align:center;
+  color:var(--muted-2);
+  font-size:12px;
+}
+
+@media(max-width:700px){
+  .v093-live-card,
+  .v094-live-card,
+  .v098-scale-card,
+  .v091-online-game .v082-question-card,
+  .v092-online-game .v082-question-card {
+    padding:20px!important;
+  }
+}
